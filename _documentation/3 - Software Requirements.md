@@ -14,7 +14,6 @@ The recommended version of VMware vSphere and vCenter for these instructions is 
 
 [https://customerconnect.vmware.com/downloads/info/slug/datacenter\_cloud\_infrastructure/vmware\_vsphere\_hypervisor\_esxi/7\_0](https://customerconnect.vmware.com/downloads/info/slug/datacenter_cloud_infrastructure/vmware_vsphere_hypervisor_esxi/7_0)
 
-  1.
 ## OPNsense Firewall
 
 In the realm of the SOC, the OPNsense firewall distribution plays a critical role as the boundary defender. OPNsense is a robust and open-source firewall solution known for its versatility and security features. It functions as the guardian of your SOC, safeguarding the perimeter, controlling traffic flows, and enforcing security policies. With its advanced capabilities, including intrusion detection and prevention, VPN support, and traffic filtering, OPNsense ensures that your SOC's external boundaries remain fortified, providing essential protection against external threats while allowing for controlled, secure communication with the outside world.
