@@ -6,111 +6,111 @@
       
 ![](_images/13._Power_Navigation.PNG)
 
-_*Figure 13 – VMware vSphere: Power on PROTECT VM*_
+*Figure 13 – VMware vSphere: Power on PROTECT VM*
 
 **2. After the machine is powered on, right click the VM and select "Edit settings." Take note of the MAC addresses for each interface, and which network you assigned to them (particularly the WAN and LAN).**
 
 ![](_images/14._MAC_Addresses.PNG)
 
-Figure 14 – PROTECT – VMware vSphere: VM Network Interfaces
+*Figure 14 – PROTECT – VMware vSphere: VM Network Interfaces*
 
 **3. Click the VM's icon. On the next page, click the miniature console window to expand the console of the VM. Clicking within the window that appears will change focus to the VM.**
 
 ![](_images/15._OPNsense_-_Login.png)
 
-Figure 15 – PROTECT – OPNsense: Console login
+*Figure 15 – PROTECT – OPNsense: Console login*
 
 **4. Log into the VM with the username "installer", and password "opnsense."**
 **5. Accept the default keymap.**
 
 ![](_images/16._OPNsense_-_Keymap.png)
 
-Figure 16 – PROTECT – OPNsense: Setup keymap
+*Figure 16 – PROTECT – OPNsense: Setup keymap*
 
 **6. On the next screen, choose "Install (UFS)."**
 
 ![](_images/17._OPNsense_-_Installation_Options.png)
 
-Figure 17 – PROTECT – OPNsense: Install options
+*Figure 17 – PROTECT – OPNsense: Install options*
 
 **7. On the next screen, choose the option labelled "da0 \<VMware Virtual disk xx\> (128 GB)."**
 
 ![](_images/18._OPNsense_-_UFS_Configuration.png)
 
-Figure 18 – PROTECT – OPNsense: Target disk
+*Figure 18 – PROTECT – OPNsense: Target disk*
 
 **8. On the following screen, choose "Yes" to continue with an 8GB swap partition.**
 
 ![](_images/19._OPNsense_-_UFS_Configuration_2.png)
 
-Figure 19 – PROTECT – OPNsense: Swap size
+*Figure 19 – PROTECT – OPNsense: Swap size*
 
 **9. On the following screen, choose "Yes" to commit changes to the hard disk.**
 
 ![](_images/20._OPNsense_-_UFS_Configuration_3.png)
 
-Figure 20 – PROTECT – OPNsense: Confirm settings
+*Figure 20 – PROTECT – OPNsense: Confirm settings*
 
 **10. The system will now install OPNsense onto the disk. This will take a few minutes.**
 
 ![](_images/21._OPNsense_-_Install.png)
 
-Figure 21 – PROTECT – OPNsense: Installation
+*Figure 21 – PROTECT – OPNsense: Installation*
 
 **11. After the install process is complete, select "Root Password" to set the password for the root account.**
 
 ![](_images/22._OPNsense_-_Final_Configuration_1.png)
 
-Figure 22 – PROTECT – OPNsense: Final configuration
+*Figure 22 – PROTECT – OPNsense: Final configuration*
 
 **12. Set a secure password for the root account. It will ask for you to confirm.**
 
 ![](_images/23._OPNsense_-_Set_Root_Password.png)
 
-Figure 23 – PROTECT – OPNsense: Set root password
+*Figure 23 – PROTECT – OPNsense: Set root password*
 
 **13. Once you return to the final configuration screen after setting the root password, return to the vSphere interface and remove the ISO from the CD/DVD drive. Open the VM settings and select "Host device" for the CD/DVD drive and click "Save."**
 
 ![](_images/24._PROTECT_-_Remove_ISO.PNG)
 
-Figure 24 -PROTECT – VMware vSphere: Removal of ISO
+*Figure 24 -PROTECT – VMware vSphere: Removal of ISO*
 
 **14. Returning to the VM console, choose "Complete Install." This will reboot the VM.**
 **15. When the login prompt appears, login with the root credentials you set previously. Verify that the interface designated as the WAN is the interface with a DHCP address assigned. On my VM, it is assigned to vmx1.**
 
 ![](_images/25._OPNsense_-_WAN_ID_and_root_login.png)
 
-Figure 25 – PROTECT – OPNsense: Root login
+*Figure 25 – PROTECT – OPNsense: Root login*
 
 **16. From the menu, select 1 to set interface assignments. Choose "n" for configuring LAGGs and VLANs.**
 
 ![](_images/26._OPNsense_-_Assign_Interfaces.png)
 
-Figure 26 – PROTECT – OPNsense: Assign interfaces
+*Figure 26 – PROTECT – OPNsense: Assign interfaces*
 
 **17. For the WAN interface name, enter the name of the interface that corresponds to the MAC address assigned to your WAN network. In my case, it is vmx1. Repeat this for the LAN network (mine is vmx2). The remaining interfaces can be assigned in any order. Use the data gathered from step 2 of this section. Confirm your settings.**
 
 ![](_images/27._OPNsense_-_Assign_Interfaces_-_WAN_and_LAN.png)
 
-Figure 27 – PROTECT – OPNsense: Assign interfaces (continued)
+*Figure 27 – PROTECT – OPNsense: Assign interfaces (continued)*
 
 **18. At the main menu, select 2 to set an IP address for an interface, and select the corresponding number for the LAN interface.**
 
 ![](_images/28._OPNsense_-_Change_LAN_IP.png)
 
-Figure 28 – PROTECT – OPNsense: Setting LAN IP
+*Figure 28 – PROTECT – OPNsense: Setting LAN IP*
 
 **19. Choose "N" for interface configuration via DHCP. Enter the desired IP address for your LAN interface and press ENTER. Choose "24" for the subnet mask bit count and press ENTER. Press ENTER for no upstream gateway. Select "n" for Ipv6 configuration via WAN tracking and DHCP6. Select "N" for configuring DHCP for the LAN interface.**
 
 ![](_images/29._OPNsense_-_Change_LAN_IP_2.png)
 
-Figure 29 – PROTECT – OPNsense: LAN IP configuration
+*Figure 29 – PROTECT – OPNsense: LAN IP configuration*
 
 **20. Select "n" for changing the web GUI protocol from HTTPS to HTTP. Select "y" for generating a new self-signed certificate for the web GUI, as well as "y" for GUI access default restoral. Once this step completes, you will be able to access the firewall via HTTPS at the LAN IP address you configured.**
 
 ![](_images/30._OPNsense_-_Change_LAN_IP_3.png)
 
-Figure 30 – PROTECT – OPNsense: LAN IP configuration (continued)
+*Figure 30 – PROTECT – OPNsense: LAN IP configuration (continued)*
 
 **21. At the main menu screen, choose 0 to log out of the firewall.**
 
