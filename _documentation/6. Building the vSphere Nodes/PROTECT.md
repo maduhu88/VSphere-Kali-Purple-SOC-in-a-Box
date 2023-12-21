@@ -42,24 +42,27 @@ Figure 4 – PROTECT – VMware vSphere: Select datastore
 
 **5. At the "Customize settings" screen, modify the VM settings in line with the requirements of this node: 2 CPUs, 2 GB RAM, 1 x 128 GB HDD, 3 NICs (OPNET NIC is optional). Ensure that the WAN interface is connected to a network that has Internet connectivity (and preferably DHCP, though not necessary).** 
 
-![](_images/5._vSphere_-_New_VM_-_Disk_Info.png)
+![](_images/5._vSphere_-_New_VM_-_VM_Configuration.PNG)
 
 Figure 5 – PROTECT – VMware vSphere: Customize settings
 
 
 **6. Configure the hard drive for thin provisioning.** 
 
-![](_images/6._vSphere_-_New_VM_-_Select_ISO.png)
+![](_images/6._vSphere_-_New_VM_-_Disk_Info.png)
 
 Figure 6 – PROTECT – VMware vSphere: Customize hard disk settings
 
 
-**7. For the CD/DVD, choose "Datastore ISO file" and navigate to your OPNsense ISO within your datastore and click "Select." Ensure that the ISO is configured to "Connect at power on."** ![](RackMultipart20231221-1-5l8g4e_html_ea08323b6870955.png)
+**7. For the CD/DVD, choose "Datastore ISO file" and navigate to your OPNsense ISO within your datastore and click "Select." Ensure that the ISO is configured to "Connect at power on."** 
+
+![](_images/7._vSphere_-_New_VM_-_Select_ISO.png)
+
 
 Figure 7 – PROTECT – VMware vSphere: ISO selection 
 
-![](RackMultipart20231221-1-5l8g4e_html_12503a93e3b545cc.png)
+![](_images/8._byzantium_settings.PNG)
 
 Figure 8 – PROTECT – VMware vSphere: Connect CD/DVD Drive at power on
 
-Click "Finish" to create the virtual machine.
+**Click "Finish" to create the virtual machine.**
