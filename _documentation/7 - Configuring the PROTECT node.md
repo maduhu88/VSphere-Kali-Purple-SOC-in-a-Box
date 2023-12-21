@@ -127,50 +127,51 @@ The following steps are to be accomplished from a separate system that has acces
 
 Figure 31 – PROTECT – OPNsense: Web Login Portal
 
-1. Upon first login, the Setup Wizard will launch. Click "Next." 
+2. Upon first login, the Setup Wizard will launch. Click "Next." 
 
 ![](_images/32._OPNsense_-Setup_Wizard.png)
 
 Figure 32 – PROTECT – OPNsense: Setup Wizard
 
-1. On the "System: Wizard: General Information" screen, enter your desired hostname, domain name, and language preferences. The figure shown here uses the settings recommended in the Proxmox instructions. When done, click "Next." 
+3. On the "System: Wizard: General Information" screen, enter your desired hostname, domain name, and language preferences. The figure shown here uses the settings recommended in the Proxmox instructions. When done, click "Next." 
 
 ![](_images/33._OPNsense_-Setup_Wizard_-_General_Information.png)
 
 Figure 33 – PROTECT – OPNsense: Setup Wizard – General information
 
-1. On the next screen, you can leave the "Time server hostname" as default or change if you wish. Set the "Time zone" value to your time zone. When done, click "Next." 
+4. On the next screen, you can leave the "Time server hostname" as default or change if you wish. Set the "Time zone" value to your time zone. When done, click "Next." 
 
 ![](_images/34._OPNsense_-Setup_Wizard_-_Time_Server_info.png)
 
 Figure 34 – PROTECT – OPNsense: Time server information
 
-1. On the next page, leave the WAN interface with default settings. Click "Next." 
+5. On the next page, leave the WAN interface with default settings. Click "Next." 
 
 ![](_images/35._OPNsense_-Setup_Wizard_-_WAN_Interface.png)
 
 Figure 35 – PROTECT – OPNsense: WAN interface configuration
 
-1. On the next page, verify your LAN IP settings are correct, then click "Next." 
+6. On the next page, verify your LAN IP settings are correct, then click "Next." 
 
 ![](_images/36._OPNsense_-Setup_Wizard_-_LAN_Interface.png)
 
 Figure 36 – PROTECT – OPNsense: LAN interface configuration
 
-1. On the following page, verify your root password, then click "Next." 
+7. On the following page, verify your root password, then click "Next." 
 
 ![](_images/37._OPNsense_-_Setup_Wizard_-_Set_Root_Password.png)
 
 Figure 37 – PROTECT – OPNsense: Root password
 
-1. Click "Reload" to apply the settings.
-2. Next, using the navigation options on the left side of the screen, navigate to Interfaces -\> Assignments. 
+8. Click "Reload" to apply the settings.
+
+9. Next, using the navigation options on the left side of the screen, navigate to Interfaces -\> Assignments. 
 
 ![](_images/38._OPNsense_-_Interfaces_-_Assignments.png)
 
 Figure 38 – PROTECT – OPNsense: Interface assignments
 
-1. Click each interface listed on the left side of the screen. With each interface, you can change the name of it by modifying the description. Do this for any interfaces you desire. You also can modify/verify the IP settings for each interface. When done with all interfaces, click "Apply" to apply changes. 
+10. Click each interface listed on the left side of the screen. With each interface, you can change the name of it by modifying the description. Do this for any interfaces you desire. You also can modify/verify the IP settings for each interface. When done with all interfaces, click "Apply" to apply changes. 
       
 ![](_images/39._OPNsense_-_Interfaces_-_Renaming.png)
 
@@ -180,13 +181,13 @@ Figure 39 – PROTECT – OPNsense: Renaming interfaces
 
 Figure 40 – PROTECT – OPNsense: Configuring interfaces
 
-1. Next, navigate to System -\> Settings -\> Administration. Change the TCP port to 8443 and ensure that the "Enable Secure Shell" option is selected. Click "Save" at the bottom of the screen when done.
+11. Next, navigate to System -\> Settings -\> Administration. Change the TCP port to 8443 and ensure that the "Enable Secure Shell" option is selected. Click "Save" at the bottom of the screen when done.
 
 ![](_images/41._OPNsense_-System_Administration.png)
 
 Figure 41 – PROTECT – OPNsense: Administration settings
 
-1. Next, navigate to Services -\> Web Proxy -\> Administration. Select the "Forward Proxy" tab at the top of the page. Ensure the "Proxy interfaces" has just the LAN interface selected. Set the Proxy port as port 80. Ensure the "Enable Transparent HTTP Proxy" option is checked. Set the SSL Proxy port to 443. Click "Apply" when done. You'll be presented a link to click to return to the firewall management site. 
+12. Next, navigate to Services -\> Web Proxy -\> Administration. Select the "Forward Proxy" tab at the top of the page. Ensure the "Proxy interfaces" has just the LAN interface selected. Set the Proxy port as port 80. Ensure the "Enable Transparent HTTP Proxy" option is checked. Set the SSL Proxy port to 443. Click "Apply" when done. You'll be presented a link to click to return to the firewall management site. 
 
 ![](_images/42._OPNsense_-Web_Proxy.png)
 
@@ -196,13 +197,13 @@ Figure 42 – PROTECT – OPNsense: Web proxy settings
 
 Figure 43 – PROTECT – OPNsense: Web redirect
 
-1. Next will setup logging. Navigate to System -\> Settings -\> Logging/targets. Click the red "+" on the right side of the screen to create a new destination.
+13. Next will setup logging. Navigate to System -\> Settings -\> Logging/targets. Click the red "+" on the right side of the screen to create a new destination.
 
 ![](_images/44._OPNsense_-Syslog.png)
 
 Figure 44 – PROTECT – OPNsense: Syslog
 
-1. Configure the following settings for log forwarding. Use Figure 39 for choice selection for "Applications." Click "Save" when complete, and "Apply" to apply the configuration. 
+14. Configure the following settings for log forwarding. Use Figure 39 for choice selection for "Applications." Click "Save" when complete, and "Apply" to apply the configuration. 
       
 ![](_images/45._OPNsense_-_Firewall_Aliases_-_Ports_-_Remote_Administration.png)
 
