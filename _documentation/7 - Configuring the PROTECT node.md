@@ -4,7 +4,7 @@
 
 1. In vSphere, right click on the "byzantium" virtual machine, select Power -\> Power On. You'll see a green arrow on the VM icon to show that it's running.
       
-![](_images/13.%20Power%20Navigation.PNG)
+![](_images/13._Power_Navigation.PNG)
 
 Figure 13 – VMware vSphere: Power on PROTECT VM
 
@@ -96,19 +96,19 @@ Figure 27 – PROTECT – OPNsense: Assign interfaces (continued)
 
 18. At the main menu, select 2 to set an IP address for an interface, and select the corresponding number for the LAN interface. 
 
-![](RackMultipart20231221-1-5l8g4e_html_f300540b7126c995.png)
+![](_images/28._OPNsense_-_Change_LAN_IP.png)
 
 Figure 28 – PROTECT – OPNsense: Setting LAN IP
 
 19. Choose "N" for interface configuration via DHCP. Enter the desired IP address for your LAN interface and press ENTER. Choose "24" for the subnet mask bit count and press ENTER. Press ENTER for no upstream gateway. Select "n" for Ipv6 configuration via WAN tracking and DHCP6. Select "N" for configuring DHCP for the LAN interface. 
 
-![](RackMultipart20231221-1-5l8g4e_html_b3aab957cdc59e0d.png)
+![](_images/29._OPNsense_-_Change_LAN_IP_2.png)
 
 Figure 29 – PROTECT – OPNsense: LAN IP configuration
 
 20. Select "n" for changing the web GUI protocol from HTTPS to HTTP. Select "y" for generating a new self-signed certificate for the web GUI, as well as "y" for GUI access default restoral. Once this step completes, you will be able to access the firewall via HTTPS at the LAN IP address you configured. 
 
-![](RackMultipart20231221-1-5l8g4e_html_325ad940f41c0320.png)
+![](_images/30._OPNsense_-_Change_LAN_IP_3.png)
 
 Figure 30 – PROTECT – OPNsense: LAN IP configuration (continued)
 
