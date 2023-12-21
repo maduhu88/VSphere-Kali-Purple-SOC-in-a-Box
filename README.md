@@ -23,13 +23,13 @@
 ## 6.2 - vSphere: Building the DETECT node
 ## 6.3 - vSphere: Building the IDENTIFY node
 ## 6.4 - vSphere: Building the RESPOND node
-# 7 - Configure: PROTECT Node
+# 7 - CONFIGURE: PROTECT Node
 ## 7.1 - OPNsense Installation
 ## 7.2 - OPNsense Configuration
 # 8 - Kali Purple
 ## 8.1 - Kali Purple Installation
 ## 8.2 - Kali Purple Configuration
-# 9 - Configure: DETECT Node
+# 9 - CONFIGURE: DETECT Node
 ## 9.1 - Elastic Stack SIEM Installation and Configuration
 ### 9.1.1 - Install Elasticsearch
 ### 9.1.2 - Install Kibana
@@ -41,7 +41,7 @@
 ### 9.3.1 - Collect Elasticsearch Certificate Fingerprint
 ### 9.3.2 - Metricbeat Installation and Configuration
 ### 9.3.3 - Filebeat Installation and Configuration
-# 10 - Configure: IDENTIFY Node
+# 10 - CONFIGURE: IDENTIFY Node
 ## 10.1 - Elastic Agent
 ### 10.1.1 - Installation
 ## 10.2 - Docker
@@ -53,7 +53,7 @@
 ### 10.4.1 - Installation
 ### 10.4.2 - Enable HTTPS
 ### 10.4.3 - Add Connection
-# 11 - Configure: RESPOND Node
+# 11 - CONFIGURE: RESPOND Node
 ## 11.1 - Elastic Agent
 ## 11.2 - Docker and Malcolm Prerequisites
 ### 11.2.1 - Installation
