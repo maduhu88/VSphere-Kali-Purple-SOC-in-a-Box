@@ -4,7 +4,7 @@ In this section, we will build the heart of this SOC solution, the Elastic SIEM 
 
 **To build the virtual machine for the DETECT node, use the steps in Section 6.1 to create a new VM in vSphere, coupled with the data from Table 2 (Section 4.4.2). We will be using the Kali Purple 2023.3 ISO for the operating system in this section (Figure 9). Your resulting VM should appear as in Figure 10.**
 
-![](_images/9._vSphere _-_New VM_-_Select_ISO.png)
+![](_images/9._vSphere_-_New_VM_-_Select_ISO.png)
 
 Figure 9 – DETECT – VMware vSphere: Kali Purple ISO
 
