@@ -11,3 +11,8 @@ Figure 9 – DETECT – VMware vSphere: Kali Purple ISO
 ![](_images/10._vSphere_-_New_VM_-_VM_Settings.png)
 
 Figure 10 – DETECT – VMware vSphere: VM Settings
+
+---
+<div align="center">
+| [Parent Section: 6 - Building the vSphere Nodes](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/6%20-%20Building%20the%20vSphere%20Nodes.md) | [Table of Contents](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/README.md) | [Next Section: 6.3 - vSphere: Building the IDENTIFY Node](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/6.%20Building%20the%20vSphere%20Nodes/IDENTIFY.md) |
+</div>
