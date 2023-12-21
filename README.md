@@ -2,7 +2,7 @@
 # 2 - [Key Differences between Proxmox and vSphere SOC deployments](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/Differences.md)
 # 3 - [Software Requirements](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/Software%20Requirements.md)
 # 4 - [VMware vSphere Configuration](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/vSphere%20Configuration.md)
-# 5 - [SOC Environment Data Center](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/SOC%20Data%20Collection.md)
+# 5 - [SOC Environment Data Collection](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/SOC%20Data%20Collection.md)
 # 6 - Building the nodes in vSphere
 ## 6.1 - vSphere: Building the PROTECT node
 ## 6.2 - vSphere: Building the DETECT node
