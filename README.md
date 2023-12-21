@@ -4,7 +4,7 @@
 # 4 - [VMware vSphere Configuration](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/4%20-%20vSphere%20Configuration.md)
 # 5 - [SOC Environment Data Collection](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/5%20-%20SOC%20Data%20Collection.md)
 # 6 - [Building the nodes in vSphere](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/6%20-%20Building%20the%20vSphere%20Nodes.md)
-# 7 - [Configure: PROTECT Node](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/7-%20Configuring%20the%20PROTECT%20node.md)
+# 7 - [Configure: PROTECT Node](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/7%20-%20Configuring%20the%20PROTECT%20node.md)
 # 8 - Kali Purple
 # 9 - Configure: DETECT Node
 # 10 - Configure: IDENTIFY Node
