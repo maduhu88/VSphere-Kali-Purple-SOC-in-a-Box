@@ -69,5 +69,5 @@ Figure 8 – PROTECT – VMware vSphere: Connect CD/DVD Drive at power on
 
 ---
 <div align="center">
-| [Parent Section: 6 - Building the vSphere Nodes](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/6%20-%20Building%20the%20vSphere%20Nodes.md) | [Table of Contents](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/README.md) | [Next Section: 6.2 - vSphere: Building the DETECT Node](_documentation/6.%20Building%20the%20vSphere%20Nodes/DETECT.md) |
+| [Parent Section: 6 - Building the vSphere Nodes](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/6%20-%20Building%20the%20vSphere%20Nodes.md) | [Table of Contents](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/README.md) | [Next Section: 6.2 - vSphere: Building the DETECT Node](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/6.%20Building%20the%20vSphere%20Nodes/DETECT.md) |
 </div>
