@@ -1,14 +1,14 @@
-# Key Differences between Proxmox and vSphere SOC deployments
+# 2 - Key Differences between Proxmox and vSphere SOC deployments
 
-## Hypervisor Changes
+## 2.1 - Hypervisor Changes
 
 I chose VMware vSphere simply because it's the hypervisor I already have deployed in my lab environment. I am certain that Proxmox was chosen by the folks at Offensive Security due to it being among the more popular open-source hypervisors available, with many of the enterprise features of VMware.
 
-## No Micro-segmentation
+## 2.2 - No Micro-segmentation
 
 I opted against micro-segmentation initially for ease of deployment. I may revisit this. In the Proxmox instruction, the internal nodes are configured with /31 subnet masks, each having a separate gateway (all of which are virtual Ips on the LAN interface of the firewall). Each of these micro-subnets have a different VLAN ID. I have chosen to use a single /24 subnet mask for the LAN interface, and all nodes (IDENTIFY, DETECT, and RESPOND) lie therein.
 
-## Software Versions
+## 2.3 - Software Versions
 
 As of the writing of this document, several versions of the software used in the Proxmox version of the SOC deployment have been updated. In my instructions, I will utilize all the current versions of each item that is available at the time of draft.
 
@@ -26,7 +26,7 @@ As of the writing of this document, several versions of the software used in the
 
 **Table 1 – Software Differences**
 
-## Network Architecture Revisions
+## 2.4 - Network Architecture Revisions
 
 As laid out, the suggested architecture seems a bit incomplete in my opinion. This assumption comes when including the build guidance that was included. The RESPOND node has many tools that you would typically find on a network sensor/IDS/IPS, but as built, it appears that the only way it can see any network data is if you manually upload PCAP to it directly. It has no monitoring interface.
 
@@ -34,8 +34,13 @@ Initially, to transform this "static" SOC into a live dynamic one, I thought of 
 
  I included an extra enclave for SOC analyst consoles. These systems could also be deployed within the same network as the IDENTIFY/DETECT/RESPOND nodes if desired.
 
-## Remote Sensor Integration
+## 2.5 - Remote Sensor Integration
 
 I added steps to build and integrate remote sensors, based on the Hedgehog Linux distribution, a companion to Malcolm recommended by Idaho National Labs (INL), the maintainers of the Malcolm Network Traffic Analysis platform. This can seamlessly integrate with the Malcolm instance configured on the RESPOND node. The inclusion of the network sensors is completely optional. As of the writing of this guide, I am unaware of any port mirroring/spanning capability within Proxmox.
 
 **NOTE:** To utilize the remote network sensors, you must have either a vSphere Enterprise Plus or vSAN license, and VMware vCenter as the steps involve creating and configuring a vSphere Distributed Switch with Port Mirroring capabilities.
+
+---
+# [Table of Contents](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/README.md)
+# [Previous Section: Introduction](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/1%20-%20Introduction.md)
+# [Next Section: 3 - Software Requirements](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/3%20-%20Software%20Requirements.md)

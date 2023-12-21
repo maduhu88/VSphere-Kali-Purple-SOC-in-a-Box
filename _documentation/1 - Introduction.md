@@ -1,4 +1,4 @@
-# Introduction
+# 1 - Introduction
 
 In this documentation, I delve into the deployment of a Kali Purple-based Security Operations Center (SOC) in a virtualized environment using VMware vSphere. Unlike the existing guidelines using Proxmox (010\_10: Kali Purple SOC IAB Overview, n.d.), this guide offers a tailored approach for vSphere users, highlighting key differences and unique challenges encountered. I focus on adapting the deployment strategies to fit vSphere's virtualization framework, ensuring that you can leverage Kali Purple's robust cybersecurity tools within this widely used hypervisor.
 
