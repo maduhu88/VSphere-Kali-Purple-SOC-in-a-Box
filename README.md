@@ -42,6 +42,38 @@
 ### 9.3.2 - Metricbeat Installation and Configuration
 ### 9.3.3 - Filebeat Installation and Configuration
 # 10 - Configure: IDENTIFY Node
+## 10.1 - Elastic Agent
+### 10.1.1 - Installation
+## 10.2 - Docker
+### 10.2.1 - Installation
+### 10.2.2 - Portainer
+## 10.3 - Greenbone Vulnerability Management
+### 10.3.1 - Installation and configuration
+## 10.4 - OpenCTI
+### 10.4.1 - Installation
+### 10.4.2 - Enable HTTPS
+### 10.4.3 - Add Connection
 # 11 - Configure: RESPOND Node
+## 11.1 - Elastic Agent
+## 11.2 - Docker and Malcolm Prerequisites
+### 11.2.1 - Installation
+### 11.2.2 - Portainer
+## 11.3 - INL Malcolm
+### 11.3.1 - Clone Malcolm Repository
+### 11.3.2 - Configure Malcolm
+### 11.3.3 - Pull Malcolm Docker Images
+### 11.3.4 - Start Malcolm
+### 11.3.5 - Verify Malcolm Web Services
+### 11.3.6 - Create Sensor Account (only if deploying remote sensors)
 # 12 - Build and Configure: Remote Network Sensor
-# 12 - Build and Configure: SOC Analyst Workstation
+## 12.1 - VMware vSphere: VM Configuration
+## 12.2 - Hedgehog linux Installation
+## 12.3 - Sensor Configuration
+### 12.3.1 - CONFIGURE: Hostname and Interfaces
+### 12.3.2 - Filebeat Certificate Transfer
+### 12.3.3 - CONFIGURE: Capture and Forwarding
+### 12.3.4 - Reboot Sensor
+### 12.3.5 - Verify Sensor Connectivity
+# 13 - Build and Configure: SOC Analyst Workstation
+## 13.1 - VMware vSphere: VM Configuration
+## 13.2 - Kali Purple Installation and Configuration
