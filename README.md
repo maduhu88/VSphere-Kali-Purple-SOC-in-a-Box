@@ -1,4 +1,4 @@
-# 1 - Introduction
+# 1 - [Introduction](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/Introduction.md)
 # 2 - Key Differences between Proxmox and vSphere SOC deployments
   *  Hypervisor Changes
   *  No Micro-segmentation
