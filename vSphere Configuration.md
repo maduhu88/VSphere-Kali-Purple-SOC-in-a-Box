@@ -58,7 +58,7 @@ This network will provide connectivity to any remote sensor's monitoring interfa
 
 | Minimum CPU Cores\* | Minimum Memory\* | Function | Disks | Network Interfaces | Networks |
 | --- | --- | --- | --- | --- | --- |
-| 2 | 2 GB | SOC Enclave Firewall, SOC Internal DNS Resolver, Proxy Server, IDS/IPS | 1 x 128 GB | 4 | WAN: DHCP <p> MGMT: 192.168.30.1/24
+| 2 | 2 GB | SOC Enclave Firewall, SOC Internal DNS Resolver, Proxy Server, IDS/IPS | 1 x 128 GB | 4 | WAN: DHCP<p>MGMT: 192.168.30.1/24
  DMZ: 10.20.30.250/24
  OPNET: 192.168.32.1/24 |
 |
