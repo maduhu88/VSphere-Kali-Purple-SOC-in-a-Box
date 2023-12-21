@@ -15,3 +15,7 @@ Within this documentation, I will cover the following:
 9. Baseline Build: SOC Analyst workstation (Kali Purple build)
 
 This document is not meant to recommend vSphere over Proxmox. I stress that you, the environment engineer, can and should use whichever hypervisor you are most comfortable with. Outside of hypervisor-specific instructions (e.g. building the VMs), all other instructions can be accomplished regardless of the hypervisor present.
+
+---
+## [Next Section: 2 - Key Differences between Proxmox and vSphere SOC deployments](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/2%20-%20Differences.md)
+## [Table of Contents](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/README.md)

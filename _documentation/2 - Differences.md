@@ -41,6 +41,7 @@ I added steps to build and integrate remote sensors, based on the Hedgehog Linux
 **NOTE:** To utilize the remote network sensors, you must have either a vSphere Enterprise Plus or vSAN license, and VMware vCenter as the steps involve creating and configuring a vSphere Distributed Switch with Port Mirroring capabilities.
 
 ---
-## [Table of Contents](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/README.md)
-## [Previous Section: Introduction](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/1%20-%20Introduction.md)
+| **[Previous Section: 1 - Introduction]**(https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/1%20-%20Introduction.md) | **[Table of Contents]**(https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/README.md) | **[Next Section: 3 - Software Requirements]**(https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/3%20-%20Software%20Requirements.md) |
 ## [Next Section: 3 - Software Requirements](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/3%20-%20Software%20Requirements.md)
+## [Previous Section: 1 - Introduction](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/1%20-%20Introduction.md)
+## [Table of Contents](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/README.md)
