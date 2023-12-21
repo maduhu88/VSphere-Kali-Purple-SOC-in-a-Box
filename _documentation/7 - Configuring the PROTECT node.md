@@ -6,7 +6,7 @@
       
 ![](_images/13._Power_Navigation.PNG)
 
-*_Figure 13 – VMware vSphere: Power on PROTECT VM_*
+*_ Figure 13 – VMware vSphere: Power on PROTECT VM _*
 
 **2. After the machine is powered on, right click the VM and select "Edit settings." Take note of the MAC addresses for each interface, and which network you assigned to them (particularly the WAN and LAN).**
 
