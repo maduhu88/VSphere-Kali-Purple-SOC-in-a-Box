@@ -31,3 +31,8 @@ You can use this table as a guide for configuring your own network layout. Here 
 **Table 7 – Virtual Machine Networking Configuration**
 
 Plan your network in a way that makes sense for your environment. Identify ranges of addresses to be assigned, methods of assignment (static, DHCP, etc.), and virtual networks that will be associated with each range if necessary.
+
+---
+<div align="center">
+| [Previous Section: 4 - vSphere Configuration](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/4%20-%20vSphere%20Configuration.md) | [Table of Contents](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/README.md) | [Next Section: 6 - Building the vSphere Nodes](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/6%20-%20Building%20the%20vSphere%20Nodes.md) |
+</div>
