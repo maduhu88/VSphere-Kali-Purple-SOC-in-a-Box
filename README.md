@@ -16,31 +16,31 @@
 ## 4.3 - Virtual Networks
 ## 4.4 - Virtual Machine Hardware Profiles
 # 5 - SOC Environment Data Center
-## SOC Node Build Order
-## Network Management
+## 5.1 - SOC Node Build Order
+## 5.2 - Network Management
 # 6 - Building the nodes in vSphere
-## vSphere: Building the PROTECT node
-## vSphere: Building the DETECT node
-## vSphere: Building the IDENTIFY node
-## vSphere: Building the RESPOND node
+## 6.1 - vSphere: Building the PROTECT node
+## 6.2 - vSphere: Building the DETECT node
+## 6.3 - vSphere: Building the IDENTIFY node
+## 6.4 - vSphere: Building the RESPOND node
 # 7 - Configure: PROTECT Node
-## OPNsense Installation
-## OPNsense Configuration
+## 7.1 - OPNsense Installation
+## 7.2 - OPNsense Configuration
 # 8 - Kali Purple
-## Kali Purple Installation
-## Kali Purple Configuration
+## 8.1 - Kali Purple Installation
+## 8.2 - Kali Purple Configuration
 # 9 - Configure: DETECT Node
-## Elastic Stack SIEM Installation and Configuration
-### Install Elasticsearch
-### Install Kibana
-### Enable HTTPS for Kibana
-## Fleet Server
-### Installation
-### Linux Server Policy
-## Beats
-### Collect Elasticsearch Certificate Fingerprint
-### Metricbeat Installation and Configuration
-### Filebeat Installation and Configuration
+## 9.1 - Elastic Stack SIEM Installation and Configuration
+### 9.1.1 - Install Elasticsearch
+### 9.1.2 - Install Kibana
+### 9.1.3 - Enable HTTPS for Kibana
+## 9.2 - Fleet Server
+### 9.2.1 - Installation
+### 9.2.2 - Linux Server Policy
+## 9.3 - Beats
+### 9.3.1 - Collect Elasticsearch Certificate Fingerprint
+### 9.3.2 - Metricbeat Installation and Configuration
+### 9.3.3 - Filebeat Installation and Configuration
 # 10 - Configure: IDENTIFY Node
 # 11 - Configure: RESPOND Node
 # 12 - Build and Configure: Remote Network Sensor
