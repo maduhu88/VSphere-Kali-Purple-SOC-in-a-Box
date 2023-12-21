@@ -93,11 +93,3 @@ This network will provide connectivity to any remote sensor's monitoring interfa
 | 2 | 16 GB | Remote Network Sensor | 1 x 100 GB | 2 | **MGMT:** 192.168.30.x/24<p>SPAN: \<promiscuous\> |
 
 **Table 6 – Remote Network Sensor Hardware Configuration**
-
-### SOC Analyst Console
-
-| CPU Cores | Memory | Function | Disks | Network Interfaces | Networks |
-| --- | --- | --- | --- | --- | --- |
-| 2 | 16 GB | SOC Analyst Workstation | 1 x 128 GB | 1 | **OPNET:** 192.168.32.x/24 |
-
-**Table 7 – SOC Analyst Workstation Hardware Configuration**
