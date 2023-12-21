@@ -1,21 +1,21 @@
-# 1 - [Introduction](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/Introduction.md)
-# 2 - Key Differences between Proxmox and vSphere SOC deployments
+# 1 - [Introduction](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/Introduction.md)
+# 2 - [Key Differences between Proxmox and vSphere SOC deployments](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/Differences.md)
   *  Hypervisor Changes
   *  No Micro-segmentation
   *  Software Versions
   *  Network Architecture Revisions
   *  Remote Sensor Integration
-# 3 - Software Requirements
+# 3 - [Software Requirements](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/Software%20Requirements.md)
   * VMWare vSphere
   * OPNsense Firewall
   * Kali Purple Linux
   * Hedgehog Linux
-# 4 - VMware vSphere Configuration
+# 4 - [VMware vSphere Configuration](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/vSphere%20Configuration.md)
 ## 4.1 - Licensing Requirements (Remote Sensor deployments only)
 ## 4.2 - Virtual Switch Configuration
 ## 4.3 - Virtual Networks
 ## 4.4 - Virtual Machine Hardware Profiles
-# 5 - SOC Environment Data Center
+# 5 - [SOC Environment Data Center](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/SOC%20Data%20Collection.md)
 ## 5.1 - SOC Node Build Order
 ## 5.2 - Network Management
 # 6 - Building the nodes in vSphere
