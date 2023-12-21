@@ -6,13 +6,13 @@ Within this documentation, I will cover the following:
 
 1. Key Differences between the Proxmox version of the SOC deployment and this vSphere deployment
 2. Software Requirements
-3. VMware vSphere configuration
+3. VMware vSphere Configuration
 4. Baseline Build: PROTECT node (byzantium)
 5. Baseline Build: DETECT node (kali-purple)
 6. Baseline Build: IDENTIFY node (kali-violet)
 7. Baseline Build: RESPOND node (kali-eminence)
 8. Baseline Build: SENSOR node (INL Malcolm Hedgehog Linux)
-9. Baseline Build: SOC Analyst workstation (Kali Purple build)
+9. Baseline Build: SOC Analyst Workstation (Kali Purple build)
 
 This document is not meant to recommend vSphere over Proxmox. I stress that you, the environment engineer, can and should use whichever hypervisor you are most comfortable with. Outside of hypervisor-specific instructions (e.g. building the VMs), all other instructions can be accomplished regardless of the hypervisor present.
 
