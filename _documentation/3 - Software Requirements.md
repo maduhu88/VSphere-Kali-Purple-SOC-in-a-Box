@@ -52,7 +52,7 @@ The recommended version of Kali Purple Linux for these instructions is 2023.3 or
 
 ### Source
 
-[https://cdimage.kali.org/kali-2023.3/kali-linux-2023.3-installer-purple-amd64.iso](https://cdimage.kali.org/kali-2023.3/kali-linux-2023.3-installer-purple-amd64.iso)
+[Kali Purple 2023.3](https://cdimage.kali.org/kali-2023.3/kali-linux-2023.3-installer-purple-amd64.iso)
 
 ## Hedgehog Linux Distribution
 
@@ -64,11 +64,11 @@ The minimum version of Hedgehog Linux these instructions have been tested on is 
 
 ### Recommended Version
 
-The recommended version of Hedgehog Linux for these instructions is 23.12.0 or later.
+The recommended version of Hedgehog Linux for these instructions is 23.10.0 or later.
 
 ### Source
 
-[https://malcolm.fyi/iso/hedgehog-23.12.0.iso](https://malcolm.fyi/iso/hedgehog-23.12.0.iso)
+[Hedgehog Linux 23.10.0](https://malcolm.fyi/docs/download.html)
 
 ---
 <div align="center">
