@@ -2,117 +2,118 @@
 
 ## 7.1 - OPNsense Installation
 
-1. In vSphere, right click on the "byzantium" virtual machine, select Power -\> Power On. You'll see a green arrow on the VM icon to show that it's running.
+**1. In vSphere, right click on the "byzantium" virtual machine, select Power -\> Power On. You'll see a green arrow on the VM icon to show that it's running.**
       
 ![](_images/13._Power_Navigation.PNG)
 
-Figure 13 – VMware vSphere: Power on PROTECT VM
+*Figure 13 – VMware vSphere: Power on PROTECT VM*
 
-2. After the machine is powered on, right click the VM and select "Edit settings." Take note of the MAC addresses for each interface, and which network you assigned to them (particularly the WAN and LAN). 
+**2. After the machine is powered on, right click the VM and select "Edit settings." Take note of the MAC addresses for each interface, and which network you assigned to them (particularly the WAN and LAN).**
 
 ![](_images/14._MAC_Addresses.PNG)
 
-Figure 14 – PROTECT – VMware vSphere: VM Network Interfaces
+*Figure 14 – PROTECT – VMware vSphere: VM Network Interfaces*
 
-3. Click the VM's icon. On the next page, click the miniature console window to expand the console of the VM. Clicking within the window that appears will change focus to the VM.
+**3. Click the VM's icon. On the next page, click the miniature console window to expand the console of the VM. Clicking within the window that appears will change focus to the VM.**
 
 ![](_images/15._OPNsense_-_Login.png)
 
-Figure 15 – PROTECT – OPNsense: Console login
+*Figure 15 – PROTECT – OPNsense: Console login*
 
-4. Log into the VM with the username "installer", and password "opnsense."
-5. Accept the default keymap. 
+**4. Log into the VM with the username "installer", and password "opnsense."**
+
+**5. Accept the default keymap.**
 
 ![](_images/16._OPNsense_-_Keymap.png)
 
-Figure 16 – PROTECT – OPNsense: Setup keymap
+*Figure 16 – PROTECT – OPNsense: Setup keymap*
 
-6. On the next screen, choose "Install (UFS)." 
+**6. On the next screen, choose "Install (UFS)."**
 
 ![](_images/17._OPNsense_-_Installation_Options.png)
 
-Figure 17 – PROTECT – OPNsense: Install options
+*Figure 17 – PROTECT – OPNsense: Install options*
 
-7. On the next screen, choose the option labelled "da0 \<VMware Virtual disk xx\> (128 GB)." 
+**7. On the next screen, choose the option labelled "da0 \<VMware Virtual disk xx\> (128 GB)."**
 
 ![](_images/18._OPNsense_-_UFS_Configuration.png)
 
-Figure 18 – PROTECT – OPNsense: Target disk
+*Figure 18 – PROTECT – OPNsense: Target disk*
 
-8. On the following screen, choose "Yes" to continue with an 8GB swap partition. 
+**8. On the following screen, choose "Yes" to continue with an 8GB swap partition.**
 
 ![](_images/19._OPNsense_-_UFS_Configuration_2.png)
 
-Figure 19 – PROTECT – OPNsense: Swap size
+*Figure 19 – PROTECT – OPNsense: Swap size*
 
-9. On the following screen, choose "Yes" to commit changes to the hard disk. 
+**9. On the following screen, choose "Yes" to commit changes to the hard disk.**
 
 ![](_images/20._OPNsense_-_UFS_Configuration_3.png)
 
-Figure 20 – PROTECT – OPNsense: Confirm settings
+*Figure 20 – PROTECT – OPNsense: Confirm settings*
 
-10. The system will now install OPNsense onto the disk. This will take a few minutes. 
+**10. The system will now install OPNsense onto the disk. This will take a few minutes.**
 
 ![](_images/21._OPNsense_-_Install.png)
 
-Figure 21 – PROTECT – OPNsense: Installation
+*Figure 21 – PROTECT – OPNsense: Installation*
 
-11. After the install process is complete, select "Root Password" to set the password for the root account. 
+**11. After the install process is complete, select "Root Password" to set the password for the root account.**
 
 ![](_images/22._OPNsense_-_Final_Configuration_1.png)
 
-Figure 22 – PROTECT – OPNsense: Final configuration
+*Figure 22 – PROTECT – OPNsense: Final configuration*
 
-12. Set a secure password for the root account. It will ask for you to confirm. 
+**12. Set a secure password for the root account. It will ask for you to confirm.**
 
 ![](_images/23._OPNsense_-_Set_Root_Password.png)
 
-Figure 23 – PROTECT – OPNsense: Set root password
+*Figure 23 – PROTECT – OPNsense: Set root password*
 
-13. Once you return to the final configuration screen after setting the root password, return to the vSphere interface and remove the ISO from the CD/DVD drive. Open the VM settings and select "Host device" for the CD/DVD drive and click "Save."
+**13. Once you return to the final configuration screen after setting the root password, return to the vSphere interface and remove the ISO from the CD/DVD drive. Open the VM settings and select "Host device" for the CD/DVD drive and click "Save."**
 
 ![](_images/24._PROTECT_-_Remove_ISO.PNG)
 
-Figure 24 -PROTECT – VMware vSphere: Removal of ISO
+*Figure 24 -PROTECT – VMware vSphere: Removal of ISO*
 
-14. Returning to the VM console, choose "Complete Install." This will reboot the VM.
-15. When the login prompt appears, login with the root credentials you set previously. Verify that the interface designated as the WAN is the interface with a DHCP address assigned. On my VM, it is assigned to vmx1. 
+**14. Returning to the VM console, choose "Complete Install." This will reboot the VM.**
+**15. When the login prompt appears, login with the root credentials you set previously. Verify that the interface designated as the WAN is the interface with a DHCP address assigned. On my VM, it is assigned to vmx1.**
 
 ![](_images/25._OPNsense_-_WAN_ID_and_root_login.png)
 
-Figure 25 – PROTECT – OPNsense: Root login
+*Figure 25 – PROTECT – OPNsense: Root login*
 
-16. From the menu, select 1 to set interface assignments. Choose "n" for configuring LAGGs and VLANs. 
+**16. From the menu, select 1 to set interface assignments. Choose "n" for configuring LAGGs and VLANs.**
 
 ![](_images/26._OPNsense_-_Assign_Interfaces.png)
 
-Figure 26 – PROTECT – OPNsense: Assign interfaces
+*Figure 26 – PROTECT – OPNsense: Assign interfaces*
 
-17. For the WAN interface name, enter the name of the interface that corresponds to the MAC address assigned to your WAN network. In my case, it is vmx1. Repeat this for the LAN network (mine is vmx2). The remaining interfaces can be assigned in any order. Use the data gathered from step 2 of this section. Confirm your settings. 
+**17. For the WAN interface name, enter the name of the interface that corresponds to the MAC address assigned to your WAN network. In my case, it is vmx1. Repeat this for the LAN network (mine is vmx2). The remaining interfaces can be assigned in any order. Use the data gathered from step 2 of this section. Confirm your settings.**
 
 ![](_images/27._OPNsense_-_Assign_Interfaces_-_WAN_and_LAN.png)
 
-Figure 27 – PROTECT – OPNsense: Assign interfaces (continued)
+*Figure 27 – PROTECT – OPNsense: Assign interfaces (continued)*
 
-18. At the main menu, select 2 to set an IP address for an interface, and select the corresponding number for the LAN interface. 
+**18. At the main menu, select 2 to set an IP address for an interface, and select the corresponding number for the LAN interface.**
 
 ![](_images/28._OPNsense_-_Change_LAN_IP.png)
 
-Figure 28 – PROTECT – OPNsense: Setting LAN IP
+*Figure 28 – PROTECT – OPNsense: Setting LAN IP*
 
-19. Choose "N" for interface configuration via DHCP. Enter the desired IP address for your LAN interface and press ENTER. Choose "24" for the subnet mask bit count and press ENTER. Press ENTER for no upstream gateway. Select "n" for Ipv6 configuration via WAN tracking and DHCP6. Select "N" for configuring DHCP for the LAN interface. 
+**19. Choose "N" for interface configuration via DHCP. Enter the desired IP address for your LAN interface and press ENTER. Choose "24" for the subnet mask bit count and press ENTER. Press ENTER for no upstream gateway. Select "n" for Ipv6 configuration via WAN tracking and DHCP6. Select "N" for configuring DHCP for the LAN interface.**
 
 ![](_images/29._OPNsense_-_Change_LAN_IP_2.png)
 
-Figure 29 – PROTECT – OPNsense: LAN IP configuration
+*Figure 29 – PROTECT – OPNsense: LAN IP configuration*
 
-20. Select "n" for changing the web GUI protocol from HTTPS to HTTP. Select "y" for generating a new self-signed certificate for the web GUI, as well as "y" for GUI access default restoral. Once this step completes, you will be able to access the firewall via HTTPS at the LAN IP address you configured. 
+**20. Select "n" for changing the web GUI protocol from HTTPS to HTTP. Select "y" for generating a new self-signed certificate for the web GUI, as well as "y" for GUI access default restoral. Once this step completes, you will be able to access the firewall via HTTPS at the LAN IP address you configured.**
 
 ![](_images/30._OPNsense_-_Change_LAN_IP_3.png)
 
-Figure 30 – PROTECT – OPNsense: LAN IP configuration (continued)
+*Figure 30 – PROTECT – OPNsense: LAN IP configuration (continued)*
 
-21. At the main menu screen, choose 0 to log out of the firewall.
+**21. At the main menu screen, choose 0 to log out of the firewall.**
 
 ## 7.2 - OPNsense Configuration
 
@@ -122,94 +123,95 @@ The following steps are to be accomplished from a separate system that has acces
 
 1. Browse to the LAN address of your firewall (https://\<LAN IP\>). You'll be greeted by a warning about your connection not being private. Accept the risks to continue to the site. You'll see the login portal of the OPNsense firewall. Log in with the root credentials you set during setup.
 
-![](RackMultipart20231221-1-5l8g4e_html_5800cdfffef22a37.png)
+![](_images/31._OPNsense_-_Web_Portal.png)
 
-Figure 31 – PROTECT – OPNsense: Web Login Portal
+*Figure 31 – PROTECT – OPNsense: Web Login Portal*
 
-1. Upon first login, the Setup Wizard will launch. Click "Next." 
+2. Upon first login, the Setup Wizard will launch. Click "Next." 
 
-![](RackMultipart20231221-1-5l8g4e_html_85977a8ef121035e.png)
+![](_images/32._OPNsense_-Setup_Wizard.png)
 
-Figure 32 – PROTECT – OPNsense: Setup Wizard
+*Figure 32 – PROTECT – OPNsense: Setup Wizard*
 
-1. On the "System: Wizard: General Information" screen, enter your desired hostname, domain name, and language preferences. The figure shown here uses the settings recommended in the Proxmox instructions. When done, click "Next." 
+3. On the "System: Wizard: General Information" screen, enter your desired hostname, domain name, and language preferences. The figure shown here uses the settings recommended in the Proxmox instructions. When done, click "Next." 
 
-![](RackMultipart20231221-1-5l8g4e_html_b62bbaec0e486b78.png)
+![](_images/33._OPNsense_-Setup_Wizard_-_General_Information.png)
 
-Figure 33 – PROTECT – OPNsense: Setup Wizard – General information
+*Figure 33 – PROTECT – OPNsense: Setup Wizard – General information*
 
-1. On the next screen, you can leave the "Time server hostname" as default or change if you wish. Set the "Time zone" value to your time zone. When done, click "Next." 
+4. On the next screen, you can leave the "Time server hostname" as default or change if you wish. Set the "Time zone" value to your time zone. When done, click "Next." 
 
-![](RackMultipart20231221-1-5l8g4e_html_7f1b9973d896b56a.png)
+![](_images/34._OPNsense_-Setup_Wizard_-_Time_Server_info.png)
 
-Figure 34 – PROTECT – OPNsense: Time server information
+*Figure 34 – PROTECT – OPNsense: Time server information*
 
-1. On the next page, leave the WAN interface with default settings. Click "Next." 
+5. On the next page, leave the WAN interface with default settings. Click "Next." 
 
-![](RackMultipart20231221-1-5l8g4e_html_68a4cc748e0d06d1.png)
+![](_images/35._OPNsense_-Setup_Wizard_-_WAN_Interface.png)
 
-Figure 35 – PROTECT – OPNsense: WAN interface configuration
+*Figure 35 – PROTECT – OPNsense: WAN interface configuration*
 
-1. On the next page, verify your LAN IP settings are correct, then click "Next." 
+6. On the next page, verify your LAN IP settings are correct, then click "Next." 
 
-![](RackMultipart20231221-1-5l8g4e_html_d097ed90d96275eb.png)
+![](_images/36._OPNsense_-Setup_Wizard_-_LAN_Interface.png)
 
-Figure 36 – PROTECT – OPNsense: LAN interface configuration
+*Figure 36 – PROTECT – OPNsense: LAN interface configuration*
 
-1. On the following page, verify your root password, then click "Next." 
+7. On the following page, verify your root password, then click "Next." 
 
-![](RackMultipart20231221-1-5l8g4e_html_f8d2370c7e8c3e77.png)
+![](_images/37._OPNsense_-_Setup_Wizard_-_Set_Root_Password.png)
 
-Figure 37 – PROTECT – OPNsense: Root password
+*Figure 37 – PROTECT – OPNsense: Root password*
 
-1. Click "Reload" to apply the settings.
-2. Next, using the navigation options on the left side of the screen, navigate to Interfaces -\> Assignments. 
+8. Click "Reload" to apply the settings.
 
-![](RackMultipart20231221-1-5l8g4e_html_9e2f729b40a61bab.png)
+9. Next, using the navigation options on the left side of the screen, navigate to Interfaces -\> Assignments. 
 
-Figure 38 – PROTECT – OPNsense: Interface assignments
+![](_images/38._OPNsense_-_Interfaces_-_Assignments.png)
 
-1. Click each interface listed on the left side of the screen. With each interface, you can change the name of it by modifying the description. Do this for any interfaces you desire. You also can modify/verify the IP settings for each interface. When done with all interfaces, click "Apply" to apply changes. 
+*Figure 38 – PROTECT – OPNsense: Interface assignments*
+
+10. Click each interface listed on the left side of the screen. With each interface, you can change the name of it by modifying the description. Do this for any interfaces you desire. You also can modify/verify the IP settings for each interface. When done with all interfaces, click "Apply" to apply changes. 
       
-![](RackMultipart20231221-1-5l8g4e_html_59cd9fdcaa76884f.png)
+![](_images/39._OPNsense_-_Interfaces_-_Renaming.png)
 
-Figure 39 – PROTECT – OPNsense: Renaming interfaces
+*Figure 39 – PROTECT – OPNsense: Renaming interfaces*
 
-![](RackMultipart20231221-1-5l8g4e_html_ea45d635eb3b9fc9.png)
+![](_images/40._OPNsense_-_Interfaces_-_IP_Addressing.png)
 
-Figure 40 – PROTECT – OPNsense: Configuring interfaces
+*Figure 40 – PROTECT – OPNsense: Configuring interfaces*
 
-1. Next, navigate to System -\> Settings -\> Administration. Change the TCP port to 8443 and ensure that the "Enable Secure Shell" option is selected. Click "Save" at the bottom of the screen when done.
+11. Next, navigate to System -\> Settings -\> Administration. Change the TCP port to 8443 and ensure that the "Enable Secure Shell" option is selected. Click "Save" at the bottom of the screen when done.
 
-![](RackMultipart20231221-1-5l8g4e_html_3ef2b96fc42927f6.png)
+![](_images/41._OPNsense_-System_Administration.png)
 
-Figure 41 – PROTECT – OPNsense: Administration settings
+*Figure 41 – PROTECT – OPNsense: Administration settings*
 
-1. Next, navigate to Services -\> Web Proxy -\> Administration. Select the "Forward Proxy" tab at the top of the page. Ensure the "Proxy interfaces" has just the LAN interface selected. Set the Proxy port as port 80. Ensure the "Enable Transparent HTTP Proxy" option is checked. Set the SSL Proxy port to 443. Click "Apply" when done. You'll be presented a link to click to return to the firewall management site. 
+12. Next, navigate to Services -\> Web Proxy -\> Administration. Select the "Forward Proxy" tab at the top of the page. Ensure the "Proxy interfaces" has just the LAN interface selected. Set the Proxy port as port 80. Ensure the "Enable Transparent HTTP Proxy" option is checked. Set the SSL Proxy port to 443. Click "Apply" when done. You'll be presented a link to click to return to the firewall management site. 
 
-![](RackMultipart20231221-1-5l8g4e_html_f36a24eb11c37b5e.png)
+![](_images/42._OPNsense_-Web_Proxy.png)
 
-Figure 42 – PROTECT – OPNsense: Web proxy settings
+*Figure 42 – PROTECT – OPNsense: Web proxy settings*
 
-![](RackMultipart20231221-1-5l8g4e_html_64b0d667599e14fe.png)
+![](_images/43._OPNsense_-System_Administration_-_apply.png)
 
-Figure 43 – PROTECT – OPNsense: Web redirect
+*Figure 43 – PROTECT – OPNsense: Web redirect*
 
-1. Next will setup logging. Navigate to System -\> Settings -\> Logging/targets. Click the red "+" on the right side of the screen to create a new destination.
+13. Next will setup logging. Navigate to System -\> Settings -\> Logging/targets. Click the red "+" on the right side of the screen to create a new destination.
 
-![](RackMultipart20231221-1-5l8g4e_html_6ceafbb5d3d151cc.png)
+![](_images/44._OPNsense_-Syslog.png)
 
-Figure 44 – PROTECT – OPNsense: Syslog
+*Figure 44 – PROTECT – OPNsense: *Syslog*
 
-1. Configure the following settings for log forwarding. Use Figure 39 for choice selection for "Applications." Click "Save" when complete, and "Apply" to apply the configuration. 
+14. Configure the following settings for log forwarding. Use Figure 39 for choice selection for "Applications." Click "Save" when complete, and "Apply" to apply the configuration. 
       
-![](RackMultipart20231221-1-5l8g4e_html_c4b71c3552b966a1.png)
+![](_images/45._OPNsense_-_Firewall_Aliases_-_Ports_-_Remote_Administration.png)
 
-Figure 45 – PROTECT – OPNsense: Syslog to Elasticsearch
+*Figure 45 – PROTECT – OPNsense: Syslog to Elasticsearch*
 
-![](RackMultipart20231221-1-5l8g4e_html_1095a74769b0ad78.png)
+![](_images/46._Syslogs.PNG)
 
-Figure 46 – PROTECT – OPNsense: Syslog app logs
+*Figure 46 – PROTECT – OPNsense: Syslog app logs*
 
 ### 7.2.2 - Updating OPNsense
 
