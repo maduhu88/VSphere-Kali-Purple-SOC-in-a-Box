@@ -1,35 +1,35 @@
-# 1. Introduction
-# 2. Key Differences between Proxmox and vSphere SOC deployments
+# 1 - Introduction
+# 2 - Key Differences between Proxmox and vSphere SOC deployments
   *  Hypervisor Changes
   *  No Micro-segmentation
   *  Software Versions
   *  Network Architecture Revisions
   *  Remote Sensor Integration
-# 3. Software Requirements
+# 3 - Software Requirements
   * VMWare vSphere
   * OPNsense Firewall
   * Kali Purple Linux
   * Hedgehog Linux
-# 4. VMware vSphere Configuration
+# 4 - VMware vSphere Configuration
 ## 4.1 - Licensing Requirements (Remote Sensor deployments only)
 ## 4.2 - Virtual Switch Configuration
 ## 4.3 - Virtual Networks
 ## 4.4 - Virtual Machine Hardware Profiles
-# 5. SOC Environment Data Center
+# 5 - SOC Environment Data Center
 ## SOC Node Build Order
 ## Network Management
-# 6. Building the nodes in vSphere
+# 6 - Building the nodes in vSphere
 ## vSphere: Building the PROTECT node
 ## vSphere: Building the DETECT node
 ## vSphere: Building the IDENTIFY node
 ## vSphere: Building the RESPOND node
-# 7. Configure: PROTECT Node
+# 7 - Configure: PROTECT Node
 ## OPNsense Installation
 ## OPNsense Configuration
-# 8. Kali Purple
+# 8 - Kali Purple
 ## Kali Purple Installation
 ## Kali Purple Configuration
-# 9. Configure: DETECT Node
+# 9 - Configure: DETECT Node
 ## Elastic Stack SIEM Installation and Configuration
 ### Install Elasticsearch
 ### Install Kibana
@@ -41,7 +41,7 @@
 ### Collect Elasticsearch Certificate Fingerprint
 ### Metricbeat Installation and Configuration
 ### Filebeat Installation and Configuration
-# 10. Configure: IDENTIFY Node
-# 11. Configure: RESPOND Node
-# 12. Build and Configure: Remote Network Sensor
-# 12. Build and Configure: SOC Analyst Workstation
+# 10 - Configure: IDENTIFY Node
+# 11 - Configure: RESPOND Node
+# 12 - Build and Configure: Remote Network Sensor
+# 12 - Build and Configure: SOC Analyst Workstation
