@@ -12,7 +12,8 @@ We will start with the NIST CSF PROTECT node. For the purposes of this document,
 
 **NOTE 4** : I have created enclaves and firewall rules that are not present in the Proxmox instructions. These are due to modifications I have made in this deployment (namely adding an enclave for analyst operations and preparing to receive external Elastic Agent traffic via the DMZ). Also, since I am not using a micro-segmented architecture, I will not configure any sub-interfaces. All rules meant for a sub-interface from the Proxmox instructions will be configured on the "SOC MGMT" interface in this setup. You will need to have a system (physical or virtual) that will be able to access the firewall from its LAN (in my case, "SOC MGMT") interface to accomplish the web components of firewall configuration.
 
-1. In the vSphere web interface, click "Create/Register VM…" ![VMware vSphere: New VM in vSphere](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_images/1._vSphere_-_New_VM.png)
+1. In the vSphere web interface, click "Create/Register VM…" 
+![VMware vSphere: New VM in vSphere](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_images/1._vSphere_-_New_VM.png)
 
 Figure 1 – PROTECT – VMware vSphere: New VM in vSphere
 
