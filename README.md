@@ -11,10 +11,10 @@
   * Kali Purple Linux
   * Hedgehog Linux
 # 4. VMware vSphere Configuration
-## Licensing Requirements (Remote Sensor deployments only)
-## Virtual Switch Configuration
-## Virtual Networks
-## Virtual Machine Hardware Profiles
+## 4.1 - Licensing Requirements (Remote Sensor deployments only)
+## 4.2 - Virtual Switch Configuration
+## 4.3 - Virtual Networks
+## 4.4 - Virtual Machine Hardware Profiles
 # 5. SOC Environment Data Center
 ## SOC Node Build Order
 ## Network Management
