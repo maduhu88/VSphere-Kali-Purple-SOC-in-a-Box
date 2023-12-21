@@ -11,4 +11,4 @@
   * Kali Purple Linux
   * Hedgehog Linux
 # 4. VMware vSphere Configuration
-  * Licensing Requirements (Remote Sensor Deployments only)
+##  * Licensing Requirements (Remote Sensor Deployments only)
