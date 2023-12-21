@@ -219,40 +219,41 @@ Now we will update our OPNsense installation.
 
 1. In the navigation pane on the left side of the screen, navigate to Lobby -\> Dashboard. Click on the "Click to view pending updates" link in the right pane. This will bring you to the "System: Firmware" screen. 
 
-![](RackMultipart20231221-1-5l8g4e_html_87ab5b1ac3c5fbea.png)
+![](_images/46a._PROTECT_-_Dashboard.PNG)
 2. A few seconds after the next screen appears, the system will display a message identifying updates to install. Click "Close." 
 
-![](RackMultipart20231221-1-5l8g4e_html_7962bccd8a91292d.png)
+![](_images/46b._PROTECT_-_Patch_Notes.PNG)
 3. Scroll to the bottom of the screen and click "Update." This will start the update process. Upon completion, the firewall will reboot, and you will be returned to the OPNsense login screen. Log back into the firewall with your root credentials. 
 
-![](RackMultipart20231221-1-5l8g4e_html_c0b6f0e177487fc6.png)
+![](_images/46c._PROTECT_-_Install_updates.PNG)
 4. Click on the "Click to view pending updates" link in the right pane. After a few seconds, you should see that no updates are needed. 
 
-![](RackMultipart20231221-1-5l8g4e_html_86dc58eb529a0f52.png)
+![](_images/46d._PROTECT_-_Patch_Complete.PNG)
 ### 7.2.3 - Install VM Tools
 
 1. On the "System: Firmware" screen, navigate to the "Plugins" tab. In the search bar of this screen, search for "os-vmware." Click the "+" on the right to install this plugin. This should take just a few seconds. 
 
-![](RackMultipart20231221-1-5l8g4e_html_22347b685205c26b.png)
+![](_images/46e._PROTECT_-_os-vmware.PNG)
 2. Navigate to Power -\> Reboot. Click "Yes" to reboot the firewall. When presented with the OPNsense login page, log in with your root credentials. 
 
-![](RackMultipart20231221-1-5l8g4e_html_a2fc8cba6ed3c36.png)
+![](_images/46f._PROTECT_-_Reboot_firewall.PNG)
 ### 7.2.4 - Unbound DNS
 
 In this section, we will configure the Unbound DNS Resolver service. As all nodes behind this firewall will use it as their DNS server, any internal services (hosts) need to have static entries for resolution to be successful.
 
 1. Using the site navigation in the left pane, navigate to Services -\> Unbound DNS -\> Overrides. 
 
-![](RackMultipart20231221-1-5l8g4e_html_a30f3844a0e9474b.png)
+![](_images/47._DNS_navigation.PNG)
 
-Figure 47 – PROTECT – OPNsense: Unbound DNS
+*Figure 47 – PROTECT – OPNsense: Unbound DNS*
 
-1. On the right side of this page, click the red "+" to add a new entry.
-2. Using the data in Table 7 and Figure 41 as a guide, create entries for your IDENTIFY, DETECT, and RESPOND nodes. Feel free to modify names/Ips as needed. 
+2. On the right side of this page, click the red "+" to add a new entry.
 
-![](RackMultipart20231221-1-5l8g4e_html_c05fb52eb8c3a014.png)
+3. Using the data in Table 7 and Figure 41 as a guide, create entries for your IDENTIFY, DETECT, and RESPOND nodes. Feel free to modify names/Ips as needed. 
 
-Figure 48 – PROTECT – OPNsense: DNS override entry
+![](_images/48._DNS_Override_Entry.PNG)
+
+*Figure 48 – PROTECT – OPNsense: DNS override entry*
 
 | **Enabled** | **Host** | **Domain** | **Type** | **IP Address** | **Description** |
 | --- | --- | --- | --- | --- | --- |
@@ -260,21 +261,21 @@ Figure 48 – PROTECT – OPNsense: DNS override entry
 | **Checked** | kali-violet | kali.purple | A (Ipv4 address) | 192.168.30.7 | IDENTIFY node |
 | **Checked** | kali-eminence | kali.purple | A (Ipv4 address) | 192.168.30.3 | RESPOND node |
 
-Table 8 – PROTECT – OPNsense: Unbound DNS entries
+*Table 8 – PROTECT – OPNsense: Unbound DNS entries*
 
-1. Click "Save" to save each entry. You can create other entries here as needed. When done, click "Apply" to apply the current settings.
+4. Click "Save" to save each entry. You can create other entries here as needed. When done, click "Apply" to apply the current settings.
 
 ### 7.2.5 - Firewall Aliases
 
 1. Next you will configure firewall aliases. Navigate to Firewall -\> Aliases. On this page, click the "+" near the lower right of the page to add a new alias. 
 
-![](RackMultipart20231221-1-5l8g4e_html_3ffdb7e662608737.png)
+![](_images/49._OPNsense_-_Firewall_Aliases.png)
 
-Figure 49 – PROTECT – OPNsense: Firewall aliases
+*Figure 49 – PROTECT – OPNsense: Firewall aliases*
 
-1. The first set of aliases you are to configure are for ports. Configure 6 aliases with the data presented below. 
+2. The first set of aliases you are to configure are for ports. Configure 6 aliases with the data presented below. 
 
-![](RackMultipart20231221-1-5l8g4e_html_cf2ef52fd9627661.png)
+![](_images/50._OPNsense_-_Firewall_Aliases_-_Ports_-_ELK.png)
 
 Figure 50 – PROTECT – OPNsense: New alias configuration
 
@@ -287,37 +288,37 @@ Figure 50 – PROTECT – OPNsense: New alias configuration
 | **Checked** | ports\_web | Port(s) | 80, 443 | Ports for web servers |
 | **Checked** | ports\_opencti | Port(s) | 8080, 9443 | OpenCTI and Portainer HTTP/HTTPS ports |
 
-Table 9 – PROTECT – OPNsense: Port alias configurations
+*Table 9 – PROTECT – OPNsense: Port alias configurations*
 
-1. The next set of aliases you are to configure are for networks. Configure 2 aliases as presented below. 
+3. The next set of aliases you are to configure are for networks. Configure 2 aliases as presented below. 
 
-![](RackMultipart20231221-1-5l8g4e_html_f96c3c7995a98e6c.png)
+![](_images/51._OPNsense_-_Firewall_Aliases_-_Networks_-_RFC_1918.png)
 
-![](RackMultipart20231221-1-5l8g4e_html_97c98825edceca1e.png)
+![](_images/51a._OPNsense_-_Firewall_Aliases_-_Networks_-_SSN.png)
 
-Figure 51 – PROTECT – OPNsense: Network aliases
+*Figure 51 – PROTECT – OPNsense: Network aliases*
 
-1. The final set of aliases you are to configure are for hosts. Configure 3 aliases as presented below. 
+4. The final set of aliases you are to configure are for hosts. Configure 3 aliases as presented below. 
 
-![](RackMultipart20231221-1-5l8g4e_html_2e5acbb0abbcde15.png) 
-![](RackMultipart20231221-1-5l8g4e_html_2ff282ffaec0ee77.png)
-![](RackMultipart20231221-1-5l8g4e_html_cf152bc145e5847d.png)
+![](_images/52._OPNsense_-_Firewall_Aliases_-_Hosts_-_DETECT_Servers.png) 
+![](_images/52a._OPNsense_-_Firewall_Aliases_-_Hosts_-_RESPOND_Servers.png)
+![](_images/52b._OPNsense_-_Firewall_Aliases_-_Hosts_-_IDENTIFY_Servers.png)
 
-Figure 52 – PROTECT – OPNsense: Host aliases
+*Figure 52 – PROTECT – OPNsense: Host aliases*
 
 ### 7.2.16 - Firewall Rules
 
 1. Next you will configure firewall rules. Navigate to Firewall -\> Rules -\> [LAN Interface]. On this page, click the "+" near the upper right of the page to add a new rule. 
 
-![](RackMultipart20231221-1-5l8g4e_html_77d8fd741e52ade.png)
+![](_images/53._OPNsense_-_Firewall_Rules.png)
 
-Figure 53 – PROTECT – OPNsense: Firewall rules
+*Figure 53 – PROTECT – OPNsense: Firewall rules*
 
-1. As seen in the figure below, configure 6 firewall rules using the aliases created previously. The rules listed in green are default rules that already exist. The rule highlighted in orange is only relevant if you elected to configure the OPNET network. To re-order the rules, select the check box next to the rule you want to move on the rules screen, then, on the right side of the rules table, click the left arrow for the rule you want your selected rule to sit above. After all changes have been made, click "Apply." 
+2. As seen in the figure below, configure 6 firewall rules using the aliases created previously. The rules listed in green are default rules that already exist. The rule highlighted in orange is only relevant if you elected to configure the OPNET network. To re-order the rules, select the check box next to the rule you want to move on the rules screen, then, on the right side of the rules table, click the left arrow for the rule you want your selected rule to sit above. After all changes have been made, click "Apply." 
 
-![](RackMultipart20231221-1-5l8g4e_html_9c8dc4067d0cd4ad.png)
+![](_images/54._OPNsense_-_Firewall_Rules_-_MGMT.png)
 
-Figure 54 – PROTECT – OPNsense: LAN Firewall rules order
+*Figure 54 – PROTECT – OPNsense: LAN Firewall rules order*
 
 | **Action** | **Interface** | **Protocol** | **Source** | **Source Port** | **Destination** | **Destination Port** | **Description** |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -330,20 +331,20 @@ Figure 54 – PROTECT – OPNsense: LAN Firewall rules order
 | **PASS** | [LAN] | Ipv6\* | [LAN] Net | \* | \* | \* | Default allow LAN Ipv6 to any rule |
 | **PASS** | [LAN] | TCP | [LAN] Address | \* | 127.0.0.1/24 | 3128 | Redirect traffic to proxy |
 
-Table 10 – PROTECT – OPNsense: LAN Firewall rules settings
+*Table 10 – PROTECT – OPNsense: LAN Firewall rules settings*
 
-1. If you elected to deploy an OPNET network, configure the following rules for this interface: 
+3. If you elected to deploy an OPNET network, configure the following rules for this interface: 
 
-![](RackMultipart20231221-1-5l8g4e_html_2b8fbc6d22f14c1b.png)
+![](_images/55._OPNsense_-_Firewall_Rules_-_OPNET.png)
 
-Figure 55 – PROTECT – OPNsense: OPNET Firewall rules order
+*Figure 55 – PROTECT – OPNsense: OPNET Firewall rules order*
 
 | **Action** | **Interface** | **Protocol** | **Source** | **Source Port** | **Destination** | **Destination Port** | **Description** |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | **PASS** | [OPNET] | TCP | \* | \* | [LAN] Address | 8443 | Allow access to firewall for management from OPNET |
 | **PASS** | [OPNET] | ICMP | \* | \* | [LAN] Net | \* | Allow ICMP from OPNET to LAN for diagnostics |
 
-Table 11 – PROTECT – OPNsense: OPNET Firewall rules order
+*Table 11 – PROTECT – OPNsense: OPNET Firewall rules order*
 
 ### 7.2.7 - DMZ Port Forwarding
 
@@ -352,7 +353,7 @@ Next you will configure DMZ port forwarding rules. The Proxmox instructions do n
 1. Navigate to Firewall -\> NAT -\> Port Forward. On the Firewall: NAT: Port Forward page, click on the "+" near the upper right corner of the right window pane to add a new entry.
 2. On the configuration page, ensure the DMZ interface is selected. TCP/IP version is 4, with TCP being the protocol. For the "from:" source port, choose "other" and enter 9200. Select the DMZ interface address as the destination. For the "from:" destination port, use the same settings as the source. For the "Redirect target IP," select "Single host or Network" and enter the IP address that your DETECT node will use. For the "Redirect target port", use the same settings as the source/destination ports. Enter "Elastic traffic from external agents" for the description. Finally, for "Filter rule association," ensure "Add associated filter rule" is selected. This will create a companion firewall rule on the DMZ interface. 
 
-![](RackMultipart20231221-1-5l8g4e_html_b43cb12dc31b0ab3.png)
+![](_images/56._OPNsense_-_Firewall_NAT_-_Port_Forwarding.png)
 
 ---
 <div align="center">
