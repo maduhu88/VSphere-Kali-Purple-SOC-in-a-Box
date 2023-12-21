@@ -4,7 +4,7 @@
 
 1. In vSphere, right click on the "byzantium" virtual machine, select Power -\> Power On. You'll see a green arrow on the VM icon to show that it's running.
       
-![](_images/13._Power_Navigation.PNG)
+![](_images/13.%20Power%20Navigation.PNG)
 
 Figure 13 – VMware vSphere: Power on PROTECT VM
 
