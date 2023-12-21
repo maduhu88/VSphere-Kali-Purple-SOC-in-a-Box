@@ -17,7 +17,7 @@ We will start with the NIST CSF PROTECT node. For the purposes of this document,
 
 Figure 1 – PROTECT – VMware vSphere: New VM in vSphere
 
-2. Select "Create a new virtual machine." ![](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_images/2._vSphere_-_New_VM_-Create_New_VM_.png)
+2. Select "Create a new virtual machine." ![](_images/2._vSphere_-_New_VM_-Create_New_VM_.png)
 
 Figure 2 – PROTECT – VMware vSphere: Create a new virtual machine
 
