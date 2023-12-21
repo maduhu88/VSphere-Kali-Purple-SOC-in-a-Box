@@ -16,7 +16,7 @@ As of the writing of this document, several versions of the software used in the
 | --- | --- | --- | --- |
 | **OPNsense Firewall** | 22.7 | 23.7 | 23.7 |
 | **Kali Purple Linux** | 2022.4/2023.1 | 2023.4 | 2023.4 |
-| Elasticsearch | 8.6.1 | 8.11.3 | 8.11.3 |
+| **Elasticsearch** | 8.6.1 | 8.11.3 | 8.11.3 |
 | **Kibana** | 8.6.1 | 8.11.3 | 8.11.3 |
 | **Elastic Agent** | 8.6.1 | 8.11.3 | 8.11.3 |
 | **Metricbeat** | 8.6.1 | 8.11.3 | 8.11.3 |
