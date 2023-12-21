@@ -8,12 +8,12 @@ I will include some optional information for building forward network sensors, a
 
 Based on my experimentation with deploying this virtual SOC solution according to the guidelines provided by the Kali Purple community, through trial-and-error I have devised what I believe to be (a) logical order of deployment. The order in which the virtual nodes will be built shall be as follows:
 
-            1. PROTECT Node (SOC Enclave Firewall)
-            2. DETECT Node (Elastic Stack SIEM)
-            3. IDENTIFY Node (Threat Intelligence, Vulnerability Scanner)
-            4. RESPOND Node (Network Analysis Aggregation Node)
-            5. (OPTIONAL) Remote Sensor (Forward Network Sensor, IDS)
-            6. (OPTIONAL) SOC Console (SOC Analyst Workstation)
+1. PROTECT Node (SOC Enclave Firewall)
+2. DETECT Node (Elastic Stack SIEM)
+3. IDENTIFY Node (Threat Intelligence, Vulnerability Scanner)
+4. RESPOND Node (Network Analysis Aggregation Node)
+5. (OPTIONAL) Remote Sensor (Forward Network Sensor, IDS)
+6. (OPTIONAL) SOC Console (SOC Analyst Workstation)
 
 ## Network Management
 
