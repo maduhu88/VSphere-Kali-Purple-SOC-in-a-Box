@@ -8,7 +8,7 @@ The minimum version of VMware vSphere (ESXi) these instructions have been tested
 
 ### Recommended Version
 
-The recommended version of VMware vSphere and vCenter for these instructions is vSphere/vCenter 7.0.3 or later. As a reminder, vCenter is only required if you desire to configure remote sensors.
+The recommended version of VMware vSphere and vCenter for these instructions is vSphere/vCenter 7.0.3 or later. As a reminder, vSphere enterprise licensing and vCenter are only required if you desire to deploy remote sensors.
 
 ### Source
 
