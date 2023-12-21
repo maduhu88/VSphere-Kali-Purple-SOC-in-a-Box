@@ -21,7 +21,7 @@ You can use this table as a guide for configuring your own network layout. Here 
 
 | **Hostname** | **CSF Function** | **Interface** | **IP Address** | **Mask Length** | **Network** |
 | --- | --- | --- | --- | --- | --- |
-| **byzantium** | PROTECT | vmx0<p>vmx1<p>opt<p>1opt2 | DHCP<p>192.168.30.1<p>192.168.32.1<p>10.20.30.250 | DHCP<p>24<p>24<p>24 | WAN<p>SOC MGMT<p>SOC OPNET<p>SOC DMZ |
+| **byzantium** | PROTECT | vmx0<p>vmx1<p>opt1<p>opt2 | DHCP<p>192.168.30.1<p>192.168.32.1<p>10.20.30.250 | DHCP<p>24<p>24<p>24 | WAN<p>SOC MGMT<p>SOC OPNET<p>SOC DMZ |
 | **kali-purple** | DETECT | ens192 | 192.168.30.5 | 24 | SOC MGMT |
 | **kali-violet** | IDENTIFY | ens192 | 192.168.30.7 | 24 | SOC MGMT |
 | **kali-eminence** | RESPOND | ens192 | 192.168.30.3 | 24 | SOC MGMT |
