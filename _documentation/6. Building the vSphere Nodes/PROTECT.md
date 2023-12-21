@@ -18,11 +18,13 @@ We will start with the NIST CSF PROTECT node. For the purposes of this document,
 
 Figure 1 – PROTECT – VMware vSphere: New VM in vSphere
 
+
 **2. Select "Create a new virtual machine."**
 
 ![](_images/2._vSphere_-_New_VM_-Create_New_VM_.png)
 
 Figure 2 – PROTECT – VMware vSphere: Create a new virtual machine
+
 
 **3. At the "Select a name and guest OS" screen, enter "byzantium" as the name. For guest OS family choose "Linux." Select the highest available 64-bit Debian GNU version.** 
 
@@ -30,11 +32,13 @@ Figure 2 – PROTECT – VMware vSphere: Create a new virtual machine
 
 Figure 3 – PROTECT – VMware vSphere: VM name and guest OS
 
+
 **4. At the "Select storage" screen, choose your desired available datastore.**
 
 ![](_images/4._vSphere_-_New_VM_-_Select_Storage.png)
 
 Figure 4 – PROTECT – VMware vSphere: Select datastore
+
 
 **5. At the "Customize settings" screen, modify the VM settings in line with the requirements of this node: 2 CPUs, 2 GB RAM, 1 x 128 GB HDD, 3 NICs (OPNET NIC is optional). Ensure that the WAN interface is connected to a network that has Internet connectivity (and preferably DHCP, though not necessary).** 
 
@@ -42,11 +46,13 @@ Figure 4 – PROTECT – VMware vSphere: Select datastore
 
 Figure 5 – PROTECT – VMware vSphere: Customize settings
 
+
 **6. Configure the hard drive for thin provisioning.** 
 
 ![](_images/6._vSphere_-_New_VM_-_Select_ISO.png)
 
 Figure 6 – PROTECT – VMware vSphere: Customize hard disk settings
+
 
 **7. For the CD/DVD, choose "Datastore ISO file" and navigate to your OPNsense ISO within your datastore and click "Select." Ensure that the ISO is configured to "Connect at power on."** ![](RackMultipart20231221-1-5l8g4e_html_ea08323b6870955.png)
 
