@@ -21,6 +21,7 @@
 *Figure 15 – PROTECT – OPNsense: Console login*
 
 **4. Log into the VM with the username "installer", and password "opnsense."**
+
 **5. Accept the default keymap.**
 
 ![](_images/16._OPNsense_-_Keymap.png)
