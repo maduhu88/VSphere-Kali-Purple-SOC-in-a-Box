@@ -4,10 +4,6 @@
 # 4 - [VMware vSphere Configuration](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/4%20-%20vSphere%20Configuration.md)
 # 5 - [SOC Environment Data Collection](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/5%20-%20SOC%20Data%20Collection.md)
 # 6 - [Building the nodes in vSphere](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/6%20-%20Building%20the%20vSphere%20Nodes.md)
-## 6.1 - vSphere: Building the PROTECT node
-## 6.2 - vSphere: Building the DETECT node
-## 6.3 - vSphere: Building the IDENTIFY node
-## 6.4 - vSphere: Building the RESPOND node
 # 7 - CONFIGURE: PROTECT Node
 ## 7.1 - OPNsense Installation
 ## 7.2 - OPNsense Configuration
