@@ -58,7 +58,7 @@ This network will provide connectivity to any remote sensor's monitoring interfa
 
 | Minimum CPU Cores\* | Minimum Memory\* | Function | Disks | Network Interfaces | Networks |
 | --- | --- | --- | --- | --- | --- |
-| 2 | 2 GB | SOC Enclave Firewall, SOC Internal DNS Resolver, Proxy Server, IDS/IPS | 1 x 128 GB | 4 | WAN: DHCP<p>MGMT: 192.168.30.1/24<p>DMZ: 10.20.30.250/24<p>OPNET: 192.168.32.1/24 |
+| 2 | 2 GB | SOC Enclave Firewall, SOC Internal DNS Resolver, Proxy Server, IDS/IPS | 1 x 128 GB | 4 | **WAN:** DHCP<p>**MGMT:** 192.168.30.1/24<p>**DMZ:** 10.20.30.250/24<p>**OPNET:** 192.168.32.1/24 |
 
 **Table 2 – PROTECT Node Hardware Configuration**
 
@@ -66,7 +66,7 @@ This network will provide connectivity to any remote sensor's monitoring interfa
 
 | Minimum CPU Cores\* | Minimum Memory\* | Function | Disks | Network Interfaces | Networks |
 | --- | --- | --- | --- | --- | --- |
-| 4 | 20 GB | Elastic SIEM | 1 x 2 TB | 1 | MGMT: 192.168.30.5/24 |
+| 4 | 20 GB | Elastic SIEM | 1 x 2 TB | 1 | **MGMT:** 192.168.30.5/24 |
 
 **Table 3 – DETECT Node Hardware Configuration**
 
@@ -74,7 +74,7 @@ This network will provide connectivity to any remote sensor's monitoring interfa
 
 | Minimum CPU Cores\* | Minimum Memory\* | Function | Disks | Network Interfaces | Networks |
 | --- | --- | --- | --- | --- | --- |
-| 4 | 8 GB | Threat Intelligence, Vulnerability Scanner | 1 x 128 GB | 1 | MGMT: 192.168.30.7/24 |
+| 4 | 8 GB | Threat Intelligence, Vulnerability Scanner | 1 x 128 GB | 1 | **MGMT:** 192.168.30.7/24 |
 
 **Table 4 – IDENTIFY Node Hardware Configuration**
 
@@ -82,7 +82,7 @@ This network will provide connectivity to any remote sensor's monitoring interfa
 
 | Minimum CPU Cores\* | Minimum Memory\* | Function | Disks | Network Interfaces | Networks |
 | --- | --- | --- | --- | --- | --- |
-| 6 | 16 GB | Network Traffic Analysis | 1 x 512 GB | 1 | MGMT: 192.168.30.3/24 |
+| 6 | 16 GB | Network Traffic Analysis | 1 x 512 GB | 1 | **MGMT:** 192.168.30.3/24 |
 
 **Table 5 – RESPOND Node Hardware Configuration**
 
@@ -90,7 +90,7 @@ This network will provide connectivity to any remote sensor's monitoring interfa
 
 | CPU Cores | Memory | Function | Disks | Network Interfaces | Networks |
 | --- | --- | --- | --- | --- | --- |
-| 2 | 16 GB | Remote Network Sensor | 1 x 100 GB | 2 | MGMT: 192.168.30.x/24<p>SPAN: \<promiscuous\> |
+| 2 | 16 GB | Remote Network Sensor | 1 x 100 GB | 2 | **MGMT:** 192.168.30.x/24<p>SPAN: \<promiscuous\> |
 
 **Table 6 – Remote Network Sensor Hardware Configuration**
 
@@ -98,6 +98,6 @@ This network will provide connectivity to any remote sensor's monitoring interfa
 
 | CPU Cores | Memory | Function | Disks | Network Interfaces | Networks |
 | --- | --- | --- | --- | --- | --- |
-| 2 | 16 GB | SOC Analyst Workstation | 1 x 128 GB | 1 | OPNET: 192.168.32.x/24 |
+| 2 | 16 GB | SOC Analyst Workstation | 1 x 128 GB | 1 | **OPNET:** 192.168.32.x/24 |
 
 **Table 7 – SOC Analyst Workstation Hardware Configuration**
