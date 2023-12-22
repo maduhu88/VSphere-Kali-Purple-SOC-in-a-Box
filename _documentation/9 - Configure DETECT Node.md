@@ -28,7 +28,7 @@ In this section, we will build the heart of this SOC solution, the Elastic SIEM 
 
 *Figure 83 - DETECT: Elasticsearch password*
 
-1. **In the terminal session, enter the following commands to convert the installation into a single-node setup:**
+4. **In the terminal session, enter the following commands to convert the installation into a single-node setup:**
 
         sudo sed -e '/cluster.initial_master_nodes/ s/^#\*/#/' -i /etc/elasticsearch/elasticsearch.yml
         echo "discovery.type: single-node" | sudo tee -a /etc/elasticsearch/elasticsearch.yml
@@ -37,7 +37,7 @@ In this section, we will build the heart of this SOC solution, the Elastic SIEM 
 
 *Figure 84 - DETECT: Configure Elasticsearch as single-node*
 
-**Keep this terminal session open for the next section.**
+5. **Keep this terminal session open for the next section.**
 
 ### 9.1.2 - Install Kibana
 
@@ -49,7 +49,7 @@ In this section, we will build the heart of this SOC solution, the Elastic SIEM 
 
 *Figure 85 - DETECT: Install Kibana*
 
-1. **In the terminal session, issue the following command to generate Kibana encryption keys and enter them into the /etc/kibana/kibana.yml file:**
+2. **In the terminal session, issue the following command to generate Kibana encryption keys and enter them into the /etc/kibana/kibana.yml file:**
 
         sudo /usr/share/kibana/bin/kibana-encryption-keys generate -q | sudo tee -a /etc/kibana/kibana.yml
 
@@ -57,19 +57,19 @@ In this section, we will build the heart of this SOC solution, the Elastic SIEM 
 
 *Figure 86 - DETECT: Kibana generate HTTP encryption keys*
 
-1. **In the terminal session, issue the following command to amend the /etc/kibana/kibana.yml file with a "server.host" entry:**
+3. **In the terminal session, issue the following command to amend the /etc/kibana/kibana.yml file with a "server.host" entry:**
 
         echo "server.host: \"kali-purple.kali.purple\"" | sudo tee -a /etc/kibana/kibana.yml
 
 ![](RackMultipart20231221-1-5l8g4e_html_8600d713f732d14b.png)
 
-2. **Verify that there is ONLY ONE entry in the /etc/hosts file that maps the configured IP address to the configured hostname. There should be no other entries tied to the hostname. This will allow Kibana to specifically bind to that interface/IP address.**
+4. **Verify that there is ONLY ONE entry in the /etc/hosts file that maps the configured IP address to the configured hostname. There should be no other entries tied to the hostname. This will allow Kibana to specifically bind to that interface/IP address.**
 
 ![](RackMultipart20231221-1-5l8g4e_html_bd192d06dbdbbf5e.png)
 
 *Figure 87 - DETECT: Verifying /etc/hosts file*
 
-1. **In the terminal session, issue the following command to configure Elasticsearch and Kibana for automatic startup:**
+5. **In the terminal session, issue the following command to configure Elasticsearch and Kibana for automatic startup:**
 
         sudo systemctl enable elasticsearch kibana --now
 
@@ -77,7 +77,7 @@ In this section, we will build the heart of this SOC solution, the Elastic SIEM 
 
 *Figure 88 - DETECT: Enable auto-start for Elasticsearch/Kibana*
 
-1. **In the terminal session, issue the following command to enroll Kibana in Elasticsearch:**
+6. **In the terminal session, issue the following command to enroll Kibana in Elasticsearch:**
 
         sudo /usr/share/elasticsearch/bin/elasticsearch-create-enrollment-token -s kibana
 
@@ -87,13 +87,13 @@ In this section, we will build the heart of this SOC solution, the Elastic SIEM 
 
 **Copy this token, as you will need it for the next step.**
 
-1. **Open a browser and navigate to http://kali-purple.kali.purple:5601. NOTE: The URL is HTTP, not HTTPS. You will be immediately prompted for the Kibana enrolment token. Paste the toke from step 6 of this section into the window supplied and then click "Configure Elastic."**
+7. **Open a browser and navigate to http://kali-purple.kali.purple:5601. NOTE: The URL is HTTP, not HTTPS. You will be immediately prompted for the Kibana enrolment token. Paste the toke from step 6 of this section into the window supplied and then click "Configure Elastic."**
 
 ![](RackMultipart20231221-1-5l8g4e_html_45c18285a9a6595a.png)
 
 *Figure 90 - DETECT: Enrolling Kibana*
 
-1. **You will be prompted for a verification code. In the terminal session, issue the following command to generate a verification code:**
+8. **You will be prompted for a verification code. In the terminal session, issue the following command to generate a verification code:**
 
         sudo /usr/share/kibana/bin/kibana-verification-code
 
@@ -101,7 +101,7 @@ In this section, we will build the heart of this SOC solution, the Elastic SIEM 
 
 *Figure 91 - DETECT: Generating Kibana verification code*
 
-1. **Enter the verification code from step 8 into the browser and click "Verify." In a few seconds, you'll be redirected to a "Welcome to Elastic" screen with a login form. DO NOT log in here.**
+9. **Enter the verification code from step 8 into the browser and click "Verify." In a few seconds, you'll be redirected to a "Welcome to Elastic" screen with a login form. DO NOT log in here.**
 
 ![](RackMultipart20231221-1-5l8g4e_html_b5b9a5548ce92ccd.png)
 
@@ -121,11 +121,11 @@ For this next section, you'll need to create a password to use for SSL certifica
 
 *Figure 93 - DETECT: Generating new CA*
 
-1. **Accept the default name for the output file (elastic-stack-ca.p12).**
+    1.1. **Accept the default name for the output file (elastic-stack-ca.p12).**
 
-2. **Enter your secure password.**
+    1.2. **Enter your secure password.**
 
-1. **In the terminal session, issue the following command to generate the Kibana PKCS#12 certificate and private key:**
+3. **In the terminal session, issue the following command to generate the Kibana PKCS#12 certificate and private key:**
 
         sudo /usr/share/elasticsearch/bin/elasticsearch-certutil cert --ca elastic-stack-ca.p12 --dns kali-purple.kali.purple,elastic.kali.purple,kali-purple --out kibana-server.p12
 
