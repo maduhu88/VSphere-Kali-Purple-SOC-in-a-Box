@@ -1,7 +1,7 @@
 # 7 - Configure: PROTECT Node
 
 <details>
-<summary>## 7.1 - OPNsense Installation</summary>
+##<summary>7.1 - OPNsense Installation</summary>
 
 **1. In vSphere, right click on the "byzantium" virtual machine, select Power -\> Power On. You'll see a green arrow on the VM icon to show that it's running.**
       
