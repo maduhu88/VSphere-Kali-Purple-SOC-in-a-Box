@@ -14,7 +14,7 @@
 
 ## 13.2 - Kali Purple Installation and Configuration
 
-1. **To install Kali Purple, use section 8.1 (Kali Purple) as your installation guide with the following caveats:**
+1. **To install Kali Purple, use section [8.1 (Kali Purple)](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/8%20-%20Kali%20Purple.md#81-kali-purple-installation) as your installation guide with the following caveats:**
 
 1.1 - **For step 8.1.5 (Disk Settings), do Step 1 only.**
 
