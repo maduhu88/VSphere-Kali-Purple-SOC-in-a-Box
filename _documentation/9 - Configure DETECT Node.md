@@ -6,39 +6,39 @@ In this section, we will build the heart of this SOC solution, the Elastic SIEM 
 
 ### 9.1.1 - Install Elasticsearch
 
-1. Log in to the DETECT node with your user credentials. 
+1. **Log in to the DETECT node with your user credentials.**
 
 ![](RackMultipart20231221-1-5l8g4e_html_c939efd53b72c943.png)
 
-2. Launch a terminal session. 
+2. **Launch a terminal session.**
 
 ![](RackMultipart20231221-1-5l8g4e_html_e9347639f7bfbaa4.png)
 
-3. In the terminal session, issue the following command to install Elasticsearch:
+3. **In the terminal session, issue the following command to install Elasticsearch:**
 
         sudo bash -c "export HOSTNAME=kali-purple.kali.purple; apt-get install elasticsearch -y"
 
 ![](RackMultipart20231221-1-5l8g4e_html_2e7c994fb0b5754.png)
 
-Figure 82 - DETECT: Install Elasticsearch
+*Figure 82 - DETECT: Install Elasticsearch*
 
-Take note of the password that is generated for the built-in superuser 'elastic.' You will need this in later steps. 
+**Take note of the password that is generated for the built-in superuser 'elastic.' You will need this in later steps.**
 
 ![](RackMultipart20231221-1-5l8g4e_html_17eb3c0292ddf34e.png)
 
-Figure 83 - DETECT: Elasticsearch password
+*Figure 83 - DETECT: Elasticsearch password*
 
-1. In the terminal session, enter the following commands to convert the installation into a single-node setup:
+1. **In the terminal session, enter the following commands to convert the installation into a single-node setup:**
 
-**sudo sed -e '/cluster.initial\_master\_nodes/ s/^#\*/#/' -i /etc/elasticsearch/elasticsearch.yml**
+        sudo sed -e '/cluster.initial\_master\_nodes/ s/^#\*/#/' -i /etc/elasticsearch/elasticsearch.yml
 
-**echo "discovery.type: single-node" | sudo tee -a /etc/elasticsearch/elasticsearch.yml**
+        echo "discovery.type: single-node" | sudo tee -a /etc/elasticsearch/elasticsearch.yml
 
 ![](RackMultipart20231221-1-5l8g4e_html_f8da48f272eeff2f.png)
 
-Figure 84 - DETECT: Configure Elasticsearch as single-node
+*Figure 84 - DETECT: Configure Elasticsearch as single-node*
 
-1. Keep this terminal session open for the next section.
+**Keep this terminal session open for the next section.**
 
 ### 9.1.2 - Install Kibana
 
