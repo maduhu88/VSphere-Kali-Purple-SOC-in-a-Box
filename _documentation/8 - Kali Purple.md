@@ -331,7 +331,7 @@ This section will cover the installation of Kali Purple Linux. These steps are t
 
 **In a terminal session, issue the following commands to synchronize time with the PROTECT node:**
 
-_sudo timedatectl set-ntp true_**_
+_sudo timedatectl set-ntp true_
 _sudo sed -e 's/#NTP=/NTP=\<PROTECT FQDN or IP\>/g' -i /etc/system/timesync.conf_
  
 ![](RackMultipart20231221-1-5l8g4e_html_be70ee8381d23abe.png)
