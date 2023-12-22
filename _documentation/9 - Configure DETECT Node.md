@@ -395,7 +395,10 @@ For this next section, you'll need to create a password to use for SSL certifica
 
 **\*NOTE THE ABSENCE OF THE PORT NUMBER**
 
-2. **Uncomment the line in this section beginning with *#username*. Change it to read *username: "elastic"***
+2. **Uncomment the line in this section beginning with *#username*. Change it to read:**
+
+*username: "elastic"*
+
 3. **Uncomment the line in this section beginning with *#password*. Change it to reflect your 'elastic' user password. Ensure your password is contained within quotation marks (e.g. *password: "s3cret\_p@$$w0rd"* )**
 4. **Immediately below the password line, add the following line (verify alignment):**
 
