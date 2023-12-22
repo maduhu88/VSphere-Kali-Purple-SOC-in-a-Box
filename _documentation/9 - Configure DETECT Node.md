@@ -633,7 +633,9 @@ For this next section, you'll need to create a password to use for SSL certifica
         }
 
 **NOTE 1: There is a space between "PUT" and "\_settings"**
+
 **NOTE 2: Line 3 is indented 2 spaces, and ends with the number 0.**
+
 **NOTE 3: The last line with the "}" has no empty space/line after it.**
 
 5. **Press the green triangle on the right side of the left pane to execute the command.**
