@@ -13,13 +13,13 @@ This section will cover the installation of Kali Purple Linux. These steps are t
 
 ![](RackMultipart20231221-1-5l8g4e_html_af74b6f7eb10bae6.png)
 
-Figure 56 – VMware vSphere: Power on Kali VM
+*Figure 56 – VMware vSphere: Power on Kali VM*
 
 2. **Click the VM's icon. On the next page, click the miniature console window to expand the console of the VM. Clicking within the window that appears will change focus to the VM. Choose "Graphical install."**
 
 ![](RackMultipart20231221-1-5l8g4e_html_e9e273daa665e5ac.png)
 
-Figure 57 – Kali Purple Installation Options
+*Figure 57 – Kali Purple Installation Options*
 
 3. **Accept the default settings for language, location, and keyboard setup.** 
 
@@ -27,7 +27,7 @@ Figure 57 – Kali Purple Installation Options
 ![](RackMultipart20231221-1-5l8g4e_html_3808bc35d1834199.png) 
 ![](RackMultipart20231221-1-5l8g4e_html_cee579d5d332d4ea.png)
 
-Figure 58 – Kali Purple: Initial Configuration
+*Figure 58 – Kali Purple: Initial Configuration*
 
 ### 8.1.2 - Network Settings
 
@@ -35,32 +35,32 @@ Figure 58 – Kali Purple: Initial Configuration
 
 ![](RackMultipart20231221-1-5l8g4e_html_7010de0649343d08.png)
 
-Figure 59 – Kali Purple: Manual network configuration
+*Figure 59 – Kali Purple: Manual network configuration*
 
 2. **Next, enter the desired IP address in CIDR notation (refer to [Table 6](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/5%20-%20SOC%20Data%20Collection.md#52-network-management)).** 
 
 ![](RackMultipart20231221-1-5l8g4e_html_daaf4272835beb11.png)
 
-Figure 60 – Kali Purple: IP addressing
+*Figure 60 – Kali Purple: IP addressing*
 
 3. **Use the IP address for the LAN interface of the PROTECT node as both the gateway and the name server (refer to [Table 6](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/5%20-%20SOC%20Data%20Collection.md#52-network-management)).** 
 
 ![](RackMultipart20231221-1-5l8g4e_html_21b03e2cc00a7e2f.png) 
 ![](RackMultipart20231221-1-5l8g4e_html_c77c8498a0011960.png)
 
-Figure 61 – Kali Purple: Gateway and DNS configuration
+*Figure 61 – Kali Purple: Gateway and DNS configuration*
 
 4. **Enter the desired name for the node (refer to [Table 6](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/5%20-%20SOC%20Data%20Collection.md#52-network-management)).** 
 
 ![](RackMultipart20231221-1-5l8g4e_html_8385e6aad9f70bc5.png)
 
-Figure 62 – Kali Purple: Hostname
+*Figure 62 – Kali Purple: Hostname*
 
 5. **Enter the desired domain name for the node. As in the Proxmox documentation, I will use "kali.purple" for this deployment.** 
 
 ![](RackMultipart20231221-1-5l8g4e_html_52bc7a7c4d9fd1f4.png)
 
-Figure 63 – Kali Purple: Domain name
+*Figure 63 – Kali Purple: Domain name*
 
 ### 8.1.3 - User Settings
 
@@ -68,19 +68,19 @@ Figure 63 – Kali Purple: Domain name
 
 ![](RackMultipart20231221-1-5l8g4e_html_81dc3897dd39a975.png)
 
-Figure 64 – Kali Purple: New user display name
+*Figure 64 – Kali Purple: New user display name*
 
 2. **Enter the desired username for the account created in the previous step.** 
 
 ![](RackMultipart20231221-1-5l8g4e_html_b21b21f1ffbf2e95.png)
 
-Figure 65 – Kali Purple: New user username
+*Figure 65 – Kali Purple: New user username*
 
 3. **Set and confirm a secure password for you new user account.** 
 
 ![](RackMultipart20231221-1-5l8g4e_html_8f018d15ef26d27b.png)
 
-Figure 66 – Kali Purple: New user password
+*Figure 66 – Kali Purple: New user password*
 
 ### 8.1.4 - Time Zone Settings
 
@@ -88,7 +88,7 @@ Figure 66 – Kali Purple: New user password
 
 ![](RackMultipart20231221-1-5l8g4e_html_7ce98b3ea346a94.png)
 
-Figure 67 – Kali Purple: Time zone
+*Figure 67 – Kali Purple: Time zone*
 
 ### Disk Settings
 
@@ -136,7 +136,7 @@ Figure 67 – Kali Purple: Time zone
 
     ![](RackMultipart20231221-1-5l8g4e_html_b4e3b233f088bd4e.png)
 
-    Figure 68 - Kali Purple: Disk: Manual partitioning
+    *Figure 68 - Kali Purple: Disk: Manual partitioning*
 
     2. **Double-click the hard disk.**
 
@@ -206,7 +206,7 @@ Figure 67 – Kali Purple: Time zone
 
     ![](RackMultipart20231221-1-5l8g4e_html_f74202c18afa5abf.png)
 
-    Figure 69 - Kali Purple: Disk Partition Layout
+    *Figure 69 - Kali Purple: Disk Partition Layout*
 
 ### 8.1.6 - Software Selection
 
@@ -225,7 +225,7 @@ Figure 67 – Kali Purple: Time zone
 
 ![](RackMultipart20231221-1-5l8g4e_html_fd82d7999892993.png)
 
-Figure 70 - Kali Purple: Software selection
+*Figure 70 - Kali Purple: Software selection*
 
 ### 8.1.7 - Finishing Installation
 
@@ -233,7 +233,7 @@ Figure 70 - Kali Purple: Software selection
 
 ![](RackMultipart20231221-1-5l8g4e_html_64160c72681ce71a.png)
 
-Figure 71 - Kali Purple: GRUB configuration
+*Figure 71 - Kali Purple: GRUB configuration*
 
 1. **Select "/dev/sda."** 
 
@@ -243,13 +243,13 @@ Figure 71 - Kali Purple: GRUB configuration
 
 ![](RackMultipart20231221-1-5l8g4e_html_a1a4b33bea777caf.png)
 
-Figure 72 - Kali Purple: ISO removal
+*Figure 72 - Kali Purple: ISO *removal*
 
 1. **Back on the VMs console, click continue to reboot the VM.** 
 
 ![](RackMultipart20231221-1-5l8g4e_html_88a3d9a544c64b15.png)
 
-Figure 73 - Kali Purple: Finished Installation
+*Figure 73 - Kali Purple: Finished Installation*
 </details>
 
 <details>
@@ -257,59 +257,59 @@ Figure 73 - Kali Purple: Finished Installation
 
 ### 8.2.1 - Installing xRDP
 
-1. **Log into your Kali Purple VM using the user credentials you created during setup. 
+1. **Log into your Kali Purple VM using the user credentials you created during setup.** 
 
 ![](RackMultipart20231221-1-5l8g4e_html_7ddca3ee0a12c1c3.png)
 
-Figure 74 - Kali Purple: Login Screen
+*Figure 74 - Kali Purple: Login Screen*
 
-2. **Launch a terminal session. 
+2. **Launch a terminal session.** 
 
 ![](RackMultipart20231221-1-5l8g4e_html_e9347639f7bfbaa4.png)
 
-Figure 75 - Kali Purple: Launch Terminal
+*Figure 75 - Kali Purple: Launch Terminal*
 
 3. **In your terminal session, enter "_sudo apt install xrdp -y_" to install xRDP. Enter your password when prompted.** 
 
 ![](RackMultipart20231221-1-5l8g4e_html_d9db1ddbfbd9ad94.png)
 
-Figure 76 - Kali Purple: Install xRDP
+*Figure 76 - Kali Purple: Install xRDP*
 
 4. **Keep this terminal session open for the next step.**
 
 ### 8.2.2 - Fixing xRDP login error
 
-The following commands are to be entered into a terminal session.
+**The following commands are to be entered into a terminal session.**
 
 1. **Enter "_sudo wget -P /etc/polkit-1/localauthority /50-local.d https://gitlab.com/kalilinux/documentation/kali-purple/-/raw/main/301\_kali-purple/overlays/etc/polkit-1/localauthority/50-local.d/45-allow-colord.pkla_" to fix a known login error with xRDP. Enter your password if prompted.** 
 
 ![](RackMultipart20231221-1-5l8g4e_html_ca215d5ffac59e43.png)
 
-Figure 77 - Kali Purple: Fix xRDP Login Error
+*Figure 77 - Kali Purple: Fix xRDP Login Error*
 
 2. **Keep this terminal session open for the next step.**
 
 ### 8.2.3 - Updating Kali Purple
 
-The following commands are to be entered into a terminal session.
+**The following commands are to be entered into a terminal session.**
 
 1. **Enter "_sudo update-grub_" to update the GRUB bootloader. Enter your password if prompted.**
 
 ![](RackMultipart20231221-1-5l8g4e_html_a1ec261e98d52386.png)
 
-Figure 78 - Kali Purple: Update GRUB bootloader
+*Figure 78 - Kali Purple: Update GRUB bootloader*
 
 1. **Enter "_sudo apt update_" to fetch the latest version of the package lists for the Kali Purple distribution.** 
 
 ![](RackMultipart20231221-1-5l8g4e_html_a7a4028cf682ae7b.png)
 
-Figure 79 - Kali Purple: APT update
+*Figure 79 - Kali Purple: APT update*
 
 1. **Enter "_sudo apt full-upgrade -y_" to install/update any packages that requires upgrading. This will take several minutes to complete.**
 
 ![](RackMultipart20231221-1-5l8g4e_html_b737e8cdef93ef54.png)
 
-Figure 80 - Kali Purple: Upgrading Kali Purple
+*Figure 80 - Kali Purple: Upgrading Kali Purple*
 
 1. **One of the updates you may encounter will ask about configuring a character set for the console-setup. Press "ENTER" to accept defaults.** 
 
@@ -319,13 +319,13 @@ Figure 80 - Kali Purple: Upgrading Kali Purple
 
 ### 8.2.4 - Enabling xRDP and SSH
 
-The following commands are to be entered into a terminal session.
+**The following commands are to be entered into a terminal session.**
 
 1. **Enter "_sudo systemctl enable xrdp ssh --now_" to set the xRDP and SSH services to auto-start. Enter your password if prompted.** 
 
 ![](RackMultipart20231221-1-5l8g4e_html_149a3f88ab877c82.png)
 
-Figure 81 - Kali Purple: Setting SSH/xRDP to auto-start
+*Figure 81 - Kali Purple: Setting SSH/xRDP to auto-start*
 
 ### 8.2.5 - Set up NTP synchronization
 
