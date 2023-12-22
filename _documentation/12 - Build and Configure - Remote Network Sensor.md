@@ -36,13 +36,9 @@
 8. **After a few minutes of installation, you will be prompted with a few questions (suggested answers in brackets):**
 
     **(a) Disable IPv6? [Yes]**
-
     **(b) Automatically login to the GUI session? [Yes]**
-
     **(c) Should the GUI session be locked due to inactivity [No]**
-
     **(d) Display the Standard Mandatory DoD Notice and Consent Banner? [No]**
-
     **(e) Allow SSH password authentication? [Yes]**
 
 ## 12.3 - Sensor Configuration
@@ -228,7 +224,7 @@ AUTOSTART_TCPDUMP
 1. **In a terminal session, issue the following command to reboot the sensor:**
 
         sudo reboot
-        
+
 2. **When the sensor has rebooted, it will re-launch into kiosk mode.**
 
 ### 12.3.5 - Verify Sensor Connectivity
