@@ -357,7 +357,7 @@ Next you will configure DMZ port forwarding rules. The Proxmox instructions do n
 2. On the configuration page, ensure the DMZ interface is selected. TCP/IP version is 4, with TCP being the protocol. For the "from:" source port, choose "other" and enter 9200. Select the DMZ interface address as the destination. For the "from:" destination port, use the same settings as the source. For the "Redirect target IP," select "Single host or Network" and enter the IP address that your DETECT node will use. For the "Redirect target port", use the same settings as the source/destination ports. Enter "Elastic traffic from external agents" for the description. Finally, for "Filter rule association," ensure "Add associated filter rule" is selected. This will create a companion firewall rule on the DMZ interface. 
 
 ![](_images/56._OPNsense_-_Firewall_NAT_-_Port_Forwarding.png)
-
+</details>
 
 ---
 <div align="center">
