@@ -94,18 +94,18 @@ Figure 67 – Kali Purple: Time zone
 
 **NOTE** : If you are not setting up SOC analyst workstations, skip to Step 2 of this section.
 
-      1. **SOC Analyst Workstations:**
-        1. For disk partitioning, select "Guided – use entire disk and set up encrypted LVM." ![](RackMultipart20231221-1-5l8g4e_html_8d2822f6c848cb68.png)
-        2. Ensure the virtual hard disk is selected. ![](RackMultipart20231221-1-5l8g4e_html_322caf0dd2300f4a.png)
-        3. Choose "All files in one partition." ![](RackMultipart20231221-1-5l8g4e_html_d6b935829cae66ce.png)
-        4. Choose "Yes" to confirm LVM configuration. ![](RackMultipart20231221-1-5l8g4e_html_3711528018c19ad7.png)
-        5. Enter and confirm a passphrase for your encrypted partition. Each time the workstation boots, it will ask for this passphrase to unlock the drive. ![](RackMultipart20231221-1-5l8g4e_html_f2db5eef79355881.png)
-        6. Enter "max" for the amount of the drive to be used for guided partitioning. ![](RackMultipart20231221-1-5l8g4e_html_571fe483e290dd16.png)
-        7. Select "Finish partitioning and write changes to disk." ![](RackMultipart20231221-1-5l8g4e_html_a9b0ae5af0b01257.png)
-        8. Choose "Yes" to confirm changes. ![](RackMultipart20231221-1-5l8g4e_html_93cccee438472aa7.png)
-        9. If desired, include the "GNOME" desktop environment as well as the role-specific tools. In this example, I am including the IDENTIFY toolset. ![](RackMultipart20231221-1-5l8g4e_html_6b42dbe6c20930e.png)
-      2. **SOC Nodes:**
-        1. For disk partitioning, select "Manual." ![](RackMultipart20231221-1-5l8g4e_html_b4e3b233f088bd4e.png)
+1. **SOC Analyst Workstations:**
+a. For disk partitioning, select "Guided – use entire disk and set up encrypted LVM." ![](RackMultipart20231221-1-5l8g4e_html_8d2822f6c848cb68.png)
+b. Ensure the virtual hard disk is selected. ![](RackMultipart20231221-1-5l8g4e_html_322caf0dd2300f4a.png)
+c. Choose "All files in one partition." ![](RackMultipart20231221-1-5l8g4e_html_d6b935829cae66ce.png)
+d. Choose "Yes" to confirm LVM configuration. ![](RackMultipart20231221-1-5l8g4e_html_3711528018c19ad7.png)
+e. Enter and confirm a passphrase for your encrypted partition. Each time the workstation boots, it will ask for this passphrase to unlock the drive. ![](RackMultipart20231221-1-5l8g4e_html_f2db5eef79355881.png)
+f. Enter "max" for the amount of the drive to be used for guided partitioning. ![](RackMultipart20231221-1-5l8g4e_html_571fe483e290dd16.png)
+g. Select "Finish partitioning and write changes to disk." ![](RackMultipart20231221-1-5l8g4e_html_a9b0ae5af0b01257.png)
+h. Choose "Yes" to confirm changes. ![](RackMultipart20231221-1-5l8g4e_html_93cccee438472aa7.png)
+i. If desired, include the "GNOME" desktop environment as well as the role-specific tools. In this example, I am including the IDENTIFY toolset. ![](RackMultipart20231221-1-5l8g4e_html_6b42dbe6c20930e.png)
+2. **SOC Nodes:**
+1. For disk partitioning, select "Manual." ![](RackMultipart20231221-1-5l8g4e_html_b4e3b233f088bd4e.png)
 
 Figure 68 - Kali Purple: Disk: Manual partitioning
 
