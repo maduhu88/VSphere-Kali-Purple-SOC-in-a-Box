@@ -121,9 +121,9 @@ For this next section, you'll need to create a password to use for SSL certifica
 
 *Figure 93 - DETECT: Generating new CA*
 
-**(a) Accept the default name for the output file (elastic-stack-ca.p12).**
+**(a)  Accept the default name for the output file (elastic-stack-ca.p12).**
 
-**(b) Enter your secure password.**
+**(b)  Enter your secure password.**
 
 2. **In the terminal session, issue the following command to generate the Kibana PKCS#12 certificate and private key:**
 
@@ -133,7 +133,7 @@ For this next section, you'll need to create a password to use for SSL certifica
 
 *Figure 94 - DETECT: Generating Kibana PKCS#12 certificate*
 
-**(a) Enter your secure password.**
+**(a)  Enter your secure password.**
 
 3. **In the terminal session, issue the following commands to write the client certificates (enter your secure password after each command):**
 
@@ -232,67 +232,66 @@ For this next section, you'll need to create a password to use for SSL certifica
 
 *Figure 102 - DETECT: Fleet server policy*
 
-1. **Once the policy has been generated, the page will provide a set of commands to paste into a terminal session for execution. Copy the command using the clipboard icon provided in the upper right corner of the command window.**
+4. **Once the policy has been generated, the page will provide a set of commands to paste into a terminal session for execution. Copy the command using the clipboard icon provided in the upper right corner of the command window.**
 
 ![](RackMultipart20231221-1-5l8g4e_html_9ed2c3d8074db195.png)
 
-2. **In a terminal session, paste the command and add " --force" on the end to auto-confirm installation of the Elastic Agent. Make sure there is a space between the port 8220 and the "--force" option. If you wish, you can change the IP address to your DETECT node's FQDN for the *fleet-server-es* option.**
+5. **In a terminal session, paste the command and add " --force" on the end to auto-confirm installation of the Elastic Agent. Make sure there is a space between the port 8220 and the "--force" option. If you wish, you can change the IP address to your DETECT node's FQDN for the *fleet-server-es* option.**
 
 ![](RackMultipart20231221-1-5l8g4e_html_d7cd1e51baf43d30.png)
 
 *Figure 103 - DETECT: Fleet server installation*
 
-1.
-2. **When complete, you'll see a confirmation message in the terminal session, and the fleet server installation page will have 3 green checkmarks indicating that the fleet server has connected. DO NOT select the "Continue enrolling Elastic Agent." Simply click the small "x" in the upper right corner to close the sub-window.**
+6. **When complete, you'll see a confirmation message in the terminal session, and the fleet server installation page will have 3 green checkmarks indicating that the fleet server has connected. DO NOT select the "Continue enrolling Elastic Agent." Simply click the small "x" in the upper right corner to close the sub-window.**
 
 ![](RackMultipart20231221-1-5l8g4e_html_55fb54d41564ea0c.png)
 ![](RackMultipart20231221-1-5l8g4e_html_2518495293b19d65.png)
 
-3. **Back on the Fleet page, click the "Agent policies" tab, and select your fleet server policy.**
+7. **Back on the Fleet page, click the "Agent policies" tab, and select your fleet server policy.**
 
 ![](RackMultipart20231221-1-5l8g4e_html_1e0981dc3a45969f.png)
 
-4. **On the next page, select "Add integration."**
+8. **On the next page, select "Add integration."**
 
 ![](RackMultipart20231221-1-5l8g4e_html_b24db3c26390218d.png)
 
-5. **On the Integrations page, select the "Elastic Stack" category on the left side, and then "Elastic Agent" that appears on the right.**
+9. **On the Integrations page, select the "Elastic Stack" category on the left side, and then "Elastic Agent" that appears on the right.**
 
 ![](RackMultipart20231221-1-5l8g4e_html_3e55b50b4c542ec.png)
 
-6. **On the Elastic Agent screen, select "Add Elastic Agent" in the upper right.**
+10. **On the Elastic Agent screen, select "Add Elastic Agent" in the upper right.**
 
 ![](RackMultipart20231221-1-5l8g4e_html_2410556b2ef9b835.png)
 
-7. **No changes are needed on this page. Just click the "Save and continue" button in the lower right.**
+11. **No changes are needed on this page. Just click the "Save and continue" button in the lower right.**
 
 ![](RackMultipart20231221-1-5l8g4e_html_42c3ce921eb8168d.png)
 
-1. **Next, click "Save and deploy changes."**
+12. **Next, click "Save and deploy changes."**
 
 ![](RackMultipart20231221-1-5l8g4e_html_86a0a960d2b5b8b.png)
 
-2. **Back on your fleet server policy page, you'll now see 3 integrations (elastic\_agent-1, fleet\_server-1, and system-1). Click the "Add integration" button again to add the pfSense module. This will allow the fleet server to ingest and properly parse the syslog data from the PROTECT node.**
+13. **Back on your fleet server policy page, you'll now see 3 integrations (elastic\_agent-1, fleet\_server-1, and system-1). Click the "Add integration" button again to add the pfSense module. This will allow the fleet server to ingest and properly parse the syslog data from the PROTECT node.**
 
 ![](RackMultipart20231221-1-5l8g4e_html_69609edb67ec3c57.png)
 
-3. **In the search bar of the Integrations page, search "pfsense." Click the pfSense integration that appears.**
+14. **In the search bar of the Integrations page, search "pfsense." Click the pfSense integration that appears.**
 
 ![](RackMultipart20231221-1-5l8g4e_html_d55b14a1f5e5e2d5.png)
 
-4. **On the "Add pfSense integration" page, enter "0.0.0.0" into the "Syslog Host" field, and ensure that the port is set to 9001. Click "Save and continue" in the lower right.**
+15. **On the "Add pfSense integration" page, enter "0.0.0.0" into the "Syslog Host" field, and ensure that the port is set to 9001. Click "Save and continue" in the lower right.**
 
 ![](RackMultipart20231221-1-5l8g4e_html_668d7ec3ab467409.png)
 
-5. **Click "Save and deploy changes."**
+16. **Click "Save and deploy changes."**
 
 ![](RackMultipart20231221-1-5l8g4e_html_aae61170800f1d9f.png)
 
-6. **Now your fleet server policy has the pfSense integration added. To verify that it is ingesting data from the PROTECT node, use the navigation on the left to go to Analytics -\> Discover.**
+17. **Now your fleet server policy has the pfSense integration added. To verify that it is ingesting data from the PROTECT node, use the navigation on the left to go to Analytics -\> Discover.**
 
 ![](RackMultipart20231221-1-5l8g4e_html_c25b1bf8b3e4a584.png)
 
-7. **In the search bar of the Discover page, enter the following search string:**
+18. **In the search bar of the Discover page, enter the following search string:**
 
         data_stream.dataset : "pfsense.log"
 
@@ -332,11 +331,11 @@ For this next section, you'll need to create a password to use for SSL certifica
 
 ![](RackMultipart20231221-1-5l8g4e_html_32018802e639c139.png)
 
-1. **Next, click "Add Elastic Agent later."**
+8. **Next, click "Add Elastic Agent later."**
 
 ![](RackMultipart20231221-1-5l8g4e_html_94f0748a62cfb3e7.png)
 
-2. **You will be returned to the "Linux Server Policy" page. There will be a window reminding you about adding Elastic Agent to your hosts. Click "Got it" to close. Your Linux policy should now show two integrations, the system (default) and the newly added Elastic Agent. We will install this agent manually on the IDENTIFY and RESPOND nodes later.**
+9. **You will be returned to the "Linux Server Policy" page. There will be a window reminding you about adding Elastic Agent to your hosts. Click "Got it" to close. Your Linux policy should now show two integrations, the system (default) and the newly added Elastic Agent. We will install this agent manually on the IDENTIFY and RESPOND nodes later.**
 
 ![](RackMultipart20231221-1-5l8g4e_html_95dab02a5a69c2dd.png)
 
@@ -368,19 +367,19 @@ For this next section, you'll need to create a password to use for SSL certifica
 
 *Figure 107 - DETECT: Installing Metricbeat*
 
-1. **In a terminal session, issue the following command to edit the file /etc/metricbeat/metricbeat.yml:**
+2. **In a terminal session, issue the following command to edit the file /etc/metricbeat/metricbeat.yml:**
 
         sudo nano /etc/metricbeat/metricbeat.yml
 
-1. **Find the section titled "Kibana."**
+**(a)  Find the section titled "Kibana."**
 
-1. **Uncomment the line *#host: "localhost:5601"*. Change it to read:**
+**(i)    Uncomment the line *#host: "localhost:5601"*. Change it to read:**
 
         host: "https://kali-purple.kali.purple"
 
 **\*NOTE THE ABSENCE OF THE PORT NUMBER**
 
-2. **Immediately below this line, add the following lines (all aligned with the previous line):**
+**(ii)   Immediately below this line, add the following lines (all aligned with the previous line):**
 
         setup.kibana.ssl.enabled: true
         ssl.certificate_authorities: ["/etc/kibana/kibana-server_ca.crt"]
