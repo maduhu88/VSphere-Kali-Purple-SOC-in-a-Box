@@ -138,73 +138,73 @@ Figure 67 – Kali Purple: Time zone
 
 Figure 68 - Kali Purple: Disk: Manual partitioning
 
-    2. Double-click the hard disk.
+2. Double-click the hard disk.
 
-    ![](RackMultipart20231221-1-5l8g4e_html_de87d825ecf8b2c1.png)
+![](RackMultipart20231221-1-5l8g4e_html_de87d825ecf8b2c1.png)
 
-    3. Select "Yes" to create a new empty partition table on the disk. 
+3. Select "Yes" to create a new empty partition table on the disk. 
 
-    ![](RackMultipart20231221-1-5l8g4e_html_dd396a5dc33f1dd1.png)
+![](RackMultipart20231221-1-5l8g4e_html_dd396a5dc33f1dd1.png)
 
-    4. Double-click the entry containing "FREE SPACE." 
+4. Double-click the entry containing "FREE SPACE." 
 
-    ![](RackMultipart20231221-1-5l8g4e_html_ad861456a595a82e.png)
+![](RackMultipart20231221-1-5l8g4e_html_ad861456a595a82e.png)
 
-    5. Choose "Create a new partition." This will be the swap partition. 
+5. Choose "Create a new partition." This will be the swap partition. 
 
-    ![](RackMultipart20231221-1-5l8g4e_html_6892ad1aad19c467.png)
+![](RackMultipart20231221-1-5l8g4e_html_6892ad1aad19c467.png)
 
-    6. Enter 24 GB for the size. 
+6. Enter 24 GB for the size. 
 
-    ![](RackMultipart20231221-1-5l8g4e_html_75466c3b1d246b34.png)
+![](RackMultipart20231221-1-5l8g4e_html_75466c3b1d246b34.png)
 
-    7. Choose "Logical" for the partition type. 
+7. Choose "Logical" for the partition type. 
 
-    ![](RackMultipart20231221-1-5l8g4e_html_e1efc572e58306e0.png)
+![](RackMultipart20231221-1-5l8g4e_html_e1efc572e58306e0.png)
 
-    8. Choose "End" to have this partition created on the tail end of the available space. 
+8. Choose "End" to have this partition created on the tail end of the available space. 
 
-    ![](RackMultipart20231221-1-5l8g4e_html_30b9705e471ee53.png)
+![](RackMultipart20231221-1-5l8g4e_html_30b9705e471ee53.png)
 
-    9. Double-click the "Use as:" entry to change the purpose of the partition. 
+9. Double-click the "Use as:" entry to change the purpose of the partition. 
 
-    ![](RackMultipart20231221-1-5l8g4e_html_389b43eb7acb1909.png)
+![](RackMultipart20231221-1-5l8g4e_html_389b43eb7acb1909.png)
 
-    10. Select "swap area." 
+10. Select "swap area." 
 
-    ![](RackMultipart20231221-1-5l8g4e_html_a0644958f2522208.png)
+![](RackMultipart20231221-1-5l8g4e_html_a0644958f2522208.png)
 
-    11. Select "Done setting up the partition." 
+11. Select "Done setting up the partition." 
 
-    ![](RackMultipart20231221-1-5l8g4e_html_a74e7cba353b3434.png)
+![](RackMultipart20231221-1-5l8g4e_html_a74e7cba353b3434.png)
 
-    12. Next, double-click on the entry containing "FREE SPACE." 
+12. Next, double-click on the entry containing "FREE SPACE." 
 
-    ![](RackMultipart20231221-1-5l8g4e_html_74c1cedb9ba74add.png)
+![](RackMultipart20231221-1-5l8g4e_html_74c1cedb9ba74add.png)
 
-    13. Choose "Create a new partition." 
+13. Choose "Create a new partition." 
 
-    ![](RackMultipart20231221-1-5l8g4e_html_c527ddb75940958a.png)
+![](RackMultipart20231221-1-5l8g4e_html_c527ddb75940958a.png)
 
-    14. Enter "max" for the size. 
+14. Enter "max" for the size. 
 
-    ![](RackMultipart20231221-1-5l8g4e_html_16b797db91e425f7.png)
+![](RackMultipart20231221-1-5l8g4e_html_16b797db91e425f7.png)
 
-    15. Choose "Primary" for the partition type. 
+15. Choose "Primary" for the partition type. 
 
-    ![](RackMultipart20231221-1-5l8g4e_html_4321f131cace278f.png)
+![](RackMultipart20231221-1-5l8g4e_html_4321f131cace278f.png)
 
-    16. Select "Done setting up the partition." 
+16. Select "Done setting up the partition." 
 
-    ![](RackMultipart20231221-1-5l8g4e_html_e2a09e8e1411db7.png)
+![](RackMultipart20231221-1-5l8g4e_html_e2a09e8e1411db7.png)
 
-    17. Select "Finish partitioning and write changes to disk." 
+17. Select "Finish partitioning and write changes to disk." 
 
-    ![](RackMultipart20231221-1-5l8g4e_html_fb146b000b69d8a9.png)
+![](RackMultipart20231221-1-5l8g4e_html_fb146b000b69d8a9.png)
 
-    18. Select "Yes" to confirm your selection. 
+18. Select "Yes" to confirm your selection. 
 
-    ![](RackMultipart20231221-1-5l8g4e_html_f74202c18afa5abf.png)
+![](RackMultipart20231221-1-5l8g4e_html_f74202c18afa5abf.png)
 
 
 Figure 69 - Kali Purple: Disk Partition Layout
