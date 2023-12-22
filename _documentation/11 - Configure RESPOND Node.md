@@ -24,6 +24,7 @@ To install the Elastic Agent on this host, follow the instructions in [Section 1
 ### 11.2.2 - Portainer
 
 To install the Portainer on this host, follow the instructions in section 10.2.2 (Portainer). Make sure to replace any references for your IDENTIFY node with your RESPOND node (name/IP address).
+</details>
 
 <details>
 <summary><h2>11.3 - INL Malcolm</h2></summary>
@@ -52,7 +53,7 @@ To install the Portainer on this host, follow the instructions in section 10.2.2
     1. "Add a non-root user to the 'docker' group?" **[Y]**
 
     2. "User:" **[your admin username]**
-    
+
     3. The next 10 questions will be about modifying specific parameters for Malcolm (all beginning with *"fs."*, *"vm."*, and *"net.core."*). Answer **[Y]** to all 10 questions.
     4. "Malcolm processes will run as UID 1000 and GID 1000. Is this OK?" **[Y]**
     5. "Enter the node name to associate with network traffic metadata:" **[your RESPOND node name] (e.g. kali-eminence)**
