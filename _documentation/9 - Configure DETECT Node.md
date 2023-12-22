@@ -125,7 +125,7 @@ For this next section, you'll need to create a password to use for SSL certifica
 
 **(b) Enter your secure password.**
 
-3. **In the terminal session, issue the following command to generate the Kibana PKCS#12 certificate and private key:**
+2. **In the terminal session, issue the following command to generate the Kibana PKCS#12 certificate and private key:**
 
         sudo /usr/share/elasticsearch/bin/elasticsearch-certutil cert --ca elastic-stack-ca.p12 --dns kali-purple.kali.purple,elastic.kali.purple,kali-purple --out kibana-server.p12
 
@@ -133,9 +133,9 @@ For this next section, you'll need to create a password to use for SSL certifica
 
 *Figure 94 - DETECT: Generating Kibana PKCS#12 certificate*
 
-1. **Enter your secure password.**
+**(a) Enter your secure password.**
 
-1. **In the terminal session, issue the following commands to write the client certificates (enter your secure password after each command):**
+3. **In the terminal session, issue the following commands to write the client certificates (enter your secure password after each command):**
 
         sudo openssl pkcs12 -in /usr/share/elasticsearch/elastic-stack-ca.p12 -clcerts -nokeys -out /etc/kibana/kibana-server_ca.crt
         sudo openssl pkcs12 -in /usr/share/elasticsearch/kibana-server.p12 -out /etc/kibana/kibana-server.crt -clcerts -nokeys
@@ -145,7 +145,7 @@ For this next section, you'll need to create a password to use for SSL certifica
 
 *Figure 95 - DETECT: Writing client certificates*
 
-1. **In the terminal session, issue the following commands to change ownership of the new client SSL certificates to the root user, as well as modify the permissions:**
+4. **In the terminal session, issue the following commands to change ownership of the new client SSL certificates to the root user, as well as modify the permissions:**
 
         sudo chown root:kibana /etc/kibana/kibana-server_ca.crt
         sudo chown root:kibana /etc/kibana/kibana-server.key
@@ -158,7 +158,7 @@ For this next section, you'll need to create a password to use for SSL certifica
 
 *Figure 96 - DETECT: Changing owner/permissions for client certs*
 
-1. **In the terminal session, issue the following commands to modify the file /etc/kibana/kibana.yml:**
+5. **In the terminal session, issue the following commands to modify the file /etc/kibana/kibana.yml:**
 
         echo "server.ssl.enabled: true" | sudo tee -a /etc/kibana/kibana.yml
         echo "server.ssl.certificate: /etc/kibana/kibana-server.crt" | sudo tee -a /etc/kibana/kibana.yml
@@ -169,11 +169,11 @@ For this next section, you'll need to create a password to use for SSL certifica
 
 *Figure 97 - DETECT: Modifying /etc/kibana/kibana.yml*
 
-1. **In the terminal session, issue the following command to comment out the previous encryption keys entered into /etc/kibana/kibana.yml:**
+6. **In the terminal session, issue the following command to comment out the previous encryption keys entered into /etc/kibana/kibana.yml:**
 
         sudo sed -e '/encryptionKey/ s/^#\*/#/' -i /etc/kibana/kibana.yml
 
-2. **In the terminal session, issue the following command to generate Kibana encryption keys and enter them into the /etc/kibana/kibana.yml file:**
+7. **In the terminal session, issue the following command to generate Kibana encryption keys and enter them into the /etc/kibana/kibana.yml file:**
 
         sudo /usr/share/kibana/bin/kibana-encryption-keys generate -q --force| sudo tee -a /etc/kibana/kibana.yml
 
@@ -181,7 +181,7 @@ For this next section, you'll need to create a password to use for SSL certifica
 
 *Figure 98 - DETECT: Generating Kibana SSL encryption keys*
 
-1. **In the terminal session, issue the following command to restart the Kibana service:**
+8. **In the terminal session, issue the following command to restart the Kibana service:**
 
         sudo systemctl restart kibana
 
@@ -189,25 +189,25 @@ For this next section, you'll need to create a password to use for SSL certifica
 
 *Figure 99 - DETECT: Restart Kibana*
 
-1. **In a few seconds, use a browser to navigate to https://kali-purple.kali.purple:5601. You'll be greeted by a page warning of an untrusted site (due to a self-signed certificate). Accept the risk to continue, and you will be redirected to the Kibana logon page (HTTPS).**
+9. **In a few seconds, use a browser to navigate to https://kali-purple.kali.purple:5601. You'll be greeted by a page warning of an untrusted site (due to a self-signed certificate). Accept the risk to continue, and you will be redirected to the Kibana logon page (HTTPS).**
 
 ![](RackMultipart20231221-1-5l8g4e_html_372efc74bb5fbc4f.png)
 
-2. **Log in with the username 'elastic' and the password you recorded from [Section 9.1.1](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/9%20-%20Configure%20DETECT%20Node.md#911-install-elasticsearch) step 3.**
+10. **Log in with the username 'elastic' and the password you recorded from [Section 9.1.1](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/9%20-%20Configure%20DETECT%20Node.md#911-install-elasticsearch) step 3.**
 
 ![](RackMultipart20231221-1-5l8g4e_html_b8d893f00ef21333.png)
 
 *Figure 100 - DETECT: Kibana Login*
 
-1. **You will see the "Welcome to Elastic" page. Click "Explore on my own."**
+11. **You will see the "Welcome to Elastic" page. Click "Explore on my own."**
 
 ![](RackMultipart20231221-1-5l8g4e_html_9388a19e946ab4f5.png)
 
-2. **On the next page, in the upper right corner, click the circled "E." This will reveal a drop-down menu. Click "Edit Profile."**
+12. **On the next page, in the upper right corner, click the circled "E." This will reveal a drop-down menu. Click "Edit Profile."**
 
 ![](RackMultipart20231221-1-5l8g4e_html_2a3d576789c6c2a4.png)
 
-3. **On the "Profile" page, set a secure password for the 'elastic' superuser using the "Change password" button.**
+13. **On the "Profile" page, set a secure password for the 'elastic' superuser using the "Change password" button.**
 
 ![](RackMultipart20231221-1-5l8g4e_html_14182ca4ca0a1cb8.png)
 ![](RackMultipart20231221-1-5l8g4e_html_bd3ec92e61870a5.png)
