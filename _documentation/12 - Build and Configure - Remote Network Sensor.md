@@ -24,7 +24,7 @@
 ![](RackMultipart20231221-1-5l8g4e_html_178260885e64f204.png)
 **8. After a few minutes of installation, you will be prompted with a few questions (suggested answers in brackets):**
 
-    **1. Disable IPv6? [Yes]**
+    **(a) Disable IPv6? [Yes]**
 2. **Automatically login to the GUI session? [Yes]
 3. **Should the GUI session be locked due to inactivity [No]
 4. **Display the Standard Mandatory DoD Notice and Consent Banner? [No]
