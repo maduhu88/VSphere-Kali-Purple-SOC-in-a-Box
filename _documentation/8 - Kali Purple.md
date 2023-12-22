@@ -92,7 +92,7 @@ This section will cover the installation of Kali Purple Linux. These steps are t
 
 ### Disk Settings
 
-**NOTE** : If you are not setting up SOC analyst workstations, skip to Step 2 of this section.
+**NOTE** : If you are not setting up SOC analyst workstations, skip to Step 2 (SOC Nodes) of this section.
 
 1. **SOC Analyst Workstations:**
     1. **For disk partitioning, select "Guided – use entire disk and set up encrypted LVM."** 
