@@ -11,23 +11,25 @@
 
 ## 12.2 - Hedgehog Linux Installation
 
-1. In vSphere, verify that the Hedgehog Linux ISO is mounted to the desired virtual machine's CD/DVD drive, and configured to connect at Power-on. Right click on the VM, select Power -\> Power On. You'll see a green arrow on the VM icon to show that it's running.
-2. Take note of the MAC address of the interface to be used for network monitoring. Use the information from Section 7.1 (OPNsense Installation), step 2 for guidance on how to do this.
-3. Click the VM's icon. On the next page, click the miniature console window to expand the console of the VM. Clicking within the window that appears will change focus to the VM.
-4. At the initial Hedgehog Linux splash screen, select the "Install Hedgehog Linux" option.
+1. **In vSphere, verify that the Hedgehog Linux ISO is mounted to the desired virtual machine's CD/DVD drive, and configured to connect at Power-on. Right click on the VM, select Power -\> Power On. You'll see a green arrow on the VM icon to show that it's running.**
+2. **Take note of the MAC address of the interface to be used for network monitoring. Use the information from Section 7.1 (OPNsense Installation), step 2 for guidance on how to do this.**
+3. **Click the VM's icon. On the next page, click the miniature console window to expand the console of the VM. Clicking within the window that appears will change focus to the VM.**
+4. **At the initial Hedgehog Linux splash screen, select the "Install Hedgehog Linux" option.**
 ![](RackMultipart20231221-1-5l8g4e_html_75494683ffeda150.png)
-5. On the next screen, choose "Virtual Machine Single Partition Quick Install."
+5. **On the next screen, choose "Virtual Machine Single Partition Quick Install."**
 ![](RackMultipart20231221-1-5l8g4e_html_b61b40b6cfd1133b.png)
-6. The Hedgehog Linux setup is designed to ask very few questions to the user. The first input screen will be for the root password. Enter a secure password, and then confirm it on the next screen.
+6. **The Hedgehog Linux setup is designed to ask very few questions to the user. The first input screen will be for the root password. Enter a secure password, and then confirm it on the next screen.**
 ![](RackMultipart20231221-1-5l8g4e_html_45130c31dae57f15.png)
-7. The following input screen will ask for a new user password. This will be the password for the service account that will run the sensor services. Enter a secure password, and then confirm it on the next screen.
+7. **The following input screen will ask for a new user password. This will be the password for the service account that will run the sensor services. Enter a secure password, and then confirm it on the next screen.**
 ![](RackMultipart20231221-1-5l8g4e_html_178260885e64f204.png)
-8. After a few minutes of installation, you will be prompted with a few questions (suggested answers in brackets):
-1. Disable IPv6? [Yes]
-2. Automatically login to the GUI session? [Yes]
-3. Should the GUI session be locked due to inactivity [No]
-4. Display the Standard Mandatory DoD Notice and Consent Banner? [No]
-9. Allow SSH password authentication? [Yes]
+**8. After a few minutes of installation, you will be prompted with a few questions (suggested answers in brackets):**
+
+    **1. Disable IPv6? [Yes]**
+2. **Automatically login to the GUI session? [Yes]
+3. **Should the GUI session be locked due to inactivity [No]
+4. **Display the Standard Mandatory DoD Notice and Consent Banner? [No]
+9. **Allow SSH password authentication? [Yes]
+
 ## 12.3 - Sensor Configuration
 
 ### 12.3.1 - CONFIGURE: Hostname and Interface
@@ -79,7 +81,7 @@ Enter the root password. You'll be dropped into the /opt/sensor/sensor\_ctl/ dir
         cd filebeat
         scp <RESPOND node admin username>@<RESPOND node FQDN or IP>:/home/<admin username>/Malcolm/filebeat/certs/* .
 
- NOTE: There is a space between the "/*" and the ".".
+ NOTE: There is a space between the "/*" and the "."
 
  This should copy 3 files to the sensor:
  ca.crt
