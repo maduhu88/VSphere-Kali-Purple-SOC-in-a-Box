@@ -269,7 +269,9 @@ This section will cover the installation of Kali Purple Linux. These steps are t
 
 *Figure 75 - Kali Purple: Launch Terminal*
 
-3. **In your terminal session, enter "_sudo apt install xrdp -y_" to install xRDP. Enter your password when prompted.** 
+3. **In your terminal session, enter the following command to install xRDP (enter your password when prompted):** 
+
+    sudo apt install xrdp -y
 
 ![](RackMultipart20231221-1-5l8g4e_html_d9db1ddbfbd9ad94.png)
 
