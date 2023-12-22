@@ -92,7 +92,7 @@ This section will cover the installation of Kali Purple Linux. These steps are t
 
 ### 8.1.5 - Disk Settings
 
-**NOTE** : If you are not setting up SOC analyst workstations, skip to Step 2 (SOC Nodes) of this section.
+**NOTE** : If you are not setting up SOC analyst workstations, skip to [Section 8.1.5.2 - SOC Nodes](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/8%20-%20Kali%20Purple.md#8152-soc-nodes) of this section.
 
 #### 8.1.5.1 - SOC Analyst Workstations:
 
