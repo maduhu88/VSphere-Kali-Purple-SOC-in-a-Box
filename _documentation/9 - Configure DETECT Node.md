@@ -2,7 +2,8 @@
 
 In this section, we will build the heart of this SOC solution, the Elastic SIEM node. In line with the Proxmox instructions, we will name this node "kali-purple." Since all other nodes will be sending data to the Elasticsearch instance that will reside on this system, I chose to build it second, after the firewall. If you recall, the firewall (byzantium) is already configured to forward syslog data to this node. Once we get this node configured, it should automatically start ingesting the syslog data from the firewall.
 
-## 9.1 - Elastic Stack SIEM Installation and Configuration
+<details>
+<summary><h2>9.1 - Elastic Stack SIEM Installation and Configuration</h2></summary>
 
 ### 9.1.1 - Install Elasticsearch
 
@@ -213,8 +214,10 @@ For this next section, you'll need to create a password to use for SSL certifica
 ![](_images/101._User_Settings.PNG)
 
 *Figure 101 - DETECT: Change Elastic user password*
+</details>
 
-## 9.2 - Fleet Server
+<details>
+<summary><h2>9.2 - Fleet Server</h2></summary>
 
 ### 9.2.1 - Installation
 
@@ -341,8 +344,10 @@ For this next section, you'll need to create a password to use for SSL certifica
 ![](_images/105._Linux_Server_policy.PNG)
 
 *Figure 105 - DETECT: Linux server policy*
+</details>
 
-## 9.3 - Beats
+<details>
+<summary><h2>9.3 - Beats</h2></summary>
 
 ### 9.3.1 - Collect Elasticsearch Certificate Fingerprint
 
@@ -649,6 +654,7 @@ For this next section, you'll need to create a password to use for SSL certifica
         }
  
  ![](_images/117d._Change_Replica_Shard_Value.PNG)
+ </details>
 
 ---
 <div align="center">
