@@ -90,123 +90,124 @@ This section will cover the installation of Kali Purple Linux. These steps are t
 
 *Figure 67 – Kali Purple: Time zone*
 
-### Disk Settings
+### 8.1.5 - Disk Settings
 
 **NOTE** : If you are not setting up SOC analyst workstations, skip to Step 2 (SOC Nodes) of this section.
 
-1. **SOC Analyst Workstations:**
-    1. **For disk partitioning, select "Guided – use entire disk and set up encrypted LVM."** 
+#### 8.1.5.1 - SOC Analyst Workstations:
 
-    ![](_images/1a._Analyst_Disk_Partition.PNG)
+1. **For disk partitioning, select "Guided – use entire disk and set up encrypted LVM."** 
 
-    2. **Ensure the virtual hard disk is selected.** 
+![](_images/1a._Analyst_Disk_Partition.PNG)
 
-    ![](_images/1b._Analyst_Disk_Partition.PNG)
+2. **Ensure the virtual hard disk is selected.** 
 
-    3. **Choose "All files in one partition."** 
+![](_images/1b._Analyst_Disk_Partition.PNG)
 
-    ![](_images/1c._Analyst_Disk_Partition.PNG)
+3. **Choose "All files in one partition."** 
 
-    4. **Choose "Yes" to confirm LVM configuration.** 
+![](_images/1c._Analyst_Disk_Partition.PNG)
 
-    ![](_images/1d._Analyst_Disk_Partition.PNG)
+4. **Choose "Yes" to confirm LVM configuration.** 
 
-    5. **Enter and confirm a passphrase for your encrypted partition. Each time the workstation boots, it will ask for this passphrase to unlock the drive.** 
+![](_images/1d._Analyst_Disk_Partition.PNG)
 
-    ![](_images/1e._Analyst_Disk_Partition.PNG)
+5. **Enter and confirm a passphrase for your encrypted partition. Each time the workstation boots, it will ask for this passphrase to unlock the drive.** 
 
-    6. **Enter "max" for the amount of the drive to be used for guided partitioning.** 
+![](_images/1e._Analyst_Disk_Partition.PNG)
 
-    ![](_images/1f._Analyst_Disk_Partition.PNG)
+6. **Enter "max" for the amount of the drive to be used for guided partitioning.** 
 
-    7. **Select "Finish partitioning and write changes to disk."** 
+![](_images/1f._Analyst_Disk_Partition.PNG)
 
-    ![](_images/1g._Analyst_Disk_Partition.PNG)
+7. **Select "Finish partitioning and write changes to disk."** 
 
-    8. **Choose "Yes" to confirm changes.**
+![](_images/1g._Analyst_Disk_Partition.PNG)
 
-    ![](_images/1h._Analyst_Disk_Partition.PNG)
+8. **Choose "Yes" to confirm changes.**
 
-    9. **If desired, include the "GNOME" desktop environment as well as the role-specific tools. In this example, I am including the IDENTIFY toolset.**
+![](_images/1h._Analyst_Disk_Partition.PNG)
 
-    ![](_images/2._Analyst_Software_Selection.PNG)
+9. **If desired, include the "GNOME" desktop environment as well as the role-specific tools. In this example, I am including the IDENTIFY toolset.**
+
+![](_images/2._Analyst_Software_Selection.PNG)
     
-2. **SOC Nodes:**
-    1. **For disk partitioning, select "Manual."**
+#### 8.1.5.2 - SOC Nodes:
+1. **For disk partitioning, select "Manual."**
 
-    ![](_images/SOC_Nodes_-_Disk_1_-_Kali_Setup_-_Disk_Setup.PNG)
+![](_images/SOC_Nodes_-_Disk_1_-_Kali_Setup_-_Disk_Setup.PNG)
 
-    *Figure 68 - Kali Purple: Disk: Manual partitioning*
+*Figure 68 - Kali Purple: Disk: Manual partitioning*
 
-    2. **Double-click the hard disk.**
+2. **Double-click the hard disk.**
 
-    ![](_images/SOC_Nodes_-_Disk_2_-_Kali_Setup_-_Disk_Setup.PNG)
+![](_images/SOC_Nodes_-_Disk_2_-_Kali_Setup_-_Disk_Setup.PNG)
 
-    3. **Select "Yes" to create a new empty partition table on the disk.** 
+3. **Select "Yes" to create a new empty partition table on the disk.** 
 
-    ![](_images/SOC_Nodes_-_Disk_3_-_Kali_Setup_-_Disk_Setup.PNG)
+![](_images/SOC_Nodes_-_Disk_3_-_Kali_Setup_-_Disk_Setup.PNG)
 
-    4. **Double-click the entry containing "FREE SPACE."** 
+4. **Double-click the entry containing "FREE SPACE."** 
 
-    ![](_images/SOC_Nodes_-_Disk_4_-_Kali_Setup_-_Disk_Setup.PNG)
+![](_images/SOC_Nodes_-_Disk_4_-_Kali_Setup_-_Disk_Setup.PNG)
 
-    5. **Choose "Create a new partition." This will be the swap partition.** 
+5. **Choose "Create a new partition." This will be the swap partition.** 
 
-    ![](_images/SOC_Nodes_-_Disk_5_-_Kali_Setup_-_Disk_Setup.PNG)
+![](_images/SOC_Nodes_-_Disk_5_-_Kali_Setup_-_Disk_Setup.PNG)
 
-    6. **Enter 24 GB for the size.** 
+6. **Enter 24 GB for the size.** 
 
-    ![](_images/SOC_Nodes_-_Disk_6_-_Kali_Setup_-_Disk_Setup.PNG)
+![](_images/SOC_Nodes_-_Disk_6_-_Kali_Setup_-_Disk_Setup.PNG)
 
-    7. **Choose "Logical" for the partition type.** 
+7. **Choose "Logical" for the partition type.** 
 
-    ![](_images/SOC_Nodes_-_Disk_7_-_Kali_Setup_-_Disk_Setup.PNG)
+![](_images/SOC_Nodes_-_Disk_7_-_Kali_Setup_-_Disk_Setup.PNG)
 
-    8. **Choose "End" to have this partition created on the tail end of the available space.**
+8. **Choose "End" to have this partition created on the tail end of the available space.**
 
-    ![](_images/SOC_Nodes_-_Disk_8_-_Kali_Setup_-_Disk_Setup.PNG)
+![](_images/SOC_Nodes_-_Disk_8_-_Kali_Setup_-_Disk_Setup.PNG)
 
-    9. **Double-click the "Use as:" entry to change the purpose of the partition.**
+9. **Double-click the "Use as:" entry to change the purpose of the partition.**
 
-    ![](_images/SOC_Nodes_-_Disk_9_-_Kali_Setup_-_Disk_Setup.PNG)
+![](_images/SOC_Nodes_-_Disk_9_-_Kali_Setup_-_Disk_Setup.PNG)
 
-    10. **Select "swap area."**
+10. **Select "swap area."**
 
-    ![](_images/SOC_Nodes_-_Disk_10_-_Kali_Setup_-_Disk_Setup.PNG)
+![](_images/SOC_Nodes_-_Disk_10_-_Kali_Setup_-_Disk_Setup.PNG)
 
-    11. **Select "Done setting up the partition."**
+11. **Select "Done setting up the partition."**
 
-    ![](_images/SOC_Nodes_-_Disk_11_-_Kali_Setup_-_Disk_Setup.PNG)
+![](_images/SOC_Nodes_-_Disk_11_-_Kali_Setup_-_Disk_Setup.PNG)
 
-    12. **Next, double-click on the entry containing "FREE SPACE."** 
+12. **Next, double-click on the entry containing "FREE SPACE."** 
 
-    ![](_images/SOC_Nodes_-_Disk_12_-_Kali_Setup_-_Disk_Setup.PNG)
+![](_images/SOC_Nodes_-_Disk_12_-_Kali_Setup_-_Disk_Setup.PNG)
 
-    13. **Choose "Create a new partition."** 
+13. **Choose "Create a new partition."** 
 
-    ![](_images/SOC_Nodes_-_Disk_13_-_Kali_Setup_-_Disk_Setup.PNG)
+![](_images/SOC_Nodes_-_Disk_13_-_Kali_Setup_-_Disk_Setup.PNG)
 
-    14. **Enter "max" for the size.** 
+14. **Enter "max" for the size.** 
 
-    ![](_images/SOC_Nodes_-_Disk_14_-_Kali_Setup_-_Disk_Setup.PNG)
+![](_images/SOC_Nodes_-_Disk_14_-_Kali_Setup_-_Disk_Setup.PNG)
 
-    15. **Choose "Primary" for the partition type.** 
+15. **Choose "Primary" for the partition type.** 
 
-    ![](_images/SOC_Nodes_-_Disk_15_-_Kali_Setup_-_Disk_Setup.PNG)
+![](_images/SOC_Nodes_-_Disk_15_-_Kali_Setup_-_Disk_Setup.PNG)
 
-    16. **Select "Done setting up the partition."** 
+16. **Select "Done setting up the partition."** 
 
-    ![](_images/SOC_Nodes_-_Disk_16_-_Kali_Setup_-_Disk_Setup.PNG)
+![](_images/SOC_Nodes_-_Disk_16_-_Kali_Setup_-_Disk_Setup.PNG)
 
-    17. **Select "Finish partitioning and write changes to disk."** 
+17. **Select "Finish partitioning and write changes to disk."** 
 
-    ![](_images/SOC_Nodes_-_Disk_17_-_Kali_Setup_-_Disk_Setup.PNG)
+![](_images/SOC_Nodes_-_Disk_17_-_Kali_Setup_-_Disk_Setup.PNG)
 
-    18. **Select "Yes" to confirm your selection.**
+18. **Select "Yes" to confirm your selection.**
 
-    ![](_images/SOC_Nodes_-_Disk_18_-_Kali_Setup_-_Disk_Setup.PNG)
+![](_images/SOC_Nodes_-_Disk_18_-_Kali_Setup_-_Disk_Setup.PNG)
 
-    *Figure 69 - Kali Purple: Disk Partition Layout*
+*Figure 69 - Kali Purple: Disk Partition Layout*
 
 ### 8.1.6 - Software Selection
 
