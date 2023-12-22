@@ -214,8 +214,9 @@
 
     **(a) Select ALL services except:**
 
-    AUTOSTART_NETSNIFF
-    AUTOSTART_TCPDUMP
+    [ ] AUTOSTART_NETSNIFF
+
+    [ ] AUTOSTART_TCPDUMP
 
     ![](RackMultipart20231221-1-5l8g4e_html_4adee32d79aaabab.png)
 
