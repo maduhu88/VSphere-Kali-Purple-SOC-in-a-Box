@@ -77,9 +77,9 @@ Enter the root password. You'll be dropped into the /opt/sensor/sensor\_ctl/ dir
 3. In the terminal session, issue the following commands to copy filebeat certificates from your RESPOND node to the sensor:
 
         cd filebeat
-        scp < RESPOND node admin username>@<RESPOND node FQDN or IP>:/home/<admin username>/Malcolm/filebeat/certs/* .
+        scp <RESPOND node admin username>@<RESPOND node FQDN or IP>:/home/<admin username>/Malcolm/filebeat/certs/* .
 
- NOTE: There is a space between the " /\***" and the " **.".
+ NOTE: There is a space between the "/*" and the ".".
 
  This should copy 3 files to the sensor:
  ca.crt
