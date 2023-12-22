@@ -94,7 +94,8 @@ This section will cover the installation of Kali Purple Linux. These steps are t
 
 **NOTE** : If you are not setting up SOC analyst workstations, skip to [Section 8.1.5.2 - SOC Nodes](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/8%20-%20Kali%20Purple.md#8152-soc-nodes) of this section.
 
-#### 8.1.5.1 - SOC Analyst Workstations:
+<details>
+<summary><h4>8.1.5.1 - SOC Analyst Workstations:</h4></summary>
 
 1. **For disk partitioning, select "Guided – use entire disk and set up encrypted LVM."** 
 
@@ -131,8 +132,11 @@ This section will cover the installation of Kali Purple Linux. These steps are t
 9. **If desired, include the "GNOME" desktop environment as well as the role-specific tools. In this example, I am including the IDENTIFY toolset.**
 
 ![](_images/2._Analyst_Software_Selection.PNG)
-    
-#### 8.1.5.2 - SOC Nodes:
+</details>
+
+<details>
+<summary><h4>8.1.5.2 - SOC Nodes:</h4></summary>
+
 1. **For disk partitioning, select "Manual."**
 
 ![](_images/SOC_Nodes_-_Disk_1_-_Kali_Setup_-_Disk_Setup.PNG)
@@ -208,6 +212,7 @@ This section will cover the installation of Kali Purple Linux. These steps are t
 ![](_images/SOC_Nodes_-_Disk_18_-_Kali_Setup_-_Disk_Setup.PNG)
 
 *Figure 69 - Kali Purple: Disk Partition Layout*
+</details>
 
 ### 8.1.6 - Software Selection
 
