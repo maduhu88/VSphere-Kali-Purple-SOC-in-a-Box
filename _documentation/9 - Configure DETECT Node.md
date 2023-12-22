@@ -472,8 +472,9 @@ For this next section, you'll need to create a password to use for SSL certifica
         ssl:
           enabled: true
           ca\_trusted\_fingerprint: "<your Elasticsearch fingerprint value\>"
+          verification\_mode: "certificate"
 
-**verification\_mode: "certificate"**![](RackMultipart20231221-1-5l8g4e_html_b6470672fbd630a.png)
+![](RackMultipart20231221-1-5l8g4e_html_b6470672fbd630a.png)
 
 Figure 110 - DETECT: Modifying /etc/metricbeat/modules.d/elasticsearch-xpack.yml
 
