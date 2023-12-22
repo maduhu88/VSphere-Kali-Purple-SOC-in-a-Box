@@ -9,7 +9,8 @@
 
 *Table 12 - Remote Sensor Hardware*
 
-## 12.2 - Hedgehog Linux Installation
+<details>
+<summary><h2>12.2 - Hedgehog Linux Installation</h2></summary>
 
 1. **In vSphere, verify that the Hedgehog Linux ISO is mounted to the desired virtual machine's CD/DVD drive, and configured to connect at Power-on. Right click on the VM, select Power -\> Power On. You'll see a green arrow on the VM icon to show that it's running.**
 
@@ -35,17 +36,19 @@
 
 8. **After a few minutes of installation, you will be prompted with a few questions (suggested answers in brackets):**
 
-    **(a) Disable IPv6? [Yes]**
+    **(a)** Disable IPv6? **[Yes]**
 
-    **(b) Automatically login to the GUI session? [Yes]**
+    **(b)** Automatically login to the GUI session? **[Yes]**
 
-    **(c) Should the GUI session be locked due to inactivity [No]**
+    **(c)** Should the GUI session be locked due to inactivity **[No]**
 
-    **(d) Display the Standard Mandatory DoD Notice and Consent Banner? [No]**
+    **(d)** Display the Standard Mandatory DoD Notice and Consent Banner? **[No]**
 
-    **(e) Allow SSH password authentication? [Yes]**
+    **(e)** Allow SSH password authentication? **[Yes]**
+</details>
 
-## 12.3 - Sensor Configuration
+<details>
+<summary><h2>12.3 - Sensor Configuration</h2></summary>
 
 ### 12.3.1 - CONFIGURE: Hostname and Interface
 
@@ -247,6 +250,7 @@ In this section, I'll show you how to verify your sensor's connectivity to the R
 3. **On the Stats page, you should see your RESPOND node (labelled "arkime") as well as your sensor(s) listed just below.**
 
 ![](_images/150h._Arkime_Stats.PNG)
+</details>
 
 ---
 <div align="center">
