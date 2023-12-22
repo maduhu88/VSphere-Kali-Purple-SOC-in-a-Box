@@ -75,7 +75,7 @@
 
 ![](_images/149c._Network_Interfaces_and_Hostname_Configuration_Utility.png)
 
-5. **Choose the interface whose MAC address DOES NOT MATCH the one you noted in Section 12.2 (Hedgehog Linux Installation), step 2. Most likely it will be ens192.**
+5. **Choose the interface whose MAC address DOES NOT MATCH the one you noted in [Section 12.2 (Hedgehog Linux Installation)](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/12%20-%20Build%20and%20Configure%20-%20Remote%20Network%20Sensor.md#122-hedgehog-linux-installation), step 2. Most likely it will be ens192.**
 
 ![](_images/149d._Network_Interfaces_and_Hostname_Configuration_Utility.png)
 
@@ -150,7 +150,7 @@
 
     ![](_images/149c._Network_Interfaces_and_Hostname_Configuration_Utility.png)
 
-    **(b) Choose the interface whose MAC address MATCHES the one you noted in Section 12.2 (Hedgehog Linux Installation), step 2. Most likely it will be ens224. Select OK.**
+    **(b) Choose the interface whose MAC address MATCHES the one you noted in [Section 12.2 (Hedgehog Linux Installation)](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/12%20-%20Build%20and%20Configure%20-%20Remote%20Network%20Sensor.md#122-hedgehog-linux-installation), step 2. Most likely it will be ens224. Select OK.**
 
     ![](_images/150c._Capture_and_Forwarding_Config.png)
 
