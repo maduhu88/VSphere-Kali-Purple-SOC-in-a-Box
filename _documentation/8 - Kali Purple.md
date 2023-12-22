@@ -339,7 +339,10 @@ This section will cover the installation of Kali Purple Linux. These steps are t
 
 ### 8.2.6 - Reboot Kali Purple
 
-1. **In a terminal session, issue the command "***sudo reboot***" to reboot the VM.**
+1. **In a terminal session, issue the command to reboot the VM:**
+
+    sudo reboot
+    
 </details>  
 
 ---
