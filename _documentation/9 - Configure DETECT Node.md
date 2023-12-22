@@ -627,9 +627,9 @@ For this next section, you'll need to create a password to use for SSL certifica
 
 4. **Delete the data in the left pane and enter the following:**
 
-        PUT \_settings
+        PUT _settings
         {
-        "number\_of\_replicas": 0
+        "number_of_replicas": 0
         }
 
 **NOTE 1: There is a space between "PUT" and "\_settings"**
