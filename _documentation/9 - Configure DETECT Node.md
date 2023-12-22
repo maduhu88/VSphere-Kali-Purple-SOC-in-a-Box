@@ -193,7 +193,7 @@ For this next section, you'll need to create a password to use for SSL certifica
 
 ![](RackMultipart20231221-1-5l8g4e_html_372efc74bb5fbc4f.png)
 
-2. **Log in with the username 'elastic' and the password you recorded from section 9.1.1 step 3.**
+2. **Log in with the username 'elastic' and the password you recorded from [Section 9.1.1](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/9%20-%20Configure%20DETECT%20Node.md#911-install-elasticsearch) step 3.**
 
 ![](RackMultipart20231221-1-5l8g4e_html_b8d893f00ef21333.png)
 
@@ -378,24 +378,30 @@ For this next section, you'll need to create a password to use for SSL certifica
 
         host: "https://kali-purple.kali.purple"
 
-\*NOTE THE ABSENCE OF THE PORT NUMBER
-    2. Immediately below this line, add the following lines (all aligned with the previous line):
-**setup.kibana.ssl.enabled: true
-ssl.certificate\_authorities: ["/etc/kibana/kibana-server\_ca.crt"]**
+**\*NOTE THE ABSENCE OF THE PORT NUMBER**
 
-**setup.kibana.ssl.certificate: "/etc/kibana/kibana-server.crt"**
+2. **Immediately below this line, add the following lines (all aligned with the previous line):**
 
-**setup.kibana.ssl.key: "/etc/kibana/kibana-server.key"**
+        setup.kibana.ssl.enabled: true
+        ssl.certificate\_authorities: ["/etc/kibana/kibana-server\_ca.crt"]
+        setup.kibana.ssl.certificate: "/etc/kibana/kibana-server.crt"
+        setup.kibana.ssl.key: "/etc/kibana/kibana-server.key"
 
-1. Find the section titled "Elasticsearch Output."
-    1. Uncomment the line **#hosts: ["localhost:9200"]**. Change it to read
-**hosts: ["https://kali-purple.kali.purple"]**
+1. **Find the section titled "Elasticsearch Output."**
 
-\*NOTE THE ABSENCE OF THE PORT NUMBER
-    2. Uncomment the line in this section beginning with **#username**. Change it to read **username: "elastic"**
-    3. Uncomment the line in this section beginning with **#password**. Change it to reflect your 'elastic' user password. Ensure your password is contained within quotation marks (e.g. **password: "s3cret\_p@$$w0rd"** )
-    4. Immediately below the password line, add the following line (verify alignment):
-**ssl.ca\_trusted\_fingerprint: "** \<your Elasticsearch fingerprint value\> **"**![](RackMultipart20231221-1-5l8g4e_html_6bd9dd9def3cb08a.png)
+1. **Uncomment the line *#hosts: ["localhost:9200"]*. Change it to read:**
+
+        hosts: ["https://kali-purple.kali.purple"]
+
+**\*NOTE THE ABSENCE OF THE PORT NUMBER**
+
+2. Uncomment the line in this section beginning with **#username**. Change it to read **username: "elastic"**
+3. Uncomment the line in this section beginning with **#password**. Change it to reflect your 'elastic' user password. Ensure your password is contained within quotation marks (e.g. **password: "s3cret\_p@$$w0rd"** )
+4. Immediately below the password line, add the following line (verify alignment):
+
+        ssl.ca\_trusted\_fingerprint: "** \<your Elasticsearch fingerprint value\> **"**
+        
+![](RackMultipart20231221-1-5l8g4e_html_6bd9dd9def3cb08a.png)
 
 Figure 108 - DETECT: Modifying /etc/metricbeat/metricbeat.yml
 
