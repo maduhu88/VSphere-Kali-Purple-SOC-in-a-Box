@@ -22,13 +22,14 @@
 ![](RackMultipart20231221-1-5l8g4e_html_45130c31dae57f15.png)
 7. **The following input screen will ask for a new user password. This will be the password for the service account that will run the sensor services. Enter a secure password, and then confirm it on the next screen.**
 ![](RackMultipart20231221-1-5l8g4e_html_178260885e64f204.png)
-**8. After a few minutes of installation, you will be prompted with a few questions (suggested answers in brackets):**
+
+8. **After a few minutes of installation, you will be prompted with a few questions (suggested answers in brackets):**
 
     **(a) Disable IPv6? [Yes]**
-2. **Automatically login to the GUI session? [Yes]
-3. **Should the GUI session be locked due to inactivity [No]
-4. **Display the Standard Mandatory DoD Notice and Consent Banner? [No]
-9. **Allow SSH password authentication? [Yes]
+    **(b) Automatically login to the GUI session? [Yes]**
+    **(c) Should the GUI session be locked due to inactivity [No]**
+    **(d) Display the Standard Mandatory DoD Notice and Consent Banner? [No]**
+    **(e) Allow SSH password authentication? [Yes]**
 
 ## 12.3 - Sensor Configuration
 
