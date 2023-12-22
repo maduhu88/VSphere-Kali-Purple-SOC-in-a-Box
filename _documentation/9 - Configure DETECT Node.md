@@ -16,7 +16,7 @@ In this section, we will build the heart of this SOC solution, the Elastic SIEM 
 
 3. In the terminal session, issue the following command to install Elasticsearch:
 
-    sudo bash -c "export HOSTNAME=kali-purple.kali.purple; apt-get install elasticsearch -y"
+        sudo bash -c "export HOSTNAME=kali-purple.kali.purple; apt-get install elasticsearch -y"
 
 ![](RackMultipart20231221-1-5l8g4e_html_2e7c994fb0b5754.png)
 
