@@ -1,10 +1,13 @@
 # 4 - VMWare vSphere Configuration
 
-## 4.1 - Licensing Requirements (Remote Sensor deployments only)
+<details>
+<summary><h2>4.1 - Licensing Requirements (Remote Sensor deployments only)</h2></summary>
 
 In this vSphere deployment, the vSphere Distributed Switch (VDS) can be utilized. This allows for, among other things, port mirroring sessions to be created. If you are not implementing Remote Sensors, then you can still follow the remaining steps using the vSphere Standard Switch (VSS), which is free to use. The VDS requires either an Enterprise Plus or vSAN license, and a VMware vCenter deployment.
+</details>
 
-## 4.2 - Virtual Switch Configuration
+<details>
+<summary><h2>4.2 - Virtual Switch Configuration</h2></summary>
 
 In a standard deployment, the built-in VSS will work fine for your virtual networking needs. However, if you choose to deploy remote sensors within your virtual environment, then you need to deploy a VDS.
 
@@ -21,8 +24,10 @@ If you are fortunate enough to have access to enterprise licensing (Enterprise P
 I have a multi-host setup (one server hosting target/attack systems, one hosting the SOC) connected via VDS. Each port group is assigned a VLAN ID. I have one port group dedicated as a SPAN network. The only interfaces that would be connected to it would be the monitoring interfaces of sensors. The security settings of the SPAN network allows Promiscuous mode, MAC address changes, and Forged transmits. As far as it's VLAN settings, the VDS allows the following: None, VLAN (ID), Private VLAN, and VLAN Trunking (range). I have the SPAN network set for trunking, with the range set for the IDs I wish to monitor.
 
 The physical uplinks (one per server) for the VDS are connected to a trunked port, configured to pass all VLANs that have been assigned to port groups (standard or distributed). No mirroring/spanning configuration is needed on the physical switch. This is done on the VDS, with my sources being the VLANs I want to monitor, and the destination being the specific interface on the target sensor (typically its secondary interface).
+</details>
 
-## 4.3 - Virtual Networks
+<details>
+<summary><h2>4.3 - Virtual Networks</h2></summary>
 
 The names and assigned IP subnet configuration of the virtual networks listed below can be whatever you want in your environment.
 
@@ -49,8 +54,10 @@ This network's function is primarily to provide access to the Internet for hosts
 ### 4.3.6 - SPAN (Distributed Port Group) (Remote Sensor Deployment only)
 
 This network will provide connectivity to any remote sensor's monitoring interface(s). As this network will be configured with port mirroring, it must be a Distributed Port Group on a vSphere Distributed Switch.
+</details>
 
-## 4.4 - Virtual Machine Hardware Profiles
+<details>
+<summary><h2>4.4 - Virtual Machine Hardware Profiles</h2></summary>
 
 \*- Minimum values for memory and CPU cores are pulled from the Proxmox deployment documentation.
 
@@ -85,6 +92,7 @@ This network will provide connectivity to any remote sensor's monitoring interfa
 | 6 | 16 GB | Network Traffic Analysis | 1 x 512 GB | 1 | **MGMT:** 192.168.30.3/24 |
 
 **Table 5 – RESPOND Node Hardware Configuration**
+</details>
 
 ---
 <div align="center">

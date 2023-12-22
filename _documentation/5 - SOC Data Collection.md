@@ -4,7 +4,8 @@ The Kali Purple virtual SOC will be primarily composed of 4 nodes: a firewall, a
 
 I will include some optional information for building forward network sensors, as well as SOC analyst workstations.
 
-## 5.1 - SOC Node Build Order
+<details>
+<summary><h2>5.1 - SOC Node Build Order</h2></summary>
 
 Based on my experimentation with deploying this virtual SOC solution according to the guidelines provided by the Kali Purple community, through trial-and-error I have devised what I believe to be (a) logical order of deployment. The order in which the virtual nodes will be built shall be as follows:
 
@@ -14,8 +15,10 @@ Based on my experimentation with deploying this virtual SOC solution according t
 4. RESPOND Node (Network Analysis Aggregation Node)
 5. (OPTIONAL) Remote Sensor (Forward Network Sensor, IDS)
 6. (OPTIONAL) SOC Console (SOC Analyst Workstation)
+</details>
 
-## 5.2 - Network Management
+<details>
+<summary><h2>5.2 - Network Management</h2></summary>
 
 You can use this table as a guide for configuring your own network layout. Here are the network configurations I will use for each node:
 
@@ -31,6 +34,7 @@ You can use this table as a guide for configuring your own network layout. Here 
 **Table 7 – Virtual Machine Networking Configuration**
 
 Plan your network in a way that makes sense for your environment. Identify ranges of addresses to be assigned, methods of assignment (static, DHCP, etc.), and virtual networks that will be associated with each range if necessary.
+</details>
 
 ---
 <div align="center">
