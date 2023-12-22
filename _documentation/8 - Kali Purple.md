@@ -283,7 +283,9 @@ This section will cover the installation of Kali Purple Linux. These steps are t
 
 **The following commands are to be entered into a terminal session.**
 
-1. **Enter "_sudo wget -P /etc/polkit-1/localauthority /50-local.d  https://gitlab.com/kalilinux/documentation/kali-purple/-/raw/main/301\_kali-purple/overlays/etc/polkit-1/localauthority/50-local.d/45-allow-colord.pkla_" to fix a known login error with xRDP. Enter your password if prompted.** 
+1. **Enter the following command to fix a known login error with xRDP. Enter your password if prompted.**
+
+        sudo wget -P /etc/polkit-1/localauthority/50-local.d https://gitlab.com/kalilinux/documentation/kali-purple/-/raw/main/301\_kali-purple/overlays/etc/polkit-1/localauthority/50-local.d/45-allow-colord.pkla
 
 ![](RackMultipart20231221-1-5l8g4e_html_ca215d5ffac59e43.png)
 
@@ -295,19 +297,25 @@ This section will cover the installation of Kali Purple Linux. These steps are t
 
 **The following commands are to be entered into a terminal session.**
 
-1. **Enter "_sudo update-grub_" to update the GRUB bootloader. Enter your password if prompted.**
+1. **Enter the following command to update the GRUB bootloader. Enter your password if prompted.**
+
+        sudo update-grub
 
 ![](RackMultipart20231221-1-5l8g4e_html_a1ec261e98d52386.png)
 
 *Figure 78 - Kali Purple: Update GRUB bootloader*
 
-1. **Enter "_sudo apt update_" to fetch the latest version of the package lists for the Kali Purple distribution.** 
+1. **Enter the following command to fetch the latest version of the package lists for the Kali Purple distribution:**
+
+        sudo apt update
 
 ![](RackMultipart20231221-1-5l8g4e_html_a7a4028cf682ae7b.png)
 
 *Figure 79 - Kali Purple: APT update*
 
-1. **Enter "_sudo apt full-upgrade -y_" to install/update any packages that requires upgrading. This will take several minutes to complete.**
+1. **Enter the following command to install/update any packages that requires upgrading. This will take several minutes to complete.**
+
+        sudo apt full-upgrade -y
 
 ![](RackMultipart20231221-1-5l8g4e_html_b737e8cdef93ef54.png)
 
