@@ -121,9 +121,9 @@ For this next section, you'll need to create a password to use for SSL certifica
 
 *Figure 93 - DETECT: Generating new CA*
 
-**Accept the default name for the output file (elastic-stack-ca.p12).**
+**(a) Accept the default name for the output file (elastic-stack-ca.p12).**
 
-**Enter your secure password.**
+**(b) Enter your secure password.**
 
 3. **In the terminal session, issue the following command to generate the Kibana PKCS#12 certificate and private key:**
 
