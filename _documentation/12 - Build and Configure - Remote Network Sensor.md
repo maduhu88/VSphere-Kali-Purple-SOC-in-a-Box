@@ -1,6 +1,5 @@
 # Build and Configure: Remote Network Sensor
 
-  1.
 ## VMware vSphere: VM Configuration
 
 | CPU Cores | Memory | Function | Disks | Network Interfaces | Networks |
@@ -12,7 +11,6 @@
 
 Table 12 - Remote Sensor Hardware
 
-  1.
 ## Hedgehog Linux Installation
 
       1. In vSphere, verify that the Hedgehog Linux ISO is mounted to the desired virtual machine's CD/DVD drive, and configured to connect at Power-on. Right click on the VM, select Power -\> Power On. You'll see a green arrow on the VM icon to show that it's running.
@@ -32,10 +30,8 @@ Table 12 - Remote Sensor Hardware
         3. Should the GUI session be locked due to inactivity [No]
         4. Display the Standard Mandatory DoD Notice and Consent Banner? [No]
       9. Allow SSH password authentication? [Yes]
-  2.
 ## Sensor Configuration
 
-    1.
 ### CONFIGURE: Hostname and Interface
 
       1. The installation will complete with a reboot of the sensor. When it starts up, it will bring you to Hedgehog Linux's kiosk mode. This can be exited with Alt+F4, but to do this without closing your browser, you'll need to be in full screen mode (typically F11 will accomplish this). Once you enter full screen mode, ensure your focus is in the VM by clicking anywhere on the VM screen, then Alt+F4 will close the kiosk, and you'll see the Debian desktop.
@@ -72,7 +68,7 @@ Figure 149 - SENSOR: Desktop
  ![](RackMultipart20231221-1-5l8g4e_html_335578df68df5320.png)
       11. You should get a message informing you that the time synchronization was successful. Select OK, and Quit to exit the utility.
  ![](RackMultipart20231221-1-5l8g4e_html_f497a567e21f629f.png)
-    1.
+
 ### Filebeat Certificate Transfer
 
       1. Launch a terminal session using the Tillix shortcut on the taskbar in the upper left.
@@ -94,7 +90,6 @@ Figure 149 - SENSOR: Desktop
 
 Figure 150 - SENSOR: Filebeat Certificate Transfer
 
-    1.
 ### CONFIGURE: Capture and Forwarding
 
       1. On the taskbar at the top of the screen click the icon labelled "Configure Capture and Forwarding". Enter the root password if prompted. This will open the capture and forwarding configuration utility welcome screen. Select "Continue."
@@ -144,12 +139,12 @@ Figure 150 - SENSOR: Filebeat Certificate Transfer
 **NOTE** : NETSNIFF and TCPDUMP cannot be run at the same time as ARKIME, as all are packet capture applications.
           2. You'll be presented with all the configuration settings you chose. Select OK.
           3. You'll be informed that a reboot will be necessary to commit all changes. Select OK. You'll be returned to the welcome screen.
-    2.
+
 ### Reboot Sensor
 
       1. In a terminal session, issue the command " **sudo reboot**" to reboot the sensor.
       2. When the sensor has rebooted, it will re-launch into kiosk mode.
-    3.
+
 ### Verify Sensor Connectivity
 
 In this section, I'll show you how to verify your sensor's connectivity to the RESPOND node (now effectively your Malcolm Network Traffic Analysis Aggregator).
@@ -159,7 +154,7 @@ In this section, I'll show you how to verify your sensor's connectivity to the R
  ![](RackMultipart20231221-1-5l8g4e_html_ef7473446eae794e.png)
       3. On the Stats page, you should see your RESPOND node (labelled "arkime") as well as your sensor(s) listed just below.
  ![](RackMultipart20231221-1-5l8g4e_html_cd814c90b15f924.png)
- 
+
 ---
 <div align="center">
 | [Previous Section: 11 - Configure: RESPOND Node](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/11%20-%20Configure%20RESPOND%20Node.md) | [Table of Contents](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/README.md) | [Next Section: 13 - Build and Configure: SOC Analyst Workstation](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/13%20-%20Build%20and%20Configure%20-%20SOC%20Analyst%20Workstation.md) |

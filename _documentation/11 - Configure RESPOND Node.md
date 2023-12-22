@@ -1,14 +1,11 @@
 # Configure: RESPOND Node
 
-  1.
 ## Elastic Agent
 
 To install the Elastic Agent on this host, follow the instructions in section 10.1.1 (Elastic Agent).
 
-  1.
 ## Docker and Malcolm Prerequisites
 
-    1.
 ### Installation
 
       1. In a terminal session, issue the following command to install Docker and prerequisite packages for Malcolm:
@@ -21,15 +18,12 @@ Figure 135 - RESPOND: Docker install with Malcolm Prerequisites
 **sudo systemctl enable docker --now**
 
 
-    1.
 ### Portainer
 
 To install the Portainer on this host, follow the instructions in section 10.2.2 (Portainer). Make sure to replace any references for your IDENTIFY node with your RESPOND node (name/IP address).
 
-  1.
 ## INL Malcolm
 
-    1.
 ### Clone Malcolm Repository
 
 In a terminal session, issue the following commands to clone the INL Malcolm repository (version 23.10.0) to your home directory:
@@ -39,7 +33,6 @@ In a terminal session, issue the following commands to clone the INL Malcolm rep
 
 Figure 136 - RESPOND: Clone Malcolm Repository
 
-    1.
 ### Configure Malcolm
 
       1. In a terminal session, issue the following commands to initialize the Malcolm configuration script:
@@ -107,7 +100,6 @@ Figure 136 - RESPOND: Clone Malcolm Repository
         9. "Store username/password for OpenSearch Alerting email sender account?" [N]
         10. "(Re)generate internal passwords for NetBox?" [Y]
         11. "Store password hash secret for Arkime viewer cluster?" [N]
-    2.
 ### Pull Malcolm Docker Images
 
       1. In a terminal session, issue the following commands to pull Malcolm Docker images:
@@ -122,7 +114,6 @@ Figure 137 - DOCKER: Pull Malcolm images
 
 Figure 138 - RESPOND: Malcolm Docker Images
 
-    1.
 ### Start Malcolm
 
 In a terminal session, issue the following commands to start Malcolm:
@@ -132,7 +123,6 @@ In a terminal session, issue the following commands to start Malcolm:
 
 Figure 139 - RESPOND: Start Malcolm Services
 
-    1.
 ### Verify Malcolm Web Services
 
       1. On your DETECT node, open a browser and browse to your IDENTIFY node's Portainer portal (e.g. https://kali-violet.kali.purple:9443). Log into Portainer using your admin credentials.
@@ -180,13 +170,12 @@ Figure 146 - RESPOND: Malcolm Network Traffic Artifact Upload
 
 Figure 147 - RESPOND: Malcolm User Account Management
 
-    1.
 ### Create Sensor Account (only if deploying remote sensors)
 
       1. In a browser, navigate to the Malcolm User Account Management page on your RESPOND node using HTTPS (e.g. https://kali-eminence.kali.purple/auth). Log in with the credentials you created during the Malcolm configuration.
       2. Create user accounts for any sensors to authenticate with the RESPOND node. You can create one per sensor, or one for all sensors.
       3. When complete, log out of the application.
-      
+
 ---
 <div align="center">
 | [Previous Section: 10 - Configure: IDENTIFY Node](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/10%20-%20Configure%20IDENTIFY%20Node.md) | [Table of Contents](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/README.md) | [Next Section: 12 - Build and Configure: Remote Network Sensor](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/12%20-%20Build%20and%20Configure%20-%20Remote%20Network%20Sensor.md) |
