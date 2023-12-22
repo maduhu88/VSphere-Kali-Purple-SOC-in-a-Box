@@ -321,11 +321,9 @@ This section will cover the installation of Kali Purple Linux. These steps are t
 
 **The following commands are to be entered into a terminal session.**
 
-1. **Enter the following command to set the xRDP and SSH services to auto-start:**
+1. **Enter the following command to set the xRDP and SSH services to auto-start (enter your password if prompted):**
 
     sudo systemctl enable xrdp ssh --now 
-    
-**Enter your password if prompted.** 
 
 ![](RackMultipart20231221-1-5l8g4e_html_149a3f88ab877c82.png)
 
