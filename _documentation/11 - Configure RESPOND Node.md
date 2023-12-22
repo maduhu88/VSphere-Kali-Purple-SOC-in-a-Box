@@ -207,7 +207,7 @@ Figure 139 - RESPOND: Start Malcolm Services
 
 *Figure 147 - RESPOND: Malcolm User Account Management*
 
-### 11.3.6 - Create Sensor Account (only if deploying remote sensors)
+### 11.3.6 - Create Sensor Account(s) (only if deploying remote sensors)
 
 1. **In a browser, navigate to the Malcolm User Account Management page on your RESPOND node using HTTPS (e.g. https://kali-eminence.kali.purple/auth). Log in with the credentials you created during the Malcolm configuration.**
 
