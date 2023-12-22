@@ -371,7 +371,7 @@ For this next section, you'll need to create a password to use for SSL certifica
 
         sudo nano /etc/metricbeat/metricbeat.yml
 
-2.1. - **Find the section titled "Kibana."**
+2.1 - **Find the section titled "Kibana."**
 
 2.1.1 - **Uncomment the line *#host: "localhost:5601"*. Change it to read:**
 
@@ -418,55 +418,55 @@ For this next section, you'll need to create a password to use for SSL certifica
 
 ![](RackMultipart20231221-1-5l8g4e_html_24c18b5a55ba6060.png)
 
-2. **In a terminal session, issue the following command to edit the file /etc/metricbeat/modules.d/elasticsearch.yml:**
+4. **In a terminal session, issue the following command to edit the file /etc/metricbeat/modules.d/elasticsearch.yml:**
 
         sudo nano /etc/modules.d/elasticsearch.yml
 
-1. **Uncomment the line that begins with *#hosts* if it is commented. Change it to read:**
+4.1 - **Uncomment the line that begins with *#hosts* if it is commented. Change it to read:**
 
         hosts: ["https://kali-purple.kali.purple:9200"]
 
 **\*NOTE THE INCLUSION OF THE PORT NUMBER**
 
-2. **Uncomment the line that begins with *#username* if it is commented. Change it to read:**
+4.2 - **Uncomment the line that begins with *#username* if it is commented. Change it to read:**
 
         username: "elastic"
 
-3. **Uncomment the line that begins with *#password* if it is commented. Change it to reflect your 'elastic' user's password.**
+4.3 - **Uncomment the line that begins with *#password* if it is commented. Change it to reflect your 'elastic' user's password.**
 
 ![](RackMultipart20231221-1-5l8g4e_html_fdc376e60a4de6d3.png)
 
 *Figure 109 - DETECT: Modifying /etc/metricbeat/modules.d/elasticsearch.yml*
 
-1. **Save the document using CTRL+X, Y, then ENTER to exit the Nano editor.**
+4.4 - **Save the document using CTRL+X, Y, then ENTER to exit the Nano editor.**
 
-1. **In a terminal session, issue the following command to enable the Metricbeat modules for Elasticsearch XPack:**
+5. **In a terminal session, issue the following command to enable the Metricbeat modules for Elasticsearch XPack:**
 
         sudo metricbeat modules enable elasticsearch-xpack
 
 ![](RackMultipart20231221-1-5l8g4e_html_1515dab6687fe960.png)
 
-1. **In a terminal session, issue the following command to edit the file /etc/metricbeat/modules.d/elasticsearch-xpack.yml:**
+6. **In a terminal session, issue the following command to edit the file /etc/metricbeat/modules.d/elasticsearch-xpack.yml:**
 
         sudo nano /etc/modules.d/elasticsearch-xpack.yml
 
-1. **Uncomment the line that begins with *#hosts* if it is commented. Change it to read:**
+6.1 - **Uncomment the line that begins with *#hosts* if it is commented. Change it to read:**
 
         hosts: ["https://kali-purple.kali.purple:9200"]
 
 **\*NOTE THE INCLUSION OF THE PORT NUMBER**
 
-1. **Immediately below this line, enter the following line (ensure proper alignment):**
+6.2 - **Immediately below this line, enter the following line (ensure proper alignment):**
 
         protocol: "https"
 
-2. **Uncomment the line that begins with *#username* if it is commented. Change it to read:**
+6.3 - **Uncomment the line that begins with *#username* if it is commented. Change it to read:**
 
         username: "elastic"
 
-3. **Uncomment the line that begins with *#password* if it is commented. Change it to reflect your 'elastic' user's password.**
+6.4 - **Uncomment the line that begins with *#password* if it is commented. Change it to reflect your 'elastic' user's password.**
 
-4. **Immediately below this line, add the following lines (ensure proper alignment, indentions are 2 spaces):**
+6.5 - **Immediately below this line, add the following lines (ensure proper alignment, indentions are 2 spaces):**
 
         ssl:
           enabled: true
@@ -477,9 +477,9 @@ For this next section, you'll need to create a password to use for SSL certifica
 
 *Figure 110 - DETECT: Modifying /etc/metricbeat/modules.d/elasticsearch-xpack.yml*
 
-1. **Save the document using CTRL+X, Y, then ENTER to exit the Nano editor.**
+6.6 - **Save the document using CTRL+X, Y, then ENTER to exit the Nano editor.**
 
-1. **In a terminal session, issue the following command to test the Metricbeat configuration:**
+7. **In a terminal session, issue the following command to test the Metricbeat configuration:**
 
         sudo metricbeat test config
 
@@ -487,7 +487,7 @@ For this next section, you'll need to create a password to use for SSL certifica
 
 *Figure 111 - DETECT: Test Metricbeat configuration*
 
-1. **In a terminal session, issue the following command to test the Metricbeat modules:**
+8. **In a terminal session, issue the following command to test the Metricbeat modules:**
 
         sudo metricbeat test modules
 
@@ -498,7 +498,7 @@ For this next section, you'll need to create a password to use for SSL certifica
 
 **NOTE : The first 7 or so lines may show errors upon execution. This will not affect the success of the installation. This step may take a few seconds to complete.**
 
-2. **In a terminal session, issue the following command to set up Metricbeat index patterns and load dashboards into Kibana:**
+9. **In a terminal session, issue the following command to set up Metricbeat index patterns and load dashboards into Kibana:**
 
         sudo metricbeat setup
 
@@ -508,31 +508,31 @@ For this next section, you'll need to create a password to use for SSL certifica
 
 **This will take a few minutes to complete.**
 
-2. **In the terminal session, issue the following command to configure Metricbeat for automatic startup:**
+10. **In the terminal session, issue the following command to configure Metricbeat for automatic startup:**
 
         sudo systemctl enable metricbeat --now
         
 ![](RackMultipart20231221-1-5l8g4e_html_2add400f5da2a40.png)
 
-3. **In Kibana (in a browser), use the navigation on the left to go to Management -\> Stack Monitoring.**
+11. **In Kibana (in a browser), use the navigation on the left to go to Management -\> Stack Monitoring.**
 
 ![](RackMultipart20231221-1-5l8g4e_html_65ebdb74be7abe2a.png)
 
-4. **On the next screen, select "Set up monitoring with Metricbeat."**
+12. **On the next screen, select "Set up monitoring with Metricbeat."**
 
 ![](RackMultipart20231221-1-5l8g4e_html_d521e11272593771.png)
 
-5. **Click "Monitor with Metricbeat" below the DETECT node's name.**
+13. **Click "Monitor with Metricbeat" below the DETECT node's name.**
 
 ![](RackMultipart20231221-1-5l8g4e_html_34fdc79496c85b49.png)
 
-6. **Click "Next."**
+14. **Click "Next."**
 
-7. **Ensure "Yes" is selected on the "Create rules" window, and click "Continue."**
+15. **Ensure "Yes" is selected on the "Create rules" window, and click "Continue."**
 
 ![](RackMultipart20231221-1-5l8g4e_html_a97ac19e270603.png)
 
-8. **Click "Exit setup mode" at either the top or the bottom of the window on the right side.**
+16. **Click "Exit setup mode" at either the top or the bottom of the window on the right side.**
 
 ### 9.3.3 - Filebeat Installation and Configuration
 
@@ -546,41 +546,41 @@ For this next section, you'll need to create a password to use for SSL certifica
 
 *Figure 114 - DETECT: Install Filebeat*
 
-1. **In a terminal session, issue the following command to edit the file /etc/filebeat/filebeat.yml:**
+2. **In a terminal session, issue the following command to edit the file /etc/filebeat/filebeat.yml:**
 
         sudo nano /etc/filebeat/filebeat.yml
 
-1. **Find the section titled "Kibana."**
-1. **Uncomment the line *#host: "localhost:5601"*. Change it to read:**
+2.1 - **Find the section titled "Kibana."**
+2.1.1 - **Uncomment the line *#host: "localhost:5601"*. Change it to read:**
 
         host: "https://kali-purple.kali.purple"
 
 **\*NOTE THE ABSENCE OF THE PORT NUMBER**
 
-2. **Immediately below this line, add the following lines (all aligned with the previous line):**
+2.1.2 - **Immediately below this line, add the following lines (all aligned with the previous line):**
 
         setup.kibana.ssl.enabled: true
         ssl.certificate_authorities: ["/etc/kibana/kibana-server_ca.crt"]
         setup.kibana.ssl.certificate: "/etc/kibana/kibana-server.crt"
         setup.kibana.ssl.key: "/etc/kibana/kibana-server.key"
 
-1. **Find the section titled "Elasticsearch Output."**
+2.2 - **Find the section titled "Elasticsearch Output."**
 
-1. **Uncomment the line *#hosts: ["localhost:9200"]*. Change it to read:**
+2.2.1 - **Uncomment the line *#hosts: ["localhost:9200"]*. Change it to read:**
 
         hosts: ["https://kali-purple.kali.purple"]
 
 **\*NOTE THE ABSENCE OF THE PORT NUMBER**
 
-2. **Uncomment the line in this section beginning with *#username*. Change it to read:**
+2.2.2 - **Uncomment the line in this section beginning with *#username*. Change it to read:**
 
         username: "elastic"
 
-3. **Uncomment the line in this section beginning with *#password*. Change it to reflect your 'elastic' user password. Ensure your password is contained within quotation marks like the following example:**
+2.2.3 - **Uncomment the line in this section beginning with *#password*. Change it to reflect your 'elastic' user password. Ensure your password is contained within quotation marks like the following example:**
 
         password: "s3cret_p@$$w0rd"
         
-4. **Immediately below the password line, add the following line (verify alignment):**
+2.2.4 - **Immediately below the password line, add the following line (verify alignment):**
 
         ssl.ca_trusted_fingerprint: "<your Elasticsearch fingerprint value>"
 
@@ -588,15 +588,15 @@ For this next section, you'll need to create a password to use for SSL certifica
 
 *Figure 115 - DETECT: Modify /etc/filebeat/filebeat.yml*
 
-1. **Save the document using CTRL+X, Y, then ENTER to exit the Nano editor.**
+2.3 - **Save the document using CTRL+X, Y, then ENTER to exit the Nano editor.**
 
-1. **In a terminal session, issue the following command to enable the Metricbeat modules for Elasticsearch:**
+3. **In a terminal session, issue the following command to enable the Metricbeat modules for Elasticsearch:**
 
         sudo filebeat modules enable elasticsearch
 
 ![](RackMultipart20231221-1-5l8g4e_html_f83ee35bfe7406dc.png)
 
-2. **In a terminal session, issue the following command to edit the file /etc/filebeat/modules.d/elasticsearch.yml:**
+4. **In a terminal session, issue the following command to edit the file /etc/filebeat/modules.d/elasticsearch.yml:**
 
         sudo sed -i 's/false/true/g' /etc/filebeat/modules.d/elasticsearch.yml
 
@@ -604,7 +604,7 @@ For this next section, you'll need to create a password to use for SSL certifica
 
 *Figure 116 - DETECT: Modify /etc/filebeat/modules.d/elasticsearch.yml*
 
-1. **In a terminal session, issue the following command to set up Filebeat index patterns and load dashboards into Kibana:**
+5. **In a terminal session, issue the following command to set up Filebeat index patterns and load dashboards into Kibana:**
 
         sudo filebeat setup
 
@@ -614,17 +614,17 @@ For this next section, you'll need to create a password to use for SSL certifica
 
  **This will take a few minutes to complete.**
 
-2. **In the terminal session, issue the following command to configure Filebeat for automatic startup:**
+6. **In the terminal session, issue the following command to configure Filebeat for automatic startup:**
 
         sudo systemctl enable filebeat --now
 
 ![](RackMultipart20231221-1-5l8g4e_html_8ebf502dab4ba6a7.png)
 
-3. **In Kibana (in a browser), use the navigation on the left to go to Management -\> Dev Tools.**
+7. **In Kibana (in a browser), use the navigation on the left to go to Management -\> Dev Tools.**
 
 ![](RackMultipart20231221-1-5l8g4e_html_65e5c0a37cfe1923.png)
 
-4. **Delete the data in the left pane and enter the following:**
+8. **Delete the data in the left pane and enter the following:**
 
         PUT _settings
         {
@@ -637,11 +637,11 @@ For this next section, you'll need to create a password to use for SSL certifica
 
 **NOTE 3: The last line with the "}" has no empty space/line after it.**
 
-5. **Press the green triangle on the right side of the left pane to execute the command.**
+9. **Press the green triangle on the right side of the left pane to execute the command.**
 
 ![](RackMultipart20231221-1-5l8g4e_html_26e8e4f44485c8d9.png)
 
-6. **Upon successful execution, the right pane will have a green "200 OK" above it, with the following message in the pane:**
+10. **Upon successful execution, the right pane will have a green "200 OK" above it, with the following message in the pane:**
 
         {
         "acknowledged": true
