@@ -19,19 +19,19 @@
 
 4. **At the initial Hedgehog Linux splash screen, select the "Install Hedgehog Linux" option.**
 
-![](RackMultipart20231221-1-5l8g4e_html_75494683ffeda150.png)
+![](_images/147a._Boot.png)
 
 5. **On the next screen, choose "Virtual Machine Single Partition Quick Install."**
 
-![](RackMultipart20231221-1-5l8g4e_html_b61b40b6cfd1133b.png)
+![](_images/147b._Boot.png)
 
 6. **The Hedgehog Linux setup is designed to ask very few questions to the user. The first input screen will be for the root password. Enter a secure password, and then confirm it on the next screen.**
 
-![](RackMultipart20231221-1-5l8g4e_html_45130c31dae57f15.png)
+![](_images/147c._Root_Password.png)
 
 7. **The following input screen will ask for a new user password. This will be the password for the service account that will run the sensor services. Enter a secure password, and then confirm it on the next screen.**
 
-![](RackMultipart20231221-1-5l8g4e_html_178260885e64f204.png)
+![](_images/147e._New_User_Password.png)
 
 8. **After a few minutes of installation, you will be prompted with a few questions (suggested answers in brackets):**
 
@@ -51,63 +51,63 @@
 
 1. **The installation will complete with a reboot of the sensor. When it starts up, it will bring you to Hedgehog Linux's kiosk mode. This can be exited with Alt+F4, but to do this without closing your browser, you'll need to be in full screen mode (typically F11 will accomplish this). Once you enter full screen mode, ensure your focus is in the VM by clicking anywhere on the VM screen, then Alt+F4 will close the kiosk, and you'll see the Debian desktop.**
 
-![](RackMultipart20231221-1-5l8g4e_html_e22cdecb50d99c23.png)
+![](_images/148._Hedgehog_Linux_-_Kiosk.png)
 
 *Figure 148 - SENSOR: Kiosk Mode*
 
-![](RackMultipart20231221-1-5l8g4e_html_c338f2d5ef5b67d6.png)
+![](_images/149._Hedgehog_Linux_-_Desktop.png)
 
 *Figure 149 - SENSOR: Desktop*
 
 2. **On the taskbar at the top of the screen click the icon labelled "Configure Interfaces and Hostname". Enter the root password if prompted. This will open the sensor network interface controller utility. Select "Continue."**
 
-![](RackMultipart20231221-1-5l8g4e_html_3b4162c499f7548b.png)
-![](RackMultipart20231221-1-5l8g4e_html_6d573add25774201.png)
+![](_images/149a._Hedgehog_Linux_-_Network_Configuration.png)
+![](_images/149b._Network_Interfaces_and_Hostname_Configuration_Utility.png)
 
 3. **On the main screen of the controller utility, choose "Interface."**
 
-![](RackMultipart20231221-1-5l8g4e_html_d142df69e37dce9c.png)
+![](_images/149d1._Network_Interfaces_and_Hostname_Configuration_Utility.png)
 
 4. **Choose "No" when asked if you need help identifying network interfaces.**
 
-![](RackMultipart20231221-1-5l8g4e_html_b7efe2aa07769839.png)
+![](_images/149c._Network_Interfaces_and_Hostname_Configuration_Utility.png)
 
 5. **Choose the interface whose MAC address DOES NOT MATCH the one you noted in Section 12.2 (Hedgehog Linux Installation), step 2. Most likely it will be ens192.**
 
-![](RackMultipart20231221-1-5l8g4e_html_72199dcf090f245e.png)
+![](_images/149d._Network_Interfaces_and_Hostname_Configuration_Utility.png)
 
 6. **Choose "static" for IP address assignment.**
 
-![](RackMultipart20231221-1-5l8g4e_html_52e98a4144bdeb81.png)
+![](_images/149e._Network_Interfaces_and_Hostname_Configuration_Utility.png)
 
 7. **Configure the sensor with an IP address within the range you've designated for sensors (see Section 5.2). In my example, I dedicated addresses between 192.168.30.20-29. Click OK.**
 
-![](RackMultipart20231221-1-5l8g4e_html_258399ba0bbe01aa.png)
+![](_images/149f._Network_Interfaces_and_Hostname_Configuration_Utility.png)
 
 8. **The sensor will toggle the network interface and then return you to the sensor network interface controller utility welcome screen. Select "Continue," then choose "Hostname."**
 
 9. **You will be provided information about the sensor's current configuration. Select OK. On the next screen, assign a hostname. Select OK. You'll be shown the new information. Select OK, and you'll be returned to the welcome screen.**
 
-![](RackMultipart20231221-1-5l8g4e_html_770644eba957067f.png)
+![](_images/149g._Network_Interfaces_and_Hostname_Configuration_Utility.png)
 
 10. **Select "Time Synchronization" on the welcome screen. Choose "ntp" for time synchronization.**
 
-![](RackMultipart20231221-1-5l8g4e_html_9c2a2238c8d6cbf9.png)
+![](_images/149h._NTP_Sync.PNG)
 
 11. **Enter the FQDN or IP address of your PROTECT (firewall) node.**
 
-![](RackMultipart20231221-1-5l8g4e_html_335578df68df5320.png)
+![](_images/149i._NTP_Sync.PNG)
 
 12. **You should get a message informing you that the time synchronization was successful. Select OK, and Quit to exit the utility.**
 
-![](RackMultipart20231221-1-5l8g4e_html_f497a567e21f629f.png)
+![](_images/149j._NTP_Sync.PNG)
 
 
 ### 12.3.2 - Filebeat Certificate Transfer
 
 1. **Launch a terminal session using the Tillix shortcut on the taskbar in the upper left.**
 
-![](RackMultipart20231221-1-5l8g4e_html_8a6b6015a12ae3d3.png)
+![](_images/149k._Hedgehog_Linux_-_Tillix.png)
 
 2. **In the terminal session, issue the following command to switch to the root account:**
 
@@ -130,7 +130,7 @@
 
  client.key
 
- ![](RackMultipart20231221-1-5l8g4e_html_8d7392d4dff256fd.png)
+ ![](_images/150._File_Transfer.png)
 
 *Figure 150 - SENSOR: Filebeat Certificate Transfer*
 
@@ -138,18 +138,18 @@
 
 1. **On the taskbar at the top of the screen click the icon labelled "Configure Capture and Forwarding". Enter the root password if prompted. This will open the capture and forwarding configuration utility welcome screen. Select "Continue."**
 
-![](RackMultipart20231221-1-5l8g4e_html_178a897a55d740db.png)
-![](RackMultipart20231221-1-5l8g4e_html_7dd6b34602c285b2.png)
+![](_images/150a1._Capture_and_Forwarding_Config.png)
+![](_images/150a._Capture_and_Forwarding_Config.png)
 
 2. **On the main menu, select "Configure Capture" and then OK.**
 
     **(a) Choose "No" when asked if you need help identifying network interfaces.**
 
-    ![](RackMultipart20231221-1-5l8g4e_html_b7efe2aa07769839.png)
+    ![](_images/149c._Network_Interfaces_and_Hostname_Configuration_Utility.png)
 
     **(b) Choose the interface whose MAC address MATCHES the one you noted in Section 12.2 (Hedgehog Linux Installation), step 2. Most likely it will be ens224. Select OK.**
 
-    ![](RackMultipart20231221-1-5l8g4e_html_353a1f9c445ebaed.png)
+    ![](_images/150c._Capture_and_Forwarding_Config.png)
 
     **(c) Leave the PCAP filter blank.**
 
@@ -161,7 +161,7 @@
 
     **(g) Select all scanners for Zeek-carved files.**
 
-    ![](RackMultipart20231221-1-5l8g4e_html_4768d9bcaa678598.png)
+    ![](_images/150d._Capture_and_Forwarding_Config.png)
 
     **(h) Select "quarantined" for file preservation action.**
 
@@ -202,9 +202,9 @@
 
     **(d) Select "None" for SSL verification.**
 
-    **(e) On the next page, modify each file path by replacing "logstash-client-certificates" with "filebeat".**
+    **(e) On the next page, modify each file path by replacing "*logstash-client-certificates*" with "*filebeat*".**
 
-    ![](RackMultipart20231221-1-5l8g4e_html_e6a0628a50824128.png)
+    ![](_images/150e._Capture_and_Forwarding_Config.png)
 
     **(f) You'll be presented with all the configuration settings you chose. Select OK.**
 
@@ -218,7 +218,7 @@
 
     [ ] AUTOSTART_TCPDUMP
 
-    ![](RackMultipart20231221-1-5l8g4e_html_4adee32d79aaabab.png)
+    ![](_images/150f._Capture_and_Forwarding_Config.png)
 
     **NOTE : NETSNIFF and TCPDUMP cannot be run at the same time as ARKIME, as all are packet capture applications.**
 
@@ -238,11 +238,15 @@
 
 In this section, I'll show you how to verify your sensor's connectivity to the RESPOND node (now effectively your Malcolm Network Traffic Analysis Aggregator).
 
-1. Ensure the sensor has been booted up. It should be in kiosk mode.
-2. From any node, open a browser and navigate to the FQDN of your RESPOND node (e.g. https://kali-eminence.kali.purple). Enter your Malcolm credentials if prompted. This should bring you to the Arkime sessions page. Click on the "Stats" tab.
-![](RackMultipart20231221-1-5l8g4e_html_ef7473446eae794e.png)
-3. On the Stats page, you should see your RESPOND node (labelled "arkime") as well as your sensor(s) listed just below.
-![](RackMultipart20231221-1-5l8g4e_html_cd814c90b15f924.png)
+1. **Ensure the sensor has been booted up. It should be in kiosk mode.**
+
+2. **From any node, open a browser and navigate to the FQDN of your RESPOND node (e.g. https://kali-eminence.kali.purple). Enter your Malcolm credentials if prompted. This should bring you to the Arkime sessions page. Click on the "Stats" tab.**
+
+![](_images/150g._Arkime_Sessions.PNG)
+
+3. **On the Stats page, you should see your RESPOND node (labelled "arkime") as well as your sensor(s) listed just below.**
+
+![](_images/150h._Arkime_Stats.PNG)
 
 ---
 <div align="center">
