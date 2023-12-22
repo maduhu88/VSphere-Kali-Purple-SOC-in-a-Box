@@ -26,9 +26,13 @@
 8. **After a few minutes of installation, you will be prompted with a few questions (suggested answers in brackets):**
 
     **(a) Disable IPv6? [Yes]**
+
     **(b) Automatically login to the GUI session? [Yes]**
+
     **(c) Should the GUI session be locked due to inactivity [No]**
+
     **(d) Display the Standard Mandatory DoD Notice and Consent Banner? [No]**
+    
     **(e) Allow SSH password authentication? [Yes]**
 
 ## 12.3 - Sensor Configuration
