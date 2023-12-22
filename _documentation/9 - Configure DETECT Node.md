@@ -371,15 +371,15 @@ For this next section, you'll need to create a password to use for SSL certifica
 
         sudo nano /etc/metricbeat/metricbeat.yml
 
-**2.1 Find the section titled "Kibana."**
+**2.1 - Find the section titled "Kibana."**
 
-**2.1.1 Uncomment the line *#host: "localhost:5601"*. Change it to read:**
+**2.1.1 - Uncomment the line *#host: "localhost:5601"*. Change it to read:**
 
         host: "https://kali-purple.kali.purple"
 
 **\*NOTE THE ABSENCE OF THE PORT NUMBER**
 
-**2.1.2 Immediately below this line, add the following lines (all aligned with the previous line):**
+**2.1.2 - Immediately below this line, add the following lines (all aligned with the previous line):**
 
         setup.kibana.ssl.enabled: true
         ssl.certificate_authorities: ["/etc/kibana/kibana-server_ca.crt"]
