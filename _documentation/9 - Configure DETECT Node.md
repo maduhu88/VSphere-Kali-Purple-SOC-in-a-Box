@@ -8,17 +8,17 @@ In this section, we will build the heart of this SOC solution, the Elastic SIEM 
 
 1. **Log in to the DETECT node with your user credentials.**
 
-![](RackMultipart20231221-1-5l8g4e_html_c939efd53b72c943.png)
+![](_images/74._Kali_Purple_Login.PNG)
 
 2. **Launch a terminal session.**
 
-![](RackMultipart20231221-1-5l8g4e_html_e9347639f7bfbaa4.png)
+![](_images/75._Terminal.PNG)
 
 3. **In the terminal session, issue the following command to install Elasticsearch:**
 
         sudo bash -c "export HOSTNAME=kali-purple.kali.purple; apt-get install elasticsearch -y"
 
-![](RackMultipart20231221-1-5l8g4e_html_2e7c994fb0b5754.png)
+![](_images/82._Install_ES.PNG)
 
 *Figure 82 - DETECT: Install Elasticsearch*
 
