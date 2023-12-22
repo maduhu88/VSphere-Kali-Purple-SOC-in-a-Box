@@ -371,38 +371,38 @@ For this next section, you'll need to create a password to use for SSL certifica
 
         sudo nano /etc/metricbeat/metricbeat.yml
 
-**2.1 - Find the section titled "Kibana."**
+2.1 - **Find the section titled "Kibana."**
 
-**2.1.1 - Uncomment the line *#host: "localhost:5601"*. Change it to read:**
+2.1.1 - **Uncomment the line *#host: "localhost:5601"*. Change it to read:**
 
         host: "https://kali-purple.kali.purple"
 
 **\*NOTE THE ABSENCE OF THE PORT NUMBER**
 
-**2.1.2 - Immediately below this line, add the following lines (all aligned with the previous line):**
+2.1.2 - **Immediately below this line, add the following lines (all aligned with the previous line):**
 
         setup.kibana.ssl.enabled: true
         ssl.certificate_authorities: ["/etc/kibana/kibana-server_ca.crt"]
         setup.kibana.ssl.certificate: "/etc/kibana/kibana-server.crt"
         setup.kibana.ssl.key: "/etc/kibana/kibana-server.key"
 
-1. **Find the section titled "Elasticsearch Output."**
+2.2 - **Find the section titled "Elasticsearch Output."**
 
-1. **Uncomment the line *#hosts: ["localhost:9200"]*. Change it to read:**
+2.2.1 - **Uncomment the line *#hosts: ["localhost:9200"]*. Change it to read:**
 
         hosts: ["https://kali-purple.kali.purple"]
 
 **\*NOTE THE ABSENCE OF THE PORT NUMBER**
 
-2. **Uncomment the line in this section beginning with *#username*. Change it to read:**
+2.2.2 - **Uncomment the line in this section beginning with *#username*. Change it to read:**
 
         username: "elastic"
 
-3. **Uncomment the line in this section beginning with *#password*. Change it to reflect your 'elastic' user password. Ensure your password is contained within quotation marks like the following example:**
+2.2.3 - **Uncomment the line in this section beginning with *#password*. Change it to reflect your 'elastic' user password. Ensure your password is contained within quotation marks like the following example:**
 
         password: "s3cret_p@$$w0rd"
 
-4. **Immediately below the password line, add the following line (verify alignment):**
+2.2.4 - **Immediately below the password line, add the following line (verify alignment):**
 
         ssl.ca_trusted_fingerprint: "<your Elasticsearch fingerprint value>"
         
@@ -410,9 +410,9 @@ For this next section, you'll need to create a password to use for SSL certifica
 
 *Figure 108 - DETECT: Modifying /etc/metricbeat/metricbeat.yml*
 
-1. **Save the document using CTRL+X, Y, then ENTER to exit the Nano editor.**
+2.3 - **Save the document using CTRL+X, Y, then ENTER to exit the Nano editor.**
 
-1. **In a terminal session, issue the following command to enable the Metricbeat modules for Elasticsearch:**
+3. **In a terminal session, issue the following command to enable the Metricbeat modules for Elasticsearch:**
 
         sudo metricbeat modules enable elasticsearch
 
