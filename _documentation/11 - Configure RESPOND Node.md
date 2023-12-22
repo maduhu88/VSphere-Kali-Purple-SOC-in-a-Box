@@ -121,7 +121,7 @@ To install the Portainer on this host, follow the instructions in section 10.2.2
     10. "(Re)generate internal passwords for NetBox?" **[Y]**
     11. "Store password hash secret for Arkime viewer cluster?" **[N]**
 
-### Pull Malcolm Docker Images
+### 11.3.3 - Pull Malcolm Docker Images
 
 1. **In a terminal session, issue the following commands to pull Malcolm Docker images:*
 
@@ -141,7 +141,7 @@ To install the Portainer on this host, follow the instructions in section 10.2.2
 
 *Figure 138 - RESPOND: Malcolm Docker Images*
 
-### Start Malcolm
+### 11.3.4 - Start Malcolm
 
 **In a terminal session, issue the following commands to start Malcolm:**
 
@@ -153,7 +153,7 @@ To install the Portainer on this host, follow the instructions in section 10.2.2
 
 Figure 139 - RESPOND: Start Malcolm Services
 
-### Verify Malcolm Web Services
+### 11.3.5 - Verify Malcolm Web Services
 
 1. **On your DETECT node, open a browser and browse to your IDENTIFY node's Portainer portal (e.g. https://kali-violet.kali.purple:9443). Log into Portainer using your admin credentials.**
 
@@ -207,11 +207,13 @@ Figure 139 - RESPOND: Start Malcolm Services
 
 *Figure 147 - RESPOND: Malcolm User Account Management*
 
-### Create Sensor Account (only if deploying remote sensors)
+### 11.3.6 - Create Sensor Account (only if deploying remote sensors)
 
-      1. In a browser, navigate to the Malcolm User Account Management page on your RESPOND node using HTTPS (e.g. https://kali-eminence.kali.purple/auth). Log in with the credentials you created during the Malcolm configuration.
-      2. Create user accounts for any sensors to authenticate with the RESPOND node. You can create one per sensor, or one for all sensors.
-      3. When complete, log out of the application.
+1. **In a browser, navigate to the Malcolm User Account Management page on your RESPOND node using HTTPS (e.g. https://kali-eminence.kali.purple/auth). Log in with the credentials you created during the Malcolm configuration.**
+
+2. **Create user accounts for any sensors to authenticate with the RESPOND node. You can create one per sensor, or one for all sensors.**
+
+3. **When complete, log out of the application.**
 
 ---
 <div align="center">
