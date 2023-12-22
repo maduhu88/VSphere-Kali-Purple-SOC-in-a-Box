@@ -371,7 +371,7 @@ For this next section, you'll need to create a password to use for SSL certifica
 
         sudo nano /etc/metricbeat/metricbeat.yml
 
-2.1 - **Find the section titled "Kibana."**
+2.1. - **Find the section titled "Kibana."**
 
 2.1.1 - **Uncomment the line *#host: "localhost:5601"*. Change it to read:**
 
