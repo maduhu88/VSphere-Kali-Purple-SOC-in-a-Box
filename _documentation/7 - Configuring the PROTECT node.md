@@ -115,11 +115,13 @@
 *Figure 30 – PROTECT – OPNsense: LAN IP configuration (continued)*
 
 **21. At the main menu screen, choose 0 to log out of the firewall.**
+</details>
 
-## 7.2 - OPNsense Configuration
+<details>
+<summary><h2>7.2 - OPNsense Configuration</h2></summary>
 
 The following steps are to be accomplished from a separate system that has access to the LAN interface (in my case, the SOC MGMT interface) of the firewall.
-</details>
+
 ### 7.2.1 - System Configuration
 
 1. Browse to the LAN address of your firewall (https://\<LAN IP\>). You'll be greeted by a warning about your connection not being private. Accept the risks to continue to the site. You'll see the login portal of the OPNsense firewall. Log in with the root credentials you set during setup.
