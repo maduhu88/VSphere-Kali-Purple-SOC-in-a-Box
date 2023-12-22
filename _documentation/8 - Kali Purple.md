@@ -281,7 +281,7 @@ This section will cover the installation of Kali Purple Linux. These steps are t
 
 **The following commands are to be entered into a terminal session.**
 
-1. **Enter "_sudo wget -P /etc/polkit-1/localauthority /50-local.d https://gitlab.com/kalilinux/documentation/kali-purple/-/raw/main/301\_kali-purple/overlays/etc/polkit-1/localauthority/50-local.d/45-allow-colord.pkla_" to fix a known login error with xRDP. Enter your password if prompted.** 
+1. **Enter "_sudo wget -P /etc/polkit-1/localauthority /50-local.d  https://gitlab.com/kalilinux/documentation/kali-purple/-/raw/main/301\_kali-purple/overlays/etc/polkit-1/localauthority/50-local.d/45-allow-colord.pkla_" to fix a known login error with xRDP. Enter your password if prompted.** 
 
 ![](RackMultipart20231221-1-5l8g4e_html_ca215d5ffac59e43.png)
 
@@ -332,6 +332,7 @@ This section will cover the installation of Kali Purple Linux. These steps are t
 **In a terminal session, issue the following commands to synchronize time with the PROTECT node:**
 
 ***sudo timedatectl set-ntp true***
+
 ***sudo sed -e 's/#NTP=/NTP=\<PROTECT FQDN or IP\>/g' -i /etc/system/timesync.conf***
  
 ![](RackMultipart20231221-1-5l8g4e_html_be70ee8381d23abe.png)
