@@ -1,6 +1,6 @@
-# Build and Configure: Remote Network Sensor
+# 12 - Build and Configure: Remote Network Sensor
 
-## VMware vSphere: VM Configuration
+## 12.1 - VMware vSphere: VM Configuration
 
 | CPU Cores | Memory | Function | Disks | Network Interfaces | Networks |
 | --- | --- | --- | --- | --- | --- |
@@ -9,9 +9,9 @@
 |
 | |
 
-Table 12 - Remote Sensor Hardware
+*Table 12 - Remote Sensor Hardware*
 
-## Hedgehog Linux Installation
+## 12.2 - Hedgehog Linux Installation
 
       1. In vSphere, verify that the Hedgehog Linux ISO is mounted to the desired virtual machine's CD/DVD drive, and configured to connect at Power-on. Right click on the VM, select Power -\> Power On. You'll see a green arrow on the VM icon to show that it's running.
       2. Take note of the MAC address of the interface to be used for network monitoring. Use the information from Section 7.1 (OPNsense Installation), step 2 for guidance on how to do this.
@@ -30,19 +30,19 @@ Table 12 - Remote Sensor Hardware
         3. Should the GUI session be locked due to inactivity [No]
         4. Display the Standard Mandatory DoD Notice and Consent Banner? [No]
       9. Allow SSH password authentication? [Yes]
-## Sensor Configuration
+## 12.3 - Sensor Configuration
 
-### CONFIGURE: Hostname and Interface
+### 12.3.1 - CONFIGURE: Hostname and Interface
 
       1. The installation will complete with a reboot of the sensor. When it starts up, it will bring you to Hedgehog Linux's kiosk mode. This can be exited with Alt+F4, but to do this without closing your browser, you'll need to be in full screen mode (typically F11 will accomplish this). Once you enter full screen mode, ensure your focus is in the VM by clicking anywhere on the VM screen, then Alt+F4 will close the kiosk, and you'll see the Debian desktop.
  ![](RackMultipart20231221-1-5l8g4e_html_e22cdecb50d99c23.png)
 
-Figure 148 - SENSOR: Kiosk Mode
+*Figure 148 - SENSOR: Kiosk Mode*
 
       1.
  ![](RackMultipart20231221-1-5l8g4e_html_c338f2d5ef5b67d6.png)
 
-Figure 149 - SENSOR: Desktop
+*Figure 149 - SENSOR: Desktop*
 
       1. On the taskbar at the top of the screen click the icon labelled "Configure Interfaces and Hostname". Enter the root password if prompted. This will open the sensor network interface controller utility. Select "Continue."
  ![](RackMultipart20231221-1-5l8g4e_html_3b4162c499f7548b.png)
@@ -69,7 +69,7 @@ Figure 149 - SENSOR: Desktop
       11. You should get a message informing you that the time synchronization was successful. Select OK, and Quit to exit the utility.
  ![](RackMultipart20231221-1-5l8g4e_html_f497a567e21f629f.png)
 
-### Filebeat Certificate Transfer
+### 12.3.2 - Filebeat Certificate Transfer
 
       1. Launch a terminal session using the Tillix shortcut on the taskbar in the upper left.
  ![](RackMultipart20231221-1-5l8g4e_html_8a6b6015a12ae3d3.png)
@@ -88,9 +88,9 @@ Figure 149 - SENSOR: Desktop
  client.key
  ![](RackMultipart20231221-1-5l8g4e_html_8d7392d4dff256fd.png)
 
-Figure 150 - SENSOR: Filebeat Certificate Transfer
+*Figure 150 - SENSOR: Filebeat Certificate Transfer*
 
-### CONFIGURE: Capture and Forwarding
+### 12.3.3 - CONFIGURE: Capture and Forwarding
 
       1. On the taskbar at the top of the screen click the icon labelled "Configure Capture and Forwarding". Enter the root password if prompted. This will open the capture and forwarding configuration utility welcome screen. Select "Continue."
  ![](RackMultipart20231221-1-5l8g4e_html_178a897a55d740db.png)
@@ -140,12 +140,12 @@ Figure 150 - SENSOR: Filebeat Certificate Transfer
           2. You'll be presented with all the configuration settings you chose. Select OK.
           3. You'll be informed that a reboot will be necessary to commit all changes. Select OK. You'll be returned to the welcome screen.
 
-### Reboot Sensor
+### 12.3.4 - Reboot Sensor
 
       1. In a terminal session, issue the command " **sudo reboot**" to reboot the sensor.
       2. When the sensor has rebooted, it will re-launch into kiosk mode.
 
-### Verify Sensor Connectivity
+### 12.3.5 - Verify Sensor Connectivity
 
 In this section, I'll show you how to verify your sensor's connectivity to the RESPOND node (now effectively your Malcolm Network Traffic Analysis Aggregator).
 
