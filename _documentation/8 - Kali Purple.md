@@ -321,7 +321,11 @@ This section will cover the installation of Kali Purple Linux. These steps are t
 
 **The following commands are to be entered into a terminal session.**
 
-1. **Enter "_sudo systemctl enable xrdp ssh --now_" to set the xRDP and SSH services to auto-start. Enter your password if prompted.** 
+1. **Enter the following command to set the xRDP and SSH services to auto-start:**
+
+    sudo systemctl enable xrdp ssh --now 
+    
+**Enter your password if prompted.** 
 
 ![](RackMultipart20231221-1-5l8g4e_html_149a3f88ab877c82.png)
 
@@ -331,9 +335,9 @@ This section will cover the installation of Kali Purple Linux. These steps are t
 
 **In a terminal session, issue the following commands to synchronize time with the PROTECT node:**
 
-    ***sudo timedatectl set-ntp true***
+    sudo timedatectl set-ntp true
 
-    ***sudo sed -e 's/#NTP=/NTP=\<PROTECT FQDN or IP\>/g' -i /etc/system/timesync.conf***
+    sudo sed -e 's/#NTP=/NTP=\<PROTECT FQDN or IP\>/g' -i /etc/system/timesync.conf
  
 ![](RackMultipart20231221-1-5l8g4e_html_be70ee8381d23abe.png)
 
