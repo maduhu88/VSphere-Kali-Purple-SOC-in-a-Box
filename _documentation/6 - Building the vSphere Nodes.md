@@ -78,7 +78,7 @@ Figure 8 – PROTECT – VMware vSphere: Connect CD/DVD Drive at power on
 
 In this section, we will build the heart of this SOC solution, the Elastic SIEM node. In line with the Proxmox instructions, we will name this node "kali-purple." Since all other nodes will be sending data to the Elasticsearch instance that will reside on this system, I chose to build it second, after the firewall. If you recall, the firewall (byzantium) is already configured to forward syslog data to this node. Once we get this node configured, it should automatically start ingesting the log data from the firewall.
 
-**To build the virtual machine for the DETECT node, use the steps in [Section 6.1](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/6.%20Building%20the%20vSphere%20Nodes/PROTECT.md#61-vsphere-building-the-protect-node) to create a new VM in vSphere, coupled with the data from [Table 2 (Section 4.4.2)](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/4%20-%20vSphere%20Configuration.md#442-detect-node-hardware). We will be using the Kali Purple 2023.3 ISO for the operating system in this section (Figure 9). Your resulting VM should appear as in Figure 10.**
+**To build the virtual machine for the DETECT node, use the steps in [Section 6.1](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/6%20-%20Building%20the%20vSphere%20Nodes.md#61-vsphere-building-the-protect-node) to create a new VM in vSphere, coupled with the data from [Table 2 (Section 4.4.2)](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/4%20-%20vSphere%20Configuration.md#442-detect-node-hardware). We will be using the Kali Purple 2023.3 ISO for the operating system in this section (Figure 9). Your resulting VM should appear as in Figure 10.**
 
 ![](_images/9._vSphere_-_New_VM_-_Select_ISO.png)
 
@@ -92,7 +92,7 @@ Figure 10 – DETECT – VMware vSphere: VM Settings
 <details>
 <summary><h2>6.3 - vSphere: Building the IDENTIFY Node</h2></summary>
 
-**As with the DETECT node, we will use the steps in [Section 6.1](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/6.%20Building%20the%20vSphere%20Nodes/PROTECT.md#61-vsphere-building-the-protect-node) to create a new VM in vSphere, coupled with the data from [Table 2 (Section 4.4.3)](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/4%20-%20vSphere%20Configuration.md#443-identify-node-hardware). We will also be using the Kali Purple 2023.3 ISO for the operating system in this section. Your resulting VM should appear as in Figure 11.**
+**As with the DETECT node, we will use the steps in [Section 6.1](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/6%20-%20Building%20the%20vSphere%20Nodes.md#61-vsphere-building-the-protect-node) to create a new VM in vSphere, coupled with the data from [Table 2 (Section 4.4.3)](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/4%20-%20vSphere%20Configuration.md#443-identify-node-hardware). We will also be using the Kali Purple 2023.3 ISO for the operating system in this section. Your resulting VM should appear as in Figure 11.**
 
 ![](_images/11._vSphere_-_New_VM_-_VM_Settings.png)
 
@@ -102,7 +102,7 @@ Figure 11 – IDENTIFY – VMware vSphere: VM Settings
 <details>
 <summary><h2>6.4 - vSphere: Building the RESPOND Node</h2></summary>
 
-**As with the IDENTIFY/DETECT nodes, we will use the steps in [Section 6.1](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/6.%20Building%20the%20vSphere%20Nodes/PROTECT.md#61-vsphere-building-the-protect-node) to create a new VM in vSphere, coupled with the data from [Table 2 (Section 4.4.4)](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/4%20-%20vSphere%20Configuration.md#444-respond-node-hardware). Your resulting VM should appear as in Figure 12.**
+**As with the IDENTIFY/DETECT nodes, we will use the steps in [Section 6.1](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/6%20-%20Building%20the%20vSphere%20Nodes.md#61-vsphere-building-the-protect-node) to create a new VM in vSphere, coupled with the data from [Table 2 (Section 4.4.4)](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/4%20-%20vSphere%20Configuration.md#444-respond-node-hardware). Your resulting VM should appear as in Figure 12.**
 
 ![](_images/12._vSphere_-_New_VM_-_VM_Settings.png)
 
