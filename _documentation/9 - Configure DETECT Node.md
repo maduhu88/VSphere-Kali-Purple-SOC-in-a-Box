@@ -30,7 +30,7 @@ In this section, we will build the heart of this SOC solution, the Elastic SIEM 
 
 1. **In the terminal session, enter the following commands to convert the installation into a single-node setup:**
 
-        sudo sed -e '/cluster.initial\_master\_nodes/ s/^#\*/#/' -i /etc/elasticsearch/elasticsearch.yml
+        sudo sed -e '/cluster.initial_master_nodes/ s/^#\*/#/' -i /etc/elasticsearch/elasticsearch.yml
         echo "discovery.type: single-node" | sudo tee -a /etc/elasticsearch/elasticsearch.yml
 
 ![](RackMultipart20231221-1-5l8g4e_html_f8da48f272eeff2f.png)
@@ -348,7 +348,7 @@ For this next section, you'll need to create a password to use for SSL certifica
 
 1. **In a terminal session, issue the following command to obtain the Elasticsearch certificate fingerprint on the DETECT node:**
 
-        sudo openssl x509 -fingerprint -sha256 -noout -in /etc/elasticsearch/certs/http\_ca.crt | awk 'BEGIN { FS = "=" } ; { print $2 }' | sed 's/://g'
+        sudo openssl x509 -fingerprint -sha256 -noout -in /etc/elasticsearch/certs/http_ca.crt | awk 'BEGIN { FS = "=" } ; { print $2 }' | sed 's/://g'
 
 ![](RackMultipart20231221-1-5l8g4e_html_c89bc3ed02ef82f5.png)
 
@@ -383,7 +383,7 @@ For this next section, you'll need to create a password to use for SSL certifica
 2. **Immediately below this line, add the following lines (all aligned with the previous line):**
 
         setup.kibana.ssl.enabled: true
-        ssl.certificate\_authorities: ["/etc/kibana/kibana-server\_ca.crt"]
+        ssl.certificate_authorities: ["/etc/kibana/kibana-server_ca.crt"]
         setup.kibana.ssl.certificate: "/etc/kibana/kibana-server.crt"
         setup.kibana.ssl.key: "/etc/kibana/kibana-server.key"
 
@@ -405,7 +405,7 @@ For this next section, you'll need to create a password to use for SSL certifica
 
 4. **Immediately below the password line, add the following line (verify alignment):**
 
-        ssl.ca\_trusted\_fingerprint: "<your Elasticsearch fingerprint value>"
+        ssl.ca_trusted_fingerprint: "<your Elasticsearch fingerprint value>"
         
 ![](RackMultipart20231221-1-5l8g4e_html_6bd9dd9def3cb08a.png)
 
@@ -421,7 +421,7 @@ For this next section, you'll need to create a password to use for SSL certifica
 
 2. **In a terminal session, issue the following command to edit the file /etc/metricbeat/modules.d/elasticsearch.yml:**
 
-        sudo nano /etc/ modules.d/elasticsearch.yml
+        sudo nano /etc/modules.d/elasticsearch.yml
 
 1. **Uncomment the line that begins with *#hosts* if it is commented. Change it to read:**
 
@@ -449,7 +449,7 @@ For this next section, you'll need to create a password to use for SSL certifica
 
 1. **In a terminal session, issue the following command to edit the file /etc/metricbeat/modules.d/elasticsearch-xpack.yml:**
 
-        sudo nano /etc/ modules.d/elasticsearch-xpack.yml
+        sudo nano /etc/modules.d/elasticsearch-xpack.yml
 
 1. **Uncomment the line that begins with *#hosts* if it is commented. Change it to read:**
 
@@ -471,114 +471,182 @@ For this next section, you'll need to create a password to use for SSL certifica
 
         ssl:
           enabled: true
-          ca\_trusted\_fingerprint: "<your Elasticsearch fingerprint value\>"
-          verification\_mode: "certificate"
+          ca_trusted_fingerprint: "<your Elasticsearch fingerprint value>"
+          verification_mode: "certificate"
 
 ![](RackMultipart20231221-1-5l8g4e_html_b6470672fbd630a.png)
 
-Figure 110 - DETECT: Modifying /etc/metricbeat/modules.d/elasticsearch-xpack.yml
+*Figure 110 - DETECT: Modifying /etc/metricbeat/modules.d/elasticsearch-xpack.yml*
 
-1. Save the document using CTRL+X, Y, then ENTER to exit the Nano editor.
-1. In a terminal session, issue the following command to test the Metricbeat configuration:
-**sudo metricbeat test config**
+1. **Save the document using CTRL+X, Y, then ENTER to exit the Nano editor.**
+
+1. **In a terminal session, issue the following command to test the Metricbeat configuration:**
+
+        sudo metricbeat test config
+
 ![](RackMultipart20231221-1-5l8g4e_html_428131020627c39e.png)
 
-Figure 111 - DETECT: Test Metricbeat configuration
+*Figure 111 - DETECT: Test Metricbeat configuration*
 
-1. In a terminal session, issue the following command to test the Metricbeat modules:
-**sudo metricbeat test modules**
+1. **In a terminal session, issue the following command to test the Metricbeat modules:**
+
+        sudo metricbeat test modules
+
 ![](RackMultipart20231221-1-5l8g4e_html_5075a45560c9d3ab.png)
 
-Figure 112 - DETECT: Test Metricbeat modules
+*Figure 112 - DETECT: Test Metricbeat modules*
 
 
-**NOTE** : The first 7 or so lines may show errors upon execution. This will not affect the success of the installation. This step may take a few seconds to complete.
-2. In a terminal session, issue the following command to set up Metricbeat index patterns and load dashboards into Kibana: **sudo metricbeat setup**
+**NOTE : The first 7 or so lines may show errors upon execution. This will not affect the success of the installation. This step may take a few seconds to complete.**
+
+2. **In a terminal session, issue the following command to set up Metricbeat index patterns and load dashboards into Kibana:**
+
+        sudo metricbeat setup
+
 ![](RackMultipart20231221-1-5l8g4e_html_1e9f7319362e2eff.png)
 
-Figure 113 - DETECT: Metricbeat setup
+*Figure 113 - DETECT: Metricbeat setup*
 
+**This will take a few minutes to complete.**
 
-This will take a few minutes to complete.
-2. In the terminal session, issue the following command to configure Metricbeat for automatic startup: **sudo systemctl enable metricbeat –now**![](RackMultipart20231221-1-5l8g4e_html_2add400f5da2a40.png)
-3. In Kibana (in a browser), use the navigation on the left to go to Management -\> Stack Monitoring.
+2. **In the terminal session, issue the following command to configure Metricbeat for automatic startup:**
+
+        sudo systemctl enable metricbeat --now
+        
+![](RackMultipart20231221-1-5l8g4e_html_2add400f5da2a40.png)
+
+3. **In Kibana (in a browser), use the navigation on the left to go to Management -\> Stack Monitoring.**
+
 ![](RackMultipart20231221-1-5l8g4e_html_65ebdb74be7abe2a.png)
-4. On the next screen, select "Set up monitoring with Metricbeat." ![](RackMultipart20231221-1-5l8g4e_html_d521e11272593771.png)
-5. Click "Monitor with Metricbeat" below the DETECT node's name. ![](RackMultipart20231221-1-5l8g4e_html_34fdc79496c85b49.png)
-6. Click "Next."
-7. Ensure "Yes" is selected on the "Create rules" window, and click "Continue." ![](RackMultipart20231221-1-5l8g4e_html_a97ac19e270603.png)
-8. Click "Exit setup mode" at either the top or the bottom of the window on the right side.
+
+4. **On the next screen, select "Set up monitoring with Metricbeat."**
+
+![](RackMultipart20231221-1-5l8g4e_html_d521e11272593771.png)
+
+5. **Click "Monitor with Metricbeat" below the DETECT node's name.**
+
+![](RackMultipart20231221-1-5l8g4e_html_34fdc79496c85b49.png)
+
+6. **Click "Next."**
+
+7. **Ensure "Yes" is selected on the "Create rules" window, and click "Continue."**
+
+![](RackMultipart20231221-1-5l8g4e_html_a97ac19e270603.png)
+
+8. **Click "Exit setup mode" at either the top or the bottom of the window on the right side.**
 
 ### 9.3.3 - Filebeat Installation and Configuration
 
-      1. In a terminal session, enter the following commands to download and install Filebeat:
-**cd ~**
+1. **In a terminal session, enter the following commands to download and install Filebeat:**
 
-**curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-8.11.3-amd64.deb**
+        cd ~
+        curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-8.11.3-amd64.deb
+        sudo dpkg -i filebeat-8.11.3-amd64.deb
 
-**sudo dpkg -i filebeat-8.11.3-amd64.deb**![](RackMultipart20231221-1-5l8g4e_html_1c167204c5fd4520.png)
+![](RackMultipart20231221-1-5l8g4e_html_1c167204c5fd4520.png)
 
-Figure 114 - DETECT: Install Filebeat
+*Figure 114 - DETECT: Install Filebeat*
 
-      1. In a terminal session, issue the following command to edit the file /etc/filebeat/filebeat.yml:
-**sudo nano /etc/filebeat/filebeat.yml**
-        1. Find the section titled "Kibana."
-          1. Uncomment the line **#host: "localhost:5601"**. Change it to read
-**host: "https://kali-purple.kali.purple"**
+1. **In a terminal session, issue the following command to edit the file /etc/filebeat/filebeat.yml:**
 
-\*NOTE THE ABSENCE OF THE PORT NUMBER
-          2. Immediately below this line, add the following lines (all aligned with the previous line):
-**setup.kibana.ssl.enabled: true
- ssl.certificate\_authorities: ["/etc/kibana/kibana-server\_ca.crt"]**
+        sudo nano /etc/filebeat/filebeat.yml
 
-**setup.kibana.ssl.certificate: "/etc/kibana/kibana-server.crt"**
+1. **Find the section titled "Kibana."**
+1. **Uncomment the line *#host: "localhost:5601"*. Change it to read:**
 
-**setup.kibana.ssl.key: "/etc/kibana/kibana-server.key"**
+        host: "https://kali-purple.kali.purple"
 
-        1. Find the section titled "Elasticsearch Output."
-          1. Uncomment the line **#hosts: ["localhost:9200"]**. Change it to read
-**hosts: ["https://kali-purple.kali.purple"]**
+**\*NOTE THE ABSENCE OF THE PORT NUMBER**
 
-\*NOTE THE ABSENCE OF THE PORT NUMBER
-          2. Uncomment the line in this section beginning with **#username**. Change it to read **username: "elastic"**
-          3. Uncomment the line in this section beginning with **#password**. Change it to reflect your 'elastic' user password. Ensure your password is contained within quotation marks (e.g. **password: "s3cret\_p@$$w0rd"** )
-          4. Immediately below the password line, add the following line (verify alignment):
-**ssl.ca\_trusted\_fingerprint: "** \<your Elasticsearch fingerprint value\> **"**![](RackMultipart20231221-1-5l8g4e_html_94dc7db45cb230fa.png)
+2. **Immediately below this line, add the following lines (all aligned with the previous line):**
 
-Figure 115 - DETECT: Modify /etc/filebeat/filebeat.yml
+        setup.kibana.ssl.enabled: true
+        ssl.certificate_authorities: ["/etc/kibana/kibana-server_ca.crt"]
+        setup.kibana.ssl.certificate: "/etc/kibana/kibana-server.crt"
+        setup.kibana.ssl.key: "/etc/kibana/kibana-server.key"
 
-        1. Save the document using CTRL+X, Y, then ENTER to exit the Nano editor.
-      1. In a terminal session, issue the following command to enable the Metricbeat modules for Elasticsearch:
-**sudo filebeat modules enable elasticsearch**![](RackMultipart20231221-1-5l8g4e_html_f83ee35bfe7406dc.png)
-      2. In a terminal session, issue the following command to edit the file /etc/filebeat/modules.d/elasticsearch.yml:
-**sudo sed -I 's/false/true/g' /etc/filebeat/modules.d/elasticsearch.yml**![](RackMultipart20231221-1-5l8g4e_html_a6e0079c98ee612c.png)
+1. **Find the section titled "Elasticsearch Output."**
 
-Figure 116 - DETECT: Modify /etc/filebeat/modules.d/elasticsearch.yml
+1. **Uncomment the line *#hosts: ["localhost:9200"]*. Change it to read:**
 
-      1. In a terminal session, issue the following command to set up Filebeat index patterns and load dashboards into Kibana: **sudo filebeat setup**
- ![](RackMultipart20231221-1-5l8g4e_html_54765bd485f9e6a1.png)
+        hosts: ["https://kali-purple.kali.purple"]
 
-Figure 117 - DETECT: Filebeat setup
+**\*NOTE THE ABSENCE OF THE PORT NUMBER**
 
+2. **Uncomment the line in this section beginning with *#username*. Change it to read:**
 
- This will take a few minutes to complete.
-      2. In the terminal session, issue the following command to configure Filebeat for automatic startup: **sudo systemctl enable filebeat –now**![](RackMultipart20231221-1-5l8g4e_html_8ebf502dab4ba6a7.png)
-      3. In Kibana (in a browser), use the navigation on the left to go to Management -\> Dev Tools.
- ![](RackMultipart20231221-1-5l8g4e_html_65e5c0a37cfe1923.png)
-      4. Delete the data in the left pane and enter the following:
-**PUT \_settings
- {
- "number\_of\_replicas": 0
- }
+        username: "elastic"
 
- NOTE 1:** There is a space between "PUT" and "\_settings"
-**NOTE 2** : Line 3 is indented 2 spaces, and ends with the number 0.
-**NOTE 3** : The last line with the "}" has no empty space/line after it.
-      5. Press the green triangle on the right side of the left pane to execute the command. ![](RackMultipart20231221-1-5l8g4e_html_26e8e4f44485c8d9.png)
-      6. Upon successful execution, the right pane will have a green "200 OK" above it, with the following message in the pane:
-**{
- "acknowledged": true
- }**![](RackMultipart20231221-1-5l8g4e_html_4e0b34900d665d41.png)
+3. **Uncomment the line in this section beginning with *#password*. Change it to reflect your 'elastic' user password. Ensure your password is contained within quotation marks like the following example:**
+
+        password: "s3cret_p@$$w0rd"
+        
+4. **Immediately below the password line, add the following line (verify alignment):**
+
+        ssl.ca_trusted_fingerprint: "<your Elasticsearch fingerprint value>"
+
+![](RackMultipart20231221-1-5l8g4e_html_94dc7db45cb230fa.png)
+
+*Figure 115 - DETECT: Modify /etc/filebeat/filebeat.yml*
+
+1. **Save the document using CTRL+X, Y, then ENTER to exit the Nano editor.**
+
+1. **In a terminal session, issue the following command to enable the Metricbeat modules for Elasticsearch:**
+
+        sudo filebeat modules enable elasticsearch
+
+![](RackMultipart20231221-1-5l8g4e_html_f83ee35bfe7406dc.png)
+
+2. **In a terminal session, issue the following command to edit the file /etc/filebeat/modules.d/elasticsearch.yml:**
+
+        sudo sed -i 's/false/true/g' /etc/filebeat/modules.d/elasticsearch.yml
+
+![](RackMultipart20231221-1-5l8g4e_html_a6e0079c98ee612c.png)
+
+*Figure 116 - DETECT: Modify /etc/filebeat/modules.d/elasticsearch.yml*
+
+1. **In a terminal session, issue the following command to set up Filebeat index patterns and load dashboards into Kibana:**
+
+        sudo filebeat setup
+
+![](RackMultipart20231221-1-5l8g4e_html_54765bd485f9e6a1.png)
+
+*Figure 117 - DETECT: Filebeat setup*
+
+ **This will take a few minutes to complete.**
+
+2. **In the terminal session, issue the following command to configure Filebeat for automatic startup:**
+
+        sudo systemctl enable filebeat --now
+
+![](RackMultipart20231221-1-5l8g4e_html_8ebf502dab4ba6a7.png)
+
+3. **In Kibana (in a browser), use the navigation on the left to go to Management -\> Dev Tools.**
+
+![](RackMultipart20231221-1-5l8g4e_html_65e5c0a37cfe1923.png)
+
+4. **Delete the data in the left pane and enter the following:**
+
+        PUT \_settings
+        {
+        "number\_of\_replicas": 0
+        }
+
+**NOTE 1: There is a space between "PUT" and "\_settings"**
+**NOTE 2: Line 3 is indented 2 spaces, and ends with the number 0.**
+**NOTE 3: The last line with the "}" has no empty space/line after it.**
+
+5. **Press the green triangle on the right side of the left pane to execute the command.**
+
+![](RackMultipart20231221-1-5l8g4e_html_26e8e4f44485c8d9.png)
+
+6. **Upon successful execution, the right pane will have a green "200 OK" above it, with the following message in the pane:**
+
+        {
+        "acknowledged": true
+        }
+ 
+ ![](RackMultipart20231221-1-5l8g4e_html_4e0b34900d665d41.png)
 
 ---
 <div align="center">
