@@ -1,91 +1,103 @@
-# Configure: RESPOND Node
+# 11 - Configure: RESPOND Node
 
-## Elastic Agent
+## 11.1 - Elastic Agent
 
-To install the Elastic Agent on this host, follow the instructions in section 10.1.1 (Elastic Agent).
+To install the Elastic Agent on this host, follow the instructions in [Section 10.1.1 (Elastic Agent)].
 
-## Docker and Malcolm Prerequisites
+<details>
+<summary><h2>11.2 - Docker and Malcolm Prerequisites</h2></summary>
 
-### Installation
+### 11.2.1 - Installation
 
-      1. In a terminal session, issue the following command to install Docker and prerequisite packages for Malcolm:
-**sudo apt install nginx apache2-utils python3-pip python3-requests python3-dialog apt-transport-https gnupg-agent software-properties-common docker.io docker-compose**
- ![](RackMultipart20231221-1-5l8g4e_html_71c018d721368def.png)
+1. **In a terminal session, issue the following command to install Docker and prerequisite packages for Malcolm:**
 
-Figure 135 - RESPOND: Docker install with Malcolm Prerequisites
+        sudo apt install nginx apache2-utils python3-pip python3-requests python3-dialog apt-transport-https gnupg-agent software-properties-common docker.io docker-compose
 
-      1. In the terminal session, issue the following command to set the Docker service to automatically start:
-**sudo systemctl enable docker --now**
+![](RackMultipart20231221-1-5l8g4e_html_71c018d721368def.png)
 
+*Figure 135 - RESPOND: Docker install with Malcolm Prerequisites*
 
-### Portainer
+1. **In the terminal session, issue the following command to set the Docker service to automatically start:**
+
+        sudo systemctl enable docker --now
+
+### 11.2.2 - Portainer
 
 To install the Portainer on this host, follow the instructions in section 10.2.2 (Portainer). Make sure to replace any references for your IDENTIFY node with your RESPOND node (name/IP address).
 
-## INL Malcolm
+<details>
+<summary><h2>11.3 - INL Malcolm</h2></summary>
 
-### Clone Malcolm Repository
+### 11.3.1 - Clone Malcolm Repository
 
-In a terminal session, issue the following commands to clone the INL Malcolm repository (version 23.10.0) to your home directory:
-**cd ~
- git clone -b v23.10.0 https://github.com/cisagov/Malcolm**
- ![](RackMultipart20231221-1-5l8g4e_html_6243f94a64b8a496.png)
+**In a terminal session, issue the following commands to clone the INL Malcolm repository (version 23.10.0) to your home directory:**
 
-Figure 136 - RESPOND: Clone Malcolm Repository
+        cd ~
+        git clone -b v23.10.0 https://github.com/cisagov/Malcolm**
 
-### Configure Malcolm
+![](RackMultipart20231221-1-5l8g4e_html_6243f94a64b8a496.png)
 
-      1. In a terminal session, issue the following commands to initialize the Malcolm configuration script:
-**cd ~/Malcolm
- ./scripts/install.py --configure**
-      2. You'll be asked a series of questions to configure the Malcolm platform (answers in brackets]:
-        1. "Add a non-root user to the 'docker' group?" [Y]
-        2. "User:" [your admin username]
-        3. The next 10 questions will be about modifying specific parameters for Malcolm (all beginning with "fs.", "vm.", and "net.core."). Answer [Y] to all 10 questions
-        4. "Malcolm processes will run as UID 1000 and GID 1000. Is this OK?" [Y]
-        5. "Enter the node name to associate with network traffic metadata:" [your RESPOND node name] (e.g. kali-eminence)
-        6. "Run with Malcolm (all containers) or Hedgehog (capture only) profile?" [Malcolm]
-        7. "Should Malcolm use and maintain its own OpenSearch instance?" [Y]
-        8. "Compress OpenSearch index snapshots?" [N]
-        9. "Forward Logstash logs to a secondary remote OpenSearch instance?" [N]
-        10. "Setting 16g for OpenSearch and 2500m for Logstash. Is this OK?" [Y]
-        11. "Setting 4 workers for Logstash pipelines. Is this OK?" [Y]
-        12. "Restart Malcolm upon system or Docker daemon restart?" [Y]
-        13. "Select Malcolm restart behavior" [unless-stopped]
-        14. "Require encrypted HTTPS connections?" [Y]
-        15. "Will Malcolm be running behind another reverse proxy (Traefik, Caddy, etc.)?" [N]
-        16. "Specify external Docker network name (or leave blank for default networking)" [leave blank]
-        17. "Select authentication method (Basic/LDAP/None)" [Basic]
-        18. "Store PCAP, log and index files locally under /home/user/Malcolm?" [Y]
-        19. "Should Malcolm delete the oldest database indices and/or PCAP files based on available storage?" [N]
-        20. "Automatically analyze all PCAP files with Suricata? [Y]
-        21. "Download updated Suricata signatures periodically?" [Y]
-        22. "Automatically analyze all PCAP files with Zeek?" [Y]
-        23. "Is Malcolm being used to monitor an Operation Technology/Industrial Control Systems (OT/ICS) network?" [N]
-        24. "Perform reverse DNS lookup locally for source and destination IP addresses in logs?" [N]
-        25. "Perform hardware vendor OUI lookups for MAC addresses?" [Y]
-        26. "Perform string randomness scoring on some fields?" [Y]
-        27. "Should Malcolm accept logs and metrics from a Hedgehog Linux sensor or other forwarder?' [N, unless you are deploying remote sensors, then answer [Y] to this question]
-        28. "Enable file extraction with Zeek?" [Y]
-        29. "Select file extraction behavior" [interesting]
-        30. "Select file preservation behavior" [quarantine]
-        31. "Expose web interface for downloading preserved files?" [Y]
-        32. "Enter AES-256-CBC encryption password for downloaded preserved files (or leave blank for unencrypted)" [leave blank]
-        33. "Scan extracted files with ClamAV?" [Y]
-        34. "Scan extracted files with Yara?" [Y]
-        35. "Scan extracted files with Capa?" [Y]
-        36. ""Lookup extracted file hashes with VirusTotal?" [N]
-        37. "Download updated file scanner signatures periodically?" [Y]
-        38. "Should Malcolm run and maintain an instance of NetBox, an infrastructure resource modelling tool?" [Y]
-        39. "Should Malcolm enrich network traffic using NetBox?" [Y]
-        40. "Should Malcolm automatically populate NetBox inventory based on observed network traffic?" [Y/N, your preference]
-        41. "Specify default NetBox site name" [your choice of name for NetBox site] (e.g. NetBox)
-        42. "Should Malcolm create 'catch-all' prefixes for private IP address space?" [N]
-        43. "Should Malcolm capture live network traffic?" [N]
-        44. "Enable dark mode for OpenSearch Dashboards?" [Y]
-      3. In the terminal session, issue the following command to reboot your RESPOND node: **sudo reboot**
-      4. Once your RESPOND node has rebooted, log back in and re-launch a terminal session.
-      5. In the terminal session, issue the following commands to set up Malcolm authentication:
+*Figure 136 - RESPOND: Clone Malcolm Repository*
+
+### 11.3.2 - Configure Malcolm
+
+1. **In a terminal session, issue the following commands to initialize the Malcolm configuration script:**
+
+        cd ~/Malcolm
+
+        ./scripts/install.py --configure
+
+2. You'll be asked a series of questions to configure the Malcolm platform (answers in brackets):
+
+    1. "Add a non-root user to the 'docker' group?" **[Y]**
+
+    2. "User:" **[your admin username]**
+    
+    3. The next 10 questions will be about modifying specific parameters for Malcolm (all beginning with *"fs."*, *"vm."*, and *"net.core."*). Answer **[Y]** to all 10 questions.
+    4. "Malcolm processes will run as UID 1000 and GID 1000. Is this OK?" **[Y]**
+    5. "Enter the node name to associate with network traffic metadata:" **[your RESPOND node name] (e.g. kali-eminence)**
+    6. "Run with Malcolm (all containers) or Hedgehog (capture only) profile?"**[Malcolm]**
+    7. "Should Malcolm use and maintain its own OpenSearch instance?" **[Y]**
+    8. "Compress OpenSearch index snapshots?" **[N]**
+    9. "Forward Logstash logs to a secondary remote OpenSearch instance?" **[N]**
+    10. "Setting 16g for OpenSearch and 2500m for Logstash. Is this OK?" **[Y]**
+    11. "Setting 4 workers for Logstash pipelines. Is this OK?" **[Y]**
+    12. "Restart Malcolm upon system or Docker daemon restart?" **[Y]**
+    13. "Select Malcolm restart behavior" **[unless-stopped]**
+    14. "Require encrypted HTTPS connections?" **[Y]**
+    15. "Will Malcolm be running behind another reverse proxy (Traefik, Caddy, etc.)?" **[N]**
+    16. "Specify external Docker network name (or leave blank for default networking)" **[leave blank]**
+    17. "Select authentication method (Basic/LDAP/None)" [Basic]
+    18. "Store PCAP, log and index files locally under /home/user/Malcolm?" **[Y]**
+    19. "Should Malcolm delete the oldest database indices and/or PCAP files based on available storage?" **[N]**
+    20. "Automatically analyze all PCAP files with Suricata? **[Y]**
+    21. "Download updated Suricata signatures periodically?" **[Y]**
+    22. "Automatically analyze all PCAP files with Zeek?" **[Y]**
+    23. "Is Malcolm being used to monitor an Operation Technology/Industrial Control Systems (OT/ICS) network?" **[N]**
+    24. "Perform reverse DNS lookup locally for source and destination IP addresses in logs?" **[N]**
+    25. "Perform hardware vendor OUI lookups for MAC addresses?" **[Y]**
+    26. "Perform string randomness scoring on some fields?" **[Y]**
+    27. "Should Malcolm accept logs and metrics from a Hedgehog Linux sensor or other forwarder?' **[N, unless you are deploying remote sensors, then answer [Y] to this question]**
+    28. "Enable file extraction with Zeek?" **[Y]**
+    29. "Select file extraction behavior" **[interesting]**
+    30. "Select file preservation behavior" **[quarantine]**
+    31. "Expose web interface for downloading preserved files?" **[Y]**
+    32. "Enter AES-256-CBC encryption password for downloaded preserved files (or leave blank for unencrypted)" **[leave blank]**
+    33. "Scan extracted files with ClamAV?" **[Y]**
+    34. "Scan extracted files with Yara?" **[Y]**
+    35. "Scan extracted files with Capa?" **[Y]**
+    36. ""Lookup extracted file hashes with VirusTotal?" **[N]**
+    37. "Download updated file scanner signatures periodically?" **[Y]**
+    38. "Should Malcolm run and maintain an instance of NetBox, an infrastructure resource modelling tool?" **[Y]**
+    39. "Should Malcolm enrich network traffic using NetBox?" **[Y]**
+    40. "Should Malcolm automatically populate NetBox inventory based on observed network traffic?" [Y/N, your preference]
+    41. "Specify default NetBox site name" [your choice of name for NetBox site] (e.g. NetBox)
+    42. "Should Malcolm create 'catch-all' prefixes for private IP address space?" **[N]**
+    43. "Should Malcolm capture live network traffic?" **[N]**
+    44. "Enable dark mode for OpenSearch Dashboards?" **[Y]**
+3. In the terminal session, issue the following command to reboot your RESPOND node: **sudo reboot**
+4. Once your RESPOND node has rebooted, log back in and re-launch a terminal session.
+5. In the terminal session, issue the following commands to set up Malcolm authentication:
 **cd ~/Malcolm
  ./scripts/auth\_setup**
       6. You'll be asked a series of questions to configure the Malcolm platform (answers in brackets]:
