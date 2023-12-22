@@ -397,51 +397,81 @@ For this next section, you'll need to create a password to use for SSL certifica
 
 2. **Uncomment the line in this section beginning with *#username*. Change it to read:**
 
-*username: "elastic"*
+        username: "elastic"
 
-3. **Uncomment the line in this section beginning with *#password*. Change it to reflect your 'elastic' user password. Ensure your password is contained within quotation marks (e.g. *password: "s3cret\_p@$$w0rd"* )**
+3. **Uncomment the line in this section beginning with *#password*. Change it to reflect your 'elastic' user password. Ensure your password is contained within quotation marks like the following example:**
+
+        password: "s3cret_p@$$w0rd"
+
 4. **Immediately below the password line, add the following line (verify alignment):**
 
         ssl.ca\_trusted\_fingerprint: "<your Elasticsearch fingerprint value>"
         
 ![](RackMultipart20231221-1-5l8g4e_html_6bd9dd9def3cb08a.png)
 
-Figure 108 - DETECT: Modifying /etc/metricbeat/metricbeat.yml
+*Figure 108 - DETECT: Modifying /etc/metricbeat/metricbeat.yml*
 
-1. Save the document using CTRL+X, Y, then ENTER to exit the Nano editor.
-1. In a terminal session, issue the following command to enable the Metricbeat modules for Elasticsearch:
-**sudo metricbeat modules enable elasticsearch**![](RackMultipart20231221-1-5l8g4e_html_24c18b5a55ba6060.png)
-2. In a terminal session, issue the following command to edit the file /etc/metricbeat/modules.d/elasticsearch.yml:
-**sudo nano /etc/ modules.d/elasticsearch.yml**
-1. Uncomment the line that begins with **#hosts** if it is commented. Change it to read **hosts: ["https://kali-purple.kali.purple:9200"]**
+1. **Save the document using CTRL+X, Y, then ENTER to exit the Nano editor.**
 
-\*NOTE THE INCLUSION OF THE PORT NUMBER
-2. Uncomment the line that begins with #username if it is commented. Change it to read username: "elastic"
-3. Uncomment the line that begins with #password if it is commented. Change it to reflect your 'elastic' user's password. ![](RackMultipart20231221-1-5l8g4e_html_fdc376e60a4de6d3.png)
+1. **In a terminal session, issue the following command to enable the Metricbeat modules for Elasticsearch:**
 
-Figure 109 - DETECT: Modifying /etc/metricbeat/modules.d/elasticsearch.yml
+        sudo metricbeat modules enable elasticsearch
 
-1. Save the document using CTRL+X, Y, then ENTER to exit the Nano editor.
-1. In a terminal session, issue the following command to enable the Metricbeat modules for Elasticsearch XPack:
+![](RackMultipart20231221-1-5l8g4e_html_24c18b5a55ba6060.png)
 
-**sudo metricbeat modules enable elasticsearch-xpack**![](RackMultipart20231221-1-5l8g4e_html_1515dab6687fe960.png)
+2. **In a terminal session, issue the following command to edit the file /etc/metricbeat/modules.d/elasticsearch.yml:**
 
-1. In a terminal session, issue the following command to edit the file /etc/metricbeat/modules.d/elasticsearch-xpack.yml:
+        sudo nano /etc/ modules.d/elasticsearch.yml
 
-**sudo nano /etc/ modules.d/elasticsearch-xpack.yml**
+1. **Uncomment the line that begins with *#hosts* if it is commented. Change it to read:**
 
-1. Uncomment the line that begins with **#hosts** if it is commented. Change it to read **hosts: ["https://kali-purple.kali.purple:9200"]**
+        hosts: ["https://kali-purple.kali.purple:9200"]
 
-\*NOTE THE INCLUSION OF THE PORT NUMBER
+**\*NOTE THE INCLUSION OF THE PORT NUMBER**
 
-1. Immediately below this line, enter the following line (ensure proper alignment):
-protocol: "https"
-2. Uncomment the line that begins with #username if it is commented. Change it to read username: "elastic"
-3. Uncomment the line that begins with #password if it is commented. Change it to reflect your 'elastic' user's password.
-4. Immediately below this line, add the following lines (ensure proper alignment, indentions are 2 spaces):
-**ssl:
-enabled: true
-ca\_trusted\_fingerprint: " **\<your Elasticsearch fingerprint value\>**"**
+2. **Uncomment the line that begins with *#username* if it is commented. Change it to read:**
+
+        username: "elastic"
+
+3. **Uncomment the line that begins with *#password* if it is commented. Change it to reflect your 'elastic' user's password.**
+
+![](RackMultipart20231221-1-5l8g4e_html_fdc376e60a4de6d3.png)
+
+*Figure 109 - DETECT: Modifying /etc/metricbeat/modules.d/elasticsearch.yml*
+
+1. **Save the document using CTRL+X, Y, then ENTER to exit the Nano editor.**
+
+1. **In a terminal session, issue the following command to enable the Metricbeat modules for Elasticsearch XPack:**
+
+        sudo metricbeat modules enable elasticsearch-xpack
+
+![](RackMultipart20231221-1-5l8g4e_html_1515dab6687fe960.png)
+
+1. **In a terminal session, issue the following command to edit the file /etc/metricbeat/modules.d/elasticsearch-xpack.yml:**
+
+        sudo nano /etc/ modules.d/elasticsearch-xpack.yml
+
+1. **Uncomment the line that begins with *#hosts* if it is commented. Change it to read:**
+
+        hosts: ["https://kali-purple.kali.purple:9200"]
+
+**\*NOTE THE INCLUSION OF THE PORT NUMBER**
+
+1. **Immediately below this line, enter the following line (ensure proper alignment):**
+
+        protocol: "https"
+
+2. **Uncomment the line that begins with *#username* if it is commented. Change it to read:**
+
+        username: "elastic"
+
+3. **Uncomment the line that begins with *#password* if it is commented. Change it to reflect your 'elastic' user's password.**
+
+4. **Immediately below this line, add the following lines (ensure proper alignment, indentions are 2 spaces):**
+
+        ssl:
+          enabled: true
+          ca\_trusted\_fingerprint: "<your Elasticsearch fingerprint value\>"
 
 **verification\_mode: "certificate"**![](RackMultipart20231221-1-5l8g4e_html_b6470672fbd630a.png)
 
