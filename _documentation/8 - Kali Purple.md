@@ -337,7 +337,7 @@ _sudo sed -e 's/#NTP=/NTP=\<PROTECT FQDN or IP\>/g' -i /etc/system/timesync.conf
 
 ### 8.2.6 - Reboot Kali Purple
 
-1. **In a terminal session, issue the command "_sudo reboot_" to reboot the VM.**
+1. **In a terminal session, issue the command "<u>sudo reboot</u>" to reboot the VM.**
 </details>  
 
 ---
