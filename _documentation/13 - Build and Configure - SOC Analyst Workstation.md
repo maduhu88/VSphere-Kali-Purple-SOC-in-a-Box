@@ -15,10 +15,15 @@
 ## 13.2 - Kali Purple Installation and Configuration
 
 1. **To install Kali Purple, use section 8.1 (Kali Purple) as your installation guide with the following caveats:**
+
 1.1 - **For step 8.1.5 (Disk Settings), do Step 1 only.**
+
 1.2 - **For step 8.1.6 (Software Selection), do Step 1 only.**
+
 2. **After Kali Purple has been installed, log in and update the distribution:**
+
 2.1 - **Update Kali Purple following section 8.2.3 (Updating Kali Purple) as a guide.**
+
 2.2 - **Reboot the system following section 8.2.5 (Reboot Kali Purple).**
 
  ![](_images/152._SOC_Analyst_-_LVM_Encrypt.PNG)
