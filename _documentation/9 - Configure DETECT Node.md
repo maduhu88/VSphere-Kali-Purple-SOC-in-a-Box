@@ -24,7 +24,7 @@ In this section, we will build the heart of this SOC solution, the Elastic SIEM 
 
 **Take note of the password that is generated for the built-in superuser 'elastic.' You will need this in later steps.**
 
-![](RackMultipart20231221-1-5l8g4e_html_17eb3c0292ddf34e.png)
+![](_images/83._ES_Password.PNG)
 
 *Figure 83 - DETECT: Elasticsearch password*
 
@@ -33,7 +33,7 @@ In this section, we will build the heart of this SOC solution, the Elastic SIEM 
         sudo sed -e '/cluster.initial_master_nodes/ s/^#\*/#/' -i /etc/elasticsearch/elasticsearch.yml
         echo "discovery.type: single-node" | sudo tee -a /etc/elasticsearch/elasticsearch.yml
 
-![](RackMultipart20231221-1-5l8g4e_html_f8da48f272eeff2f.png)
+![](_images/84._Modify_etc-elasticsearch-elasticsearch.yml.png)
 
 *Figure 84 - DETECT: Configure Elasticsearch as single-node*
 
@@ -45,7 +45,7 @@ In this section, we will build the heart of this SOC solution, the Elastic SIEM 
 
         sudo apt install kibana -y
 
-![](RackMultipart20231221-1-5l8g4e_html_a4bb11b8ef443baa.png)
+![](_images/85._Install_Kibana.PNG)
 
 *Figure 85 - DETECT: Install Kibana*
 
@@ -53,7 +53,7 @@ In this section, we will build the heart of this SOC solution, the Elastic SIEM 
 
         sudo /usr/share/kibana/bin/kibana-encryption-keys generate -q | sudo tee -a /etc/kibana/kibana.yml
 
-![](RackMultipart20231221-1-5l8g4e_html_43fb9da9e14a589f.png)
+![](_images/86._Generate_Kibana_Encryption_Keys.PNG)
 
 *Figure 86 - DETECT: Kibana generate HTTP encryption keys*
 
@@ -61,11 +61,11 @@ In this section, we will build the heart of this SOC solution, the Elastic SIEM 
 
         echo "server.host: \"kali-purple.kali.purple\"" | sudo tee -a /etc/kibana/kibana.yml
 
-![](RackMultipart20231221-1-5l8g4e_html_8600d713f732d14b.png)
+![](_images/86a._Modify_kibana-yml.PNG)
 
 4. **Verify that there is ONLY ONE entry in the /etc/hosts file that maps the configured IP address to the configured hostname. There should be no other entries tied to the hostname. This will allow Kibana to specifically bind to that interface/IP address.**
 
-![](RackMultipart20231221-1-5l8g4e_html_bd192d06dbdbbf5e.png)
+![](_images/87._Verify_hosts_file.PNG)
 
 *Figure 87 - DETECT: Verifying /etc/hosts file*
 
@@ -73,7 +73,7 @@ In this section, we will build the heart of this SOC solution, the Elastic SIEM 
 
         sudo systemctl enable elasticsearch kibana --now
 
-![](RackMultipart20231221-1-5l8g4e_html_c56af7b7de755832.png)
+![](_images/88._Auto-start_ES_-_Kibana.PNG)
 
 *Figure 88 - DETECT: Enable auto-start for Elasticsearch/Kibana*
 
@@ -81,7 +81,7 @@ In this section, we will build the heart of this SOC solution, the Elastic SIEM 
 
         sudo /usr/share/elasticsearch/bin/elasticsearch-create-enrollment-token -s kibana
 
-![](RackMultipart20231221-1-5l8g4e_html_25c09e25c2269b27.png)
+![](_images/89._Kibana_Enrollment_Token.PNG)
 
 *Figure 89 - DETECT: Generate Kibana enrolment token*
 
@@ -89,7 +89,7 @@ In this section, we will build the heart of this SOC solution, the Elastic SIEM 
 
 7. **Open a browser and navigate to http://kali-purple.kali.purple:5601. NOTE: The URL is HTTP, not HTTPS. You will be immediately prompted for the Kibana enrolment token. Paste the toke from step 6 of this section into the window supplied and then click "Configure Elastic."**
 
-![](RackMultipart20231221-1-5l8g4e_html_45c18285a9a6595a.png)
+![](_images/90._Kibana_Enrollment_Token.PNG)
 
 *Figure 90 - DETECT: Enrolling Kibana*
 
@@ -97,17 +97,17 @@ In this section, we will build the heart of this SOC solution, the Elastic SIEM 
 
         sudo /usr/share/kibana/bin/kibana-verification-code
 
-![](RackMultipart20231221-1-5l8g4e_html_938f2ce2acb16f3a.png)
+![](_images/91._Kibana_Verification_Code.PNG)
 
 *Figure 91 - DETECT: Generating Kibana verification code*
 
 9. **Enter the verification code from step 8 into the browser and click "Verify." In a few seconds, you'll be redirected to a "Welcome to Elastic" screen with a login form. DO NOT log in here.**
 
-![](RackMultipart20231221-1-5l8g4e_html_b5b9a5548ce92ccd.png)
+![](_images/92._Kibana_Verification_Code.PNG)
 
 *Figure 92 - DETECT: Verifying Kibana*
 
-![](RackMultipart20231221-1-5l8g4e_html_7f3c7835d10e8dc1.png)
+![](_images/92a._Kibana_Login_Screen.PNG)
 
 ### 9.1.3 - Enable HTTPS for Kibana
 
@@ -117,7 +117,7 @@ For this next section, you'll need to create a password to use for SSL certifica
 
         sudo /usr/share/elasticsearch/bin/elasticsearch-certutil ca
 
-![](RackMultipart20231221-1-5l8g4e_html_118b938af96700b3.png)
+![](_images/93._SSL.PNG)
 
 *Figure 93 - DETECT: Generating new CA*
 
@@ -129,7 +129,7 @@ For this next section, you'll need to create a password to use for SSL certifica
 
         sudo /usr/share/elasticsearch/bin/elasticsearch-certutil cert --ca elastic-stack-ca.p12 --dns kali-purple.kali.purple,elastic.kali.purple,kali-purple --out kibana-server.p12
 
-![](RackMultipart20231221-1-5l8g4e_html_206cd41dcba46abe.png)
+![](_images/94._SSL.PNG)
 
 *Figure 94 - DETECT: Generating Kibana PKCS#12 certificate*
 
@@ -141,7 +141,7 @@ For this next section, you'll need to create a password to use for SSL certifica
         sudo openssl pkcs12 -in /usr/share/elasticsearch/kibana-server.p12 -out /etc/kibana/kibana-server.crt -clcerts -nokeys
         sudo openssl pkcs12 -in /usr/share/elasticsearch/kibana-server.p12 -out /etc/kibana/kibana-server.key -nocerts -nodes
 
-![](RackMultipart20231221-1-5l8g4e_html_c23a7114e76f7ff6.png)
+![](_images/95._SSL.PNG)
 
 *Figure 95 - DETECT: Writing client certificates*
 
@@ -154,7 +154,7 @@ For this next section, you'll need to create a password to use for SSL certifica
         sudo chmod 660 /etc/kibana/kibana-server.key
         sudo chmod 660 /etc/kibana/kibana-server.crt
  
- ![](RackMultipart20231221-1-5l8g4e_html_94f9ef74d477c134.png)
+ ![](_images/96._SSL.PNG)
 
 *Figure 96 - DETECT: Changing owner/permissions for client certs*
 
@@ -165,7 +165,7 @@ For this next section, you'll need to create a password to use for SSL certifica
         echo "server.ssl.key: /etc/kibana/kibana-server.key" | sudo tee -a /etc/kibana/kibana.yml
         echo "server.publicBaseUrl: \"https://kali-purple.kali.purple:5601\"" | sudo tee -a /etc/kibana/kibana.yml
 
-![](RackMultipart20231221-1-5l8g4e_html_f3f15abf2df9a050.png)
+![](_images/97._SSL.PNG)
 
 *Figure 97 - DETECT: Modifying /etc/kibana/kibana.yml*
 
@@ -177,7 +177,7 @@ For this next section, you'll need to create a password to use for SSL certifica
 
         sudo /usr/share/kibana/bin/kibana-encryption-keys generate -q --force| sudo tee -a /etc/kibana/kibana.yml
 
-![](RackMultipart20231221-1-5l8g4e_html_584ab926417df973.png)
+![](_images/98._SSL.PNG)
 
 *Figure 98 - DETECT: Generating Kibana SSL encryption keys*
 
@@ -185,32 +185,32 @@ For this next section, you'll need to create a password to use for SSL certifica
 
         sudo systemctl restart kibana
 
-![](RackMultipart20231221-1-5l8g4e_html_794e19b7dd8513b2.png)
+![](_images/99._Restart_Kibana.PNG)
 
 *Figure 99 - DETECT: Restart Kibana*
 
 9. **In a few seconds, use a browser to navigate to https://kali-purple.kali.purple:5601. You'll be greeted by a page warning of an untrusted site (due to a self-signed certificate). Accept the risk to continue, and you will be redirected to the Kibana logon page (HTTPS).**
 
-![](RackMultipart20231221-1-5l8g4e_html_372efc74bb5fbc4f.png)
+![](_images/99a._Kibana_over_TLS.PNG)
 
 10. **Log in with the username 'elastic' and the password you recorded from [Section 9.1.1](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/9%20-%20Configure%20DETECT%20Node.md#911-install-elasticsearch) step 3.**
 
-![](RackMultipart20231221-1-5l8g4e_html_b8d893f00ef21333.png)
+![](_images/99b._Kibana_Login.PNG)
 
 *Figure 100 - DETECT: Kibana Login*
 
 11. **You will see the "Welcome to Elastic" page. Click "Explore on my own."**
 
-![](RackMultipart20231221-1-5l8g4e_html_9388a19e946ab4f5.png)
+![](_images/99c._Kibana_Splash.PNG)
 
 12. **On the next page, in the upper right corner, click the circled "E." This will reveal a drop-down menu. Click "Edit Profile."**
 
-![](RackMultipart20231221-1-5l8g4e_html_2a3d576789c6c2a4.png)
+![](_images/100._User_Settings.PNG)
 
 13. **On the "Profile" page, set a secure password for the 'elastic' superuser using the "Change password" button.**
 
-![](RackMultipart20231221-1-5l8g4e_html_14182ca4ca0a1cb8.png)
-![](RackMultipart20231221-1-5l8g4e_html_bd3ec92e61870a5.png)
+![](_images/100a._User_Settings.PNG)
+![](_images/101._User_Settings.PNG)
 
 *Figure 101 - DETECT: Change Elastic user password*
 
@@ -220,76 +220,76 @@ For this next section, you'll need to create a password to use for SSL certifica
 
 1. **Within the Kibana interface, click the navigation button in the upper left corner, scroll down towards the bottom of the list, and click "Fleet."**
 
-![](RackMultipart20231221-1-5l8g4e_html_c464980df9f682c5.png)
+![](_images/101b._Navigate_to_Fleet.PNG)
 
 2. **On the "Fleet" page, click the "Add Fleet Server" button.**
 
-![](RackMultipart20231221-1-5l8g4e_html_cd932a15a0a8b28e.png)
+![](_images/101c._Add_Fleet_Server.PNG)
 
 3. **On the page that appears, enter a name for your Fleet Server Policy in the "Name" field. For the URL, enter the HTTPS FQDN of your DETECT node, at port 8220. In my example, I will enter https://kali-purple.kali.purple:8220. Then, click "Generate Fleet Server policy."**
 
-![](RackMultipart20231221-1-5l8g4e_html_71ae8a78714a7893.png)
+![](_images/102._New_Fleet_Server_Policy.PNG)
 
 *Figure 102 - DETECT: Fleet server policy*
 
 4. **Once the policy has been generated, the page will provide a set of commands to paste into a terminal session for execution. Copy the command using the clipboard icon provided in the upper right corner of the command window.**
 
-![](RackMultipart20231221-1-5l8g4e_html_9ed2c3d8074db195.png)
+![](_images/102a._Copy_Fleet_Server_Install_Script.PNG)
 
 5. **In a terminal session, paste the command and add " --force" on the end to auto-confirm installation of the Elastic Agent. Make sure there is a space between the port 8220 and the "--force" option. If you wish, you can change the IP address to your DETECT node's FQDN for the *fleet-server-es* option.**
 
-![](RackMultipart20231221-1-5l8g4e_html_d7cd1e51baf43d30.png)
+![](_images/103._Paste_Fleet_Install_Command.PNG)
 
 *Figure 103 - DETECT: Fleet server installation*
 
 6. **When complete, you'll see a confirmation message in the terminal session, and the fleet server installation page will have 3 green checkmarks indicating that the fleet server has connected. DO NOT select the "Continue enrolling Elastic Agent." Simply click the small "x" in the upper right corner to close the sub-window.**
 
-![](RackMultipart20231221-1-5l8g4e_html_55fb54d41564ea0c.png)
-![](RackMultipart20231221-1-5l8g4e_html_2518495293b19d65.png)
+![](_images/103a._Fleet_Installation_Complete.PNG)
+![](_images/103b._Fleet_Installation_Complete.PNG)
 
 7. **Back on the Fleet page, click the "Agent policies" tab, and select your fleet server policy.**
 
-![](RackMultipart20231221-1-5l8g4e_html_1e0981dc3a45969f.png)
+![](_images/103c._Fleet_Server_Policy.PNG)
 
 8. **On the next page, select "Add integration."**
 
-![](RackMultipart20231221-1-5l8g4e_html_b24db3c26390218d.png)
+![](_images/103d._Add_integration.PNG)
 
 9. **On the Integrations page, select the "Elastic Stack" category on the left side, and then "Elastic Agent" that appears on the right.**
 
-![](RackMultipart20231221-1-5l8g4e_html_3e55b50b4c542ec.png)
+![](_images/103d._Elastic_Agent.PNG)
 
 10. **On the Elastic Agent screen, select "Add Elastic Agent" in the upper right.**
 
-![](RackMultipart20231221-1-5l8g4e_html_2410556b2ef9b835.png)
+![](_images/103e._Elastic_Agent.PNG)
 
 11. **No changes are needed on this page. Just click the "Save and continue" button in the lower right.**
 
-![](RackMultipart20231221-1-5l8g4e_html_42c3ce921eb8168d.png)
+![](_images/103f._Elastic_Agent.PNG)
 
 12. **Next, click "Save and deploy changes."**
 
-![](RackMultipart20231221-1-5l8g4e_html_86a0a960d2b5b8b.png)
+![](_images/103g._Elastic_Agent.PNG)
 
 13. **Back on your fleet server policy page, you'll now see 3 integrations (elastic\_agent-1, fleet\_server-1, and system-1). Click the "Add integration" button again to add the pfSense module. This will allow the fleet server to ingest and properly parse the syslog data from the PROTECT node.**
 
-![](RackMultipart20231221-1-5l8g4e_html_69609edb67ec3c57.png)
+![](_images/103h._Updated_Fleet_Server_Policy.PNG)
 
 14. **In the search bar of the Integrations page, search "pfsense." Click the pfSense integration that appears.**
 
-![](RackMultipart20231221-1-5l8g4e_html_d55b14a1f5e5e2d5.png)
+![](_images/103i._pfSense_Integration.PNG)
 
 15. **On the "Add pfSense integration" page, enter "0.0.0.0" into the "Syslog Host" field, and ensure that the port is set to 9001. Click "Save and continue" in the lower right.**
 
-![](RackMultipart20231221-1-5l8g4e_html_668d7ec3ab467409.png)
+![](_images/103j._pfSense_Integration.PNG)
 
 16. **Click "Save and deploy changes."**
 
-![](RackMultipart20231221-1-5l8g4e_html_aae61170800f1d9f.png)
+![](_images/103k._pfSense_Integration.PNG)
 
 17. **Now your fleet server policy has the pfSense integration added. To verify that it is ingesting data from the PROTECT node, use the navigation on the left to go to Analytics -\> Discover.**
 
-![](RackMultipart20231221-1-5l8g4e_html_c25b1bf8b3e4a584.png)
+![](_images/103l._Discover.PNG)
 
 18. **In the search bar of the Discover page, enter the following search string:**
 
@@ -297,7 +297,7 @@ For this next section, you'll need to create a password to use for SSL certifica
 
 **If the DETECT node is ingesting properly, you will see data coming in.**
 
-![](RackMultipart20231221-1-5l8g4e_html_f26dac45c6fe9f02.png)
+![](_images/104._OPNsense_data_being_ingested.PNG)
 
 *Figure 104 - DETECT: Kibana Discover*
 
@@ -305,39 +305,40 @@ For this next section, you'll need to create a password to use for SSL certifica
 
 1. **Within the Kibana interface, click the navigation button in the upper left corner, and navigate to Management -\> Fleet.**
 
-![](RackMultipart20231221-1-5l8g4e_html_8da5d4cacd1590d3.png)
+![](_images/104a._Nav_to_Fleet.PNG)
 
 2. **On the Fleet screen, select "Agent Policies." On the right, click "Create agent policy."**
 
-![](RackMultipart20231221-1-5l8g4e_html_27dc0497203c8445.png)
+![](_images/104b._New_Agent_Policy.PNG)
 
 3. **For the name of the policy, enter "Linux Server Policy." Click the "Create agent policy" button in the lower right.**
 
-![](RackMultipart20231221-1-5l8g4e_html_b29015fbf290dc14.png)
+![](_images/104c._Create_Policy.PNG)
 
 4. **On the right side of the screen, click "Add integration."**
 
-![](RackMultipart20231221-1-5l8g4e_html_30570be593577377.png)
+![](_images/104d._Add_integration.PNG)
 
 5. **On the Integrations page, select the "Elastic Stack" category on the left side, and then "Elastic Agent" that appears on the right.**
 
-![](RackMultipart20231221-1-5l8g4e_html_3e55b50b4c542ec.png)
+![](_images/103d._Elastic_Agent.PNG)
 
 6. **On the Elastic Agent screen, select "Add Elastic Agent" in the upper right.**
 
-![](RackMultipart20231221-1-5l8g4e_html_2410556b2ef9b835.png)
+![](_images/103e._Elastic_Agent.PNG)
 
 7. **Ensure the newly created Linux policy is selected for "Agent Policy." Click the "Save and continue" button in the lower right.**
 
-![](RackMultipart20231221-1-5l8g4e_html_32018802e639c139.png)
+![](_images/104e._Add_Elastic_Agent.PNG)
 
 8. **Next, click "Add Elastic Agent later."**
 
-![](RackMultipart20231221-1-5l8g4e_html_94f0748a62cfb3e7.png)
+![](_images/104f._Add_Agent_later.PNG)
 
 9. **You will be returned to the "Linux Server Policy" page. There will be a window reminding you about adding Elastic Agent to your hosts. Click "Got it" to close. Your Linux policy should now show two integrations, the system (default) and the newly added Elastic Agent. We will install this agent manually on the IDENTIFY and RESPOND nodes later.**
 
-![](RackMultipart20231221-1-5l8g4e_html_95dab02a5a69c2dd.png)
+![](_images/104g._Add_Agent_later.PNG)
+![](_images/105._Linux_Server_policy.PNG)
 
 *Figure 105 - DETECT: Linux server policy*
 
@@ -349,7 +350,7 @@ For this next section, you'll need to create a password to use for SSL certifica
 
         sudo openssl x509 -fingerprint -sha256 -noout -in /etc/elasticsearch/certs/http_ca.crt | awk 'BEGIN { FS = "=" } ; { print $2 }' | sed 's/://g'
 
-![](RackMultipart20231221-1-5l8g4e_html_c89bc3ed02ef82f5.png)
+![](_images/106._ES_Fingerprint.PNG)
 
 *Figure 106 - DETECT: Acquiring Elasticsearch fingerprint*
 
@@ -363,7 +364,7 @@ For this next section, you'll need to create a password to use for SSL certifica
         curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-8.11.3-amd64.deb
         sudo dpkg -i metricbeat-8.11.3-amd64.deb
 
-![](RackMultipart20231221-1-5l8g4e_html_6c79f46134327385.png)
+![](_images/107._Install_Metricbeat.PNG)
 
 *Figure 107 - DETECT: Installing Metricbeat*
 
@@ -406,7 +407,7 @@ For this next section, you'll need to create a password to use for SSL certifica
 
         ssl.ca_trusted_fingerprint: "<your Elasticsearch fingerprint value>"
         
-![](RackMultipart20231221-1-5l8g4e_html_6bd9dd9def3cb08a.png)
+![](_images/108._Modify_etc-metricbeat-metricbeat-yml.PNG)
 
 *Figure 108 - DETECT: Modifying /etc/metricbeat/metricbeat.yml*
 
@@ -416,7 +417,7 @@ For this next section, you'll need to create a password to use for SSL certifica
 
         sudo metricbeat modules enable elasticsearch
 
-![](RackMultipart20231221-1-5l8g4e_html_24c18b5a55ba6060.png)
+![](_images/108a._Enable_Elasticsearch_module.PNG)
 
 4. **In a terminal session, issue the following command to edit the file /etc/metricbeat/modules.d/elasticsearch.yml:**
 
@@ -434,7 +435,7 @@ For this next section, you'll need to create a password to use for SSL certifica
 
 4.3 - **Uncomment the line that begins with *#password* if it is commented. Change it to reflect your 'elastic' user's password.**
 
-![](RackMultipart20231221-1-5l8g4e_html_fdc376e60a4de6d3.png)
+![](_images/109._Modify_etc-metricbeat-modules.d-elasticsearch-yml.PNG)
 
 *Figure 109 - DETECT: Modifying /etc/metricbeat/modules.d/elasticsearch.yml*
 
@@ -444,7 +445,7 @@ For this next section, you'll need to create a password to use for SSL certifica
 
         sudo metricbeat modules enable elasticsearch-xpack
 
-![](RackMultipart20231221-1-5l8g4e_html_1515dab6687fe960.png)
+![](_images/109a._Enable_Elasticsearch-XPack_module.PNG)
 
 6. **In a terminal session, issue the following command to edit the file /etc/metricbeat/modules.d/elasticsearch-xpack.yml:**
 
@@ -473,7 +474,7 @@ For this next section, you'll need to create a password to use for SSL certifica
           ca_trusted_fingerprint: "<your Elasticsearch fingerprint value>"
           verification_mode: "certificate"
 
-![](RackMultipart20231221-1-5l8g4e_html_b6470672fbd630a.png)
+![](_images/110._Modify_etc-metricbeat-modules.d-elasticsearch-xpack-yml.PNG)
 
 *Figure 110 - DETECT: Modifying /etc/metricbeat/modules.d/elasticsearch-xpack.yml*
 
@@ -483,7 +484,7 @@ For this next section, you'll need to create a password to use for SSL certifica
 
         sudo metricbeat test config
 
-![](RackMultipart20231221-1-5l8g4e_html_428131020627c39e.png)
+![](_images/111._Test_Config.PNG)
 
 *Figure 111 - DETECT: Test Metricbeat configuration*
 
@@ -491,7 +492,7 @@ For this next section, you'll need to create a password to use for SSL certifica
 
         sudo metricbeat test modules
 
-![](RackMultipart20231221-1-5l8g4e_html_5075a45560c9d3ab.png)
+![](_images/112._Test_Modules.PNG)
 
 *Figure 112 - DETECT: Test Metricbeat modules*
 
@@ -502,7 +503,7 @@ For this next section, you'll need to create a password to use for SSL certifica
 
         sudo metricbeat setup
 
-![](RackMultipart20231221-1-5l8g4e_html_1e9f7319362e2eff.png)
+![](_images/113._Metricbeat_setup.PNG)
 
 *Figure 113 - DETECT: Metricbeat setup*
 
@@ -512,25 +513,25 @@ For this next section, you'll need to create a password to use for SSL certifica
 
         sudo systemctl enable metricbeat --now
         
-![](RackMultipart20231221-1-5l8g4e_html_2add400f5da2a40.png)
+![](_images/113a._Enable_Metricbeat.PNG)
 
 11. **In Kibana (in a browser), use the navigation on the left to go to Management -\> Stack Monitoring.**
 
-![](RackMultipart20231221-1-5l8g4e_html_65ebdb74be7abe2a.png)
+![](_images/113b._Navigate_to_Stack_Monitoring.PNG)
 
 12. **On the next screen, select "Set up monitoring with Metricbeat."**
 
-![](RackMultipart20231221-1-5l8g4e_html_d521e11272593771.png)
+![](_images/113c._Set_Up_monitoring.PNG)
 
 13. **Click "Monitor with Metricbeat" below the DETECT node's name.**
 
-![](RackMultipart20231221-1-5l8g4e_html_34fdc79496c85b49.png)
+![](_images/113d._Monitor_with_Metricbeat.PNG)
 
 14. **Click "Next."**
 
 15. **Ensure "Yes" is selected on the "Create rules" window, and click "Continue."**
 
-![](RackMultipart20231221-1-5l8g4e_html_a97ac19e270603.png)
+![](_images/113e._Monitor_with_Metricbeat.PNG)
 
 16. **Click "Exit setup mode" at either the top or the bottom of the window on the right side.**
 
@@ -542,7 +543,7 @@ For this next section, you'll need to create a password to use for SSL certifica
         curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-8.11.3-amd64.deb
         sudo dpkg -i filebeat-8.11.3-amd64.deb
 
-![](RackMultipart20231221-1-5l8g4e_html_1c167204c5fd4520.png)
+![](_images/114._Install_Filebeat.PNG)
 
 *Figure 114 - DETECT: Install Filebeat*
 
@@ -584,7 +585,7 @@ For this next section, you'll need to create a password to use for SSL certifica
 
         ssl.ca_trusted_fingerprint: "<your Elasticsearch fingerprint value>"
 
-![](RackMultipart20231221-1-5l8g4e_html_94dc7db45cb230fa.png)
+![](_images/115._Modify_etc-filebeat-filebeat-yml.PNG)
 
 *Figure 115 - DETECT: Modify /etc/filebeat/filebeat.yml*
 
@@ -594,13 +595,13 @@ For this next section, you'll need to create a password to use for SSL certifica
 
         sudo filebeat modules enable elasticsearch
 
-![](RackMultipart20231221-1-5l8g4e_html_f83ee35bfe7406dc.png)
+![](_images/115a._Enable_Elasticsearch_module.PNG)
 
 4. **In a terminal session, issue the following command to edit the file /etc/filebeat/modules.d/elasticsearch.yml:**
 
         sudo sed -i 's/false/true/g' /etc/filebeat/modules.d/elasticsearch.yml
 
-![](RackMultipart20231221-1-5l8g4e_html_a6e0079c98ee612c.png)
+![](_images/116._Modify_etc-filebeat-modules.d-elasticsearch-yml.PNG)
 
 *Figure 116 - DETECT: Modify /etc/filebeat/modules.d/elasticsearch.yml*
 
@@ -608,7 +609,7 @@ For this next section, you'll need to create a password to use for SSL certifica
 
         sudo filebeat setup
 
-![](RackMultipart20231221-1-5l8g4e_html_54765bd485f9e6a1.png)
+![](_images/117._Filebeat_setup.PNG)
 
 *Figure 117 - DETECT: Filebeat setup*
 
@@ -618,11 +619,11 @@ For this next section, you'll need to create a password to use for SSL certifica
 
         sudo systemctl enable filebeat --now
 
-![](RackMultipart20231221-1-5l8g4e_html_8ebf502dab4ba6a7.png)
+![](_images/117a._Enable_Filebeat.PNG)
 
 7. **In Kibana (in a browser), use the navigation on the left to go to Management -\> Dev Tools.**
 
-![](RackMultipart20231221-1-5l8g4e_html_65e5c0a37cfe1923.png)
+![](_images/117b._Dev_Tools.PNG)
 
 8. **Delete the data in the left pane and enter the following:**
 
@@ -639,7 +640,7 @@ For this next section, you'll need to create a password to use for SSL certifica
 
 9. **Press the green triangle on the right side of the left pane to execute the command.**
 
-![](RackMultipart20231221-1-5l8g4e_html_26e8e4f44485c8d9.png)
+![](_images/117c._Change_Replica_Shard_Value.PNG)
 
 10. **Upon successful execution, the right pane will have a green "200 OK" above it, with the following message in the pane:**
 
@@ -647,7 +648,7 @@ For this next section, you'll need to create a password to use for SSL certifica
         "acknowledged": true
         }
  
- ![](RackMultipart20231221-1-5l8g4e_html_4e0b34900d665d41.png)
+ ![](_images/117d._Change_Replica_Shard_Value.PNG)
 
 ---
 <div align="center">
