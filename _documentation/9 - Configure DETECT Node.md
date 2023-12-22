@@ -137,7 +137,7 @@ For this next section, you'll need to create a password to use for SSL certifica
 
 1. **In the terminal session, issue the following commands to write the client certificates (enter your secure password after each command):**
 
-        sudo openssl pkcs12 -in /usr/share/elasticsearch/elastic-stack-ca.p12 -clcerts -nokeys -out /etc/kibana/kibana-server\_ca.crt
+        sudo openssl pkcs12 -in /usr/share/elasticsearch/elastic-stack-ca.p12 -clcerts -nokeys -out /etc/kibana/kibana-server_ca.crt
         sudo openssl pkcs12 -in /usr/share/elasticsearch/kibana-server.p12 -out /etc/kibana/kibana-server.crt -clcerts -nokeys
         sudo openssl pkcs12 -in /usr/share/elasticsearch/kibana-server.p12 -out /etc/kibana/kibana-server.key -nocerts -nodes
 
@@ -147,10 +147,10 @@ For this next section, you'll need to create a password to use for SSL certifica
 
 1. **In the terminal session, issue the following commands to change ownership of the new client SSL certificates to the root user, as well as modify the permissions:**
 
-        sudo chown root:kibana /etc/kibana/kibana-server\_ca.crt
+        sudo chown root:kibana /etc/kibana/kibana-server_ca.crt
         sudo chown root:kibana /etc/kibana/kibana-server.key
         sudo chown root:kibana /etc/kibana/kibana-server.crt
-        sudo chmod 660 /etc/kibana/kibana-server\_ca.crt
+        sudo chmod 660 /etc/kibana/kibana-server_ca.crt
         sudo chmod 660 /etc/kibana/kibana-server.key
         sudo chmod 660 /etc/kibana/kibana-server.crt
  
@@ -294,7 +294,7 @@ For this next section, you'll need to create a password to use for SSL certifica
 
 7. **In the search bar of the Discover page, enter the following search string:**
 
-**data\_stream.dataset : "pfsense.log"**
+        data_stream.dataset : "pfsense.log"
 
 **If the DETECT node is ingesting properly, you will see data coming in.**
 
@@ -348,7 +348,7 @@ For this next section, you'll need to create a password to use for SSL certifica
 
 1. **In a terminal session, issue the following command to obtain the Elasticsearch certificate fingerprint on the DETECT node:**
 
-**sudo openssl x509 -fingerprint -sha256 -noout -in /etc/elasticsearch/certs/http\_ca.crt | awk 'BEGIN { FS = "=" } ; { print $2 }' | sed 's/://g'**
+        sudo openssl x509 -fingerprint -sha256 -noout -in /etc/elasticsearch/certs/http\_ca.crt | awk 'BEGIN { FS = "=" } ; { print $2 }' | sed 's/://g'
 
 ![](RackMultipart20231221-1-5l8g4e_html_c89bc3ed02ef82f5.png)
 
@@ -360,22 +360,23 @@ For this next section, you'll need to create a password to use for SSL certifica
 
 1. **In a terminal session, enter the following commands to download and install Metricbeat:**
 
-**cd ~**
+        cd ~
+        curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-8.11.3-amd64.deb
+        sudo dpkg -i metricbeat-8.11.3-amd64.deb
 
-**curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-8.11.3-amd64.deb**
-
-**sudo dpkg -i metricbeat-8.11.3-amd64.deb**![](RackMultipart20231221-1-5l8g4e_html_6c79f46134327385.png)
+![](RackMultipart20231221-1-5l8g4e_html_6c79f46134327385.png)
 
 *Figure 107 - DETECT: Installing Metricbeat*
 
 1. **In a terminal session, issue the following command to edit the file /etc/metricbeat/metricbeat.yml:**
 
-**sudo nano /etc/metricbeat/metricbeat.yml**
+        sudo nano /etc/metricbeat/metricbeat.yml
 
 1. **Find the section titled "Kibana."**
 
-    1. Uncomment the line **#host: "localhost:5601"**. Change it to read
-**host: "https://kali-purple.kali.purple"**
+1. **Uncomment the line *#host: "localhost:5601"*. Change it to read:**
+
+        host: "https://kali-purple.kali.purple"
 
 \*NOTE THE ABSENCE OF THE PORT NUMBER
     2. Immediately below this line, add the following lines (all aligned with the previous line):
