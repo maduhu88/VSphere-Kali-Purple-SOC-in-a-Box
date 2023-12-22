@@ -1,7 +1,6 @@
 # 3 - Software Requirements
 
-<details>
-<summary><h2>3.1 - VMWare vSphere</h2></summary>
+## 3.1 - VMWare vSphere
 
 ### 3.1.1 - Minimum Version
 
@@ -14,10 +13,8 @@ The recommended version of VMware vSphere and vCenter for these instructions is 
 ### 3.1.3 - Source
 
 [VMware vSphere 7](https://customerconnect.vmware.com/downloads/info/slug/datacenter_cloud_infrastructure/vmware_vsphere_hypervisor_esxi/7_0)
-</details>
 
-<details>
-<summary><h2>3.2 - OPNsense Firewall</h2></summary>
+## 3.2 - OPNsense Firewall
 
 In the realm of the SOC, the OPNsense firewall distribution plays a critical role as the boundary defender. OPNsense is a robust and open-source firewall solution known for its versatility and security features. It functions as the guardian of your SOC, safeguarding the perimeter, controlling traffic flows, and enforcing security policies. With its advanced capabilities, including intrusion detection and prevention, VPN support, and traffic filtering, OPNsense ensures that your SOC's external boundaries remain fortified, providing essential protection against external threats while allowing for controlled, secure communication with the outside world.
 
@@ -36,10 +33,8 @@ The recommended version of OPNsense for these instructions is OPNsense 23.7 or l
 ### 3.2.4 - Source
 
 [OPNsense](https://opnsense.org/download/)
-</details>
 
-<details>
-<summary><h2>3.3 - Kali Purple Linux Distribution</h2></summary>
+## 3.3 - Kali Purple Linux Distribution
 
 Kali Purple, stemming from the renowned Kali Linux lineage, offers an exceptional choice as the baseline operating system for deploying a virtual Security Operations Center (SOC). With a comprehensive suite of over 100 defensive tools, streamlined documentation, pre-generated images, and automated attack capabilities through Kali Autopilot, it simplifies setup and configuration. Its alignment with NIST CSF guidelines ensures efficient SOC operations, making it an ideal foundation for your virtual SOC deployment. This distribution will be the base operating system for the IDENTIFY, DETECT, and RESPOND nodes, as well as any SOC analyst workstations you may wish to deploy.
 
@@ -58,10 +53,8 @@ The recommended version of Kali Purple Linux for these instructions is 2023.3 or
 ### 3.3.4 - Source
 
 [Kali Purple 2023.3](https://cdimage.kali.org/kali-2023.3/kali-linux-2023.3-installer-purple-amd64.iso)
-</details>
 
-<details>
-<summary><h2>3.4 - Hedgehog Linux Distribution</h2></summary>
+## 3.4 - Hedgehog Linux Distribution
 
 Hedgehog Linux, a Debian-derived operating system, specializes in network monitoring, packet capture to PCAP files, identification of file transfers within network traffic, and subsequent threat scanning of these files. Moreover, it excels at producing and transmitting essential data, including Zeek logs, Arkime sessions, and other critical information, directly to the Malcolm platform. When seamlessly integrated into a virtual SOC, Hedgehog Linux serves as an invaluable remote network sensor, enhancing threat detection and response capabilities by actively monitoring and analysing network activity. This distribution will the base operating system for any remote network sensors you decide to deploy.
 
@@ -76,7 +69,6 @@ The recommended version of Hedgehog Linux for these instructions is 23.10.0 or l
 ### 3.4.3 - Source
 
 [Hedgehog Linux 23.10.0](https://malcolm.fyi/docs/download.html)
-</details>
 
 ---
 <div align="center">
