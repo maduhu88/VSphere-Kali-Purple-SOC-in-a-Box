@@ -316,7 +316,7 @@
 
  ![](RackMultipart20231221-1-5l8g4e_html_6d42e786ce0348c1.png)
 
-3. **In the editor window, find the line that reads "- APP__PORT=8080" (this should be around line 52). Immediately after this line, insert the following (mind the alignment):**
+3. **In the editor window, find the line that reads "*- APP__PORT=8080*" (this should be around line 52). Immediately after this line, insert the following (mind the alignment):**
 
         - APP__HTTPS_CERT__KEY=${OPENCTI_KEY_PATH}
         - APP__HTTPS_CERT__CRT=${OPENCTI_CRT_PATH}
@@ -326,7 +326,7 @@
 
  ![](RackMultipart20231221-1-5l8g4e_html_d72ee4883fef6e5d.png)
 
-4. **In the editor window, find the line that reads "- "8080:8080" (this should be around line 79). Immediately after this line, insert the following (mind the alignment):**
+4. **In the editor window, find the line that reads "*- "8080:8080"*" (this should be around line 79). Immediately after this line, insert the following (mind the alignment):**
 
         volumes:
           - /etc/ssl/localcerts/:/etc/ssl/localcerts:ro**
