@@ -105,7 +105,7 @@
 
         cd ~/Malcolm
 
-        ./scripts/auth\_setup
+        ./scripts/auth_setup
 
 6. **You'll be asked a series of questions to configure the Malcolm platform (answers in brackets):**
 
@@ -151,7 +151,7 @@
 
  ![](_images/139._Start_Malcolm.PNG)
 
-Figure 139 - RESPOND: Start Malcolm Services
+*Figure 139 - RESPOND: Start Malcolm Services*
 
 ### 11.3.5 - Verify Malcolm Web Services
 
