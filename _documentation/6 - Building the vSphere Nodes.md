@@ -7,8 +7,6 @@ In this section, we will build the 4 virtual machines that will make up the core
 
 We will start with the NIST CSF PROTECT node. For the purposes of this document, I will use the naming conventions referred to in the original Proxmox instructions from the Offensive Security Kali Linux community. The node in this section will be named "byzantium.kali.purple." This will be the enclave firewall. It will provide boundary protection, transparent HTTP proxy, DNS, and port forwarding services to the internal nodes of the SOC.
 
-We will start with the NIST CSF PROTECT node. For the purposes of this document, I will use the naming conventions referred to in the original Proxmox instructions from the Offensive Security Kali Linux community. The node in this section will be named "byzantium.kali.purple." This will be the enclave firewall.
-
 **NOTE 1** : You will need to have a system (physical or virtual) that will be able to access the firewall from its LAN (in my case, "SOC MGMT") interface to accomplish the web components of firewall configuration.
 
 **NOTE 2** : One of the changes I made to the steps in this section was to consolidate all firewall modifications called for in the entire set of Proxmox instructions into this section, to eliminate the need for revisiting this node each time you are setting up another component of the SOC.
