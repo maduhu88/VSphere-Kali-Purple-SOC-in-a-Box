@@ -1,44 +1,59 @@
-# Configure: IDENTIFY Node
+# 10 - Configure: IDENTIFY Node
 
-  1.
-## Elastic Agent
+<details>
+<summary><h2>10.1 - Elastic Agent</h2></summary>
 
-    1.
 ### Installation
 
-      1. In a terminal session, issue the following command to install rSyslog:
- sudo apt install rsyslog -y
+1. In a terminal session, issue the following command to install rSyslog:
+
+        sudo apt install rsyslog -y
+
  ![](RackMultipart20231221-1-5l8g4e_html_9e022bf861239bd6.png)
 
-Figure 118 - IDENTIFY: Install rSyslog
+*Figure 118 - IDENTIFY: Install rSyslog*
 
-      1. In a browser, browse to the Fleet page Elastic SIEM on your DETECT node's FQDN on port 5601 via HTTPS (e.g. https://kali-purple.kali.purple:5601/app/fleet/policies). Log in with your 'elastic' account credentials.
- ![](RackMultipart20231221-1-5l8g4e_html_8c7028f60c4c1203.png)
-      2. Click the "Agent policies" tab and select your Linux server policy created in section 9.2.2.
- ![](RackMultipart20231221-1-5l8g4e_html_ce0f153e3809ed39.png)
-      3. In the upper section of the Linux server policy page, click "Add agent."
- ![](RackMultipart20231221-1-5l8g4e_html_d3593bb21722c05e.png)
-      4. On the "Add agent" screen, scroll down to step 3 (Install Elastic Agent on your host). Ensure that the Linux Tar" option is selected, and copy the contents of the command box (use the clipboard icon as a copy shortcut).
- ![](RackMultipart20231221-1-5l8g4e_html_dbf2f2c8f4baadf0.png)
-      5. In a terminal session, paste the commands into the terminal. Ensure to add " --insecure --force" at the end. There is a space between the enrolment-token and the "--insecure", as well as between the "--insecure" and "--force" options. Hit ENTER to install Elastic Agent.
- ![](RackMultipart20231221-1-5l8g4e_html_e85082b9f9b83adf.png)
+2. In a browser, browse to the Fleet page Elastic SIEM on your DETECT node's FQDN on port 5601 via HTTPS (e.g. https://kali-purple.kali.purple:5601/app/fleet/policies). Log in with your 'elastic' account credentials.
 
-Figure 119 - IDENTIFY: Elastic Agent install
+![](RackMultipart20231221-1-5l8g4e_html_8c7028f60c4c1203.png)
 
-      1. When installation has been completed, the browser page will indicate that the agent enrolment and incoming data has been confirmed. ![](RackMultipart20231221-1-5l8g4e_html_6eeb49d6895a8457.png)
+3. Click the "Agent policies" tab and select your Linux server policy created in section 9.2.2.
 
-Figure 120 - IDENTIFY: Elastic Agent enrolled in Fleet
+![](RackMultipart20231221-1-5l8g4e_html_ce0f153e3809ed39.png)
 
-      1. To confirm that you are seeing data from this host:
-        1. Navigate to Analytics -\> Dashboard.
+4. In the upper section of the Linux server policy page, click "Add agent."
+
+![](RackMultipart20231221-1-5l8g4e_html_d3593bb21722c05e.png)
+
+5. On the "Add agent" screen, scroll down to step 3 (Install Elastic Agent on your host). Ensure that the Linux Tar" option is selected, and copy the contents of the command box (use the clipboard icon as a copy shortcut).
+
+![](RackMultipart20231221-1-5l8g4e_html_dbf2f2c8f4baadf0.png)
+
+6. In a terminal session, paste the commands into the terminal. Ensure to add " --insecure --force" at the end. There is a space between the enrolment-token and the "--insecure", as well as between the "--insecure" and "--force" options. Hit ENTER to install Elastic Agent.
+
+![](RackMultipart20231221-1-5l8g4e_html_e85082b9f9b83adf.png)
+
+*Figure 119 - IDENTIFY: Elastic Agent install*
+
+7. When installation has been completed, the browser page will indicate that the agent enrolment and incoming data has been confirmed.
+
+![](RackMultipart20231221-1-5l8g4e_html_6eeb49d6895a8457.png)
+
+*Figure 120 - IDENTIFY: Elastic Agent enrolled in Fleet*
+
+8. To confirm that you are seeing data from this host:
+
+    1. Navigate to Analytics -> Dashboard.
+
  ![](RackMultipart20231221-1-5l8g4e_html_1435318890e5ffeb.png)
         2. Search "System Overview" and select the dashboard titled "[Metrics System] Overview."
  ![](RackMultipart20231221-1-5l8g4e_html_4f5017d636e166ba.png)
         3. Your host will be listed in the "Host" tile. ![](RackMultipart20231221-1-5l8g4e_html_8b7478135a23884b.png)
-  1.
-## Docker
+</details>
 
-    1.
+<details>
+<summary><h2>10.2 - Docker</h2></summary>
+
 ### Installation
 
       1. In a terminal session, issue the following command to install Docker:
@@ -55,7 +70,7 @@ Figure 121 - DOCKER: Installation
 
  sudo chmod 666 /var/run/docker.sock**
    ![](RackMultipart20231221-1-5l8g4e_html_b00b6b03788b1fea.png)
-    1.
+
 ### Portainer
 
       1. In a terminal session, issue the following commands to create a Docker volume for and install Portainer:
@@ -64,7 +79,7 @@ Figure 121 - DOCKER: Installation
  docker run -d -p 18000:18000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer\_data:/data portainer/portainer-ce:latest**
    ![](RackMultipart20231221-1-5l8g4e_html_6494caca5044cae1.png)
 
-Figure 122 - DOCKER: Install Portainer
+*Figure 122 - DOCKER: Install Portainer*
 
       1. In a terminal session, issue the following command to verify that Portainer is running:
 
@@ -75,24 +90,23 @@ Figure 122 - DOCKER: Install Portainer
  ![](RackMultipart20231221-1-5l8g4e_html_3c857d3d8c5d84ff.png)
       4. On the "Quick Setup" page, click "Home" in the upper left. ![](RackMultipart20231221-1-5l8g4e_html_57c37c5f4990083e.png)
       5. On the home page, click your local environment. This will bring you to your dashboard. ![](RackMultipart20231221-1-5l8g4e_html_cafdfd1ca5601c46.png)
-  1.
-## Greenbone Vulnerability Management (GVM)
+</details>
 
-    1.
+<details>
+<summary><h2>10.3 - Greenbone Vulnerability Management (GVM)</h2></summary>
+
 ### Installation and configuration
 
       1. In a terminal session, issue the following command to install the GVM platform:
 **sudo apt install gvm -y**![](RackMultipart20231221-1-5l8g4e_html_85625b552cc269b3.png)
 
-Figure 123 - IDENTIFY: Install Greenbone Vulnerability Management
+*Figure 123 - IDENTIFY: Install Greenbone Vulnerability Management*
 
       1. In a terminal session, issue the following command to initialize the GVM setup:
 **sudo gvm-setup**
  ![](RackMultipart20231221-1-5l8g4e_html_cd79417e45927314.png)
 
-Figure 124 - IDENTIFY: GVM Setup
-
-      1.
+*Figure 124 - IDENTIFY: GVM Setup*
 
  NOTE: This will take several minutes to complete. When it finishes, take note of the administrator password that will be displayed.
       2. In a terminal session, issue the following command to check the GVM configuration:
@@ -114,25 +128,27 @@ Figure 124 - IDENTIFY: GVM Setup
       2. In the open browser, login with the username 'admin' and the password recorded from step 2.
  ![](RackMultipart20231221-1-5l8g4e_html_bb753b6f9585a134.png)
 
-Figure 125 - IDENTIFY: GVM Login portal
+*Figure 125 - IDENTIFY: GVM Login portal*
 
       1. On the main page after login, click the user icon in the upper right, and select "My settings" from the drop-down menu. ![](RackMultipart20231221-1-5l8g4e_html_c48c4404f35ba391.png)
       2. On the "My Settings" page, select the edit icon (looks like a sheet of paper with a pen) to edit the user settings.
  ![](RackMultipart20231221-1-5l8g4e_html_4ee6be43a5c792cf.png)
       3. Set a new secure password for the 'admin' user. You can adjust any other settings you wish here. Click "Save" when done.
  ![](RackMultipart20231221-1-5l8g4e_html_7b63d6d816c25df3.png)
-  1.
-## OpenCTI
+</details>
+
+<details>
+<summary><h2>10.4 - OpenCTI</h2></summary>
 
 At the time of the drafting of the Proxmox instructions, the OpenCTI version that was available was 5.5.2. The latest version as of the drafting of these instructions is 5.12.9, however I was running into issues with getting that version to deploy. The instructions to follow will refer to the most recent version I could successfully deploy: v5.12.8.
 
-    1.
+
 ### Installation
 
       1. On your DETECT node, open a browser and browse to your IDENTIFY node's Portainer portal (e.g. https://kali-violet.kali.purple:9443). Log into Portainer using your admin credentials.
  ![](RackMultipart20231221-1-5l8g4e_html_23e719f58c7d6367.png)
 
-Figure 126 - IDENTIFY: Portainer Login Portal
+*Figure 126 - IDENTIFY: Portainer Login Portal*
 
       1. Click on the local environment in the center (the Docker icon). Then on the left side of the next page int the navigation area, select "Stacks."
  ![](RackMultipart20231221-1-5l8g4e_html_165cb8905874bd0c.png)
@@ -142,12 +158,12 @@ Figure 126 - IDENTIFY: Portainer Login Portal
       4. In another browser (or tab), browse to the OpenCTI Github repository at https:/github.com/OpenCTI-Platform/docker/blob/master/docker-compose.yml. Use the copy icon to copy all the raw text from the file to your clipboard. You can close this tab/window as we no longer need it.
  ![](RackMultipart20231221-1-5l8g4e_html_573c72eeffeef01e.png)
 
-Figure 127 - IDENTIFY: OpenCTI docker-compose.yml file
+*Figure 127 - IDENTIFY: OpenCTI docker-compose.yml file*
 
       1. Back on the Portainer tab/window, paste the data into the Web editor pane. In this pane, change all occurrences of "5.12.9" to "5.12.8" (there are 7). Then, under the Environmental variables section, click "Advanced mode." Keep this window/tab open, as we will return to it in a bit.
  ![](RackMultipart20231221-1-5l8g4e_html_f47f4114b656797f.png)
 
-Figure 128 - IDENTIFY: Portainer Stack Web Editor
+*Figure 128 - IDENTIFY: Portainer Stack Web Editor*
 
       1. In a terminal session, issue the following commands to create and enter the /opt/opencti folder:
 **sudo mkdir /opt/opencti
@@ -208,7 +224,7 @@ Figure 128 - IDENTIFY: Portainer Stack Web Editor
       3. Copy the contents of the environmental variables file into the environmental variables pane of the browser window (opencti Portainer stack). Ensure the variables such as your email address, base URL and password have been set.
  ![](RackMultipart20231221-1-5l8g4e_html_636328e92adaa78.png)
 
-Figure 129 - IDENTIFY: Portainer Stack Environmental Variables
+*Figure 129 - IDENTIFY: Portainer Stack Environmental Variables*
 
       1. Near the bottom of the screen, click "Deploy the stack."
  ![](RackMultipart20231221-1-5l8g4e_html_f12963bbfd0126d3.png)
@@ -219,10 +235,10 @@ Figure 129 - IDENTIFY: Portainer Stack Environmental Variables
       4. Now you have a deployment stack named "opencti." Click on the stack to view the details.
  ![](RackMultipart20231221-1-5l8g4e_html_1876fb6e5fa0a203.png)
 
-Figure 130 - IDENTIFY: OpenCTI Portainer Stack
+*Figure 130 - IDENTIFY: OpenCTI Portainer Stack*
 
       1. On the "Stack details" screen, you can see all containers that are a part of the stack. Keep this window/tab open as we will return in a bit.
-    1.
+
 ### Enable HTTPS
 
       1. In a terminal session, issue the following commands to generate new certificates for the OpenCTI instance:
@@ -240,7 +256,7 @@ Figure 130 - IDENTIFY: OpenCTI Portainer Stack
         7. (OPTIONAL) Enter an email address
  ![](RackMultipart20231221-1-5l8g4e_html_823510cf88f1c061.png)
 
-Figure 131 - IDENTIFY: OpenCTI SSL Certificate Generation
+*Figure 131 - IDENTIFY: OpenCTI SSL Certificate Generation*
 
       1. Returning to the browser, on the "Stack details" page, click the "Editor" option.
  ![](RackMultipart20231221-1-5l8g4e_html_6d42e786ce0348c1.png)
@@ -270,14 +286,12 @@ Figure 131 - IDENTIFY: OpenCTI SSL Certificate Generation
       8. When the refresh is complete, use another tab in your browser to log into OpenCTI. The URL will be the FQDN of your IDENTIFY node using HTTPS on port 8080 (e.g. https://kali-violet.kali.purple:8080). Your credentials will be the email address and password you provided in the stack configuration.
  ![](RackMultipart20231221-1-5l8g4e_html_3a1343c9ded3569.png)
 
-Figure 132 - IDENTIFY: OpenCTI Login Portal
+*Figure 132 - IDENTIFY: OpenCTI Login Portal*
 
-      1.
- ![](RackMultipart20231221-1-5l8g4e_html_224f60f8840f7a7b.png)
+![](RackMultipart20231221-1-5l8g4e_html_224f60f8840f7a7b.png)
 
-Figure 133 - IDENTIFY: OpenCTI Dashboard (unpopulated)
+*Figure 133 - IDENTIFY: OpenCTI Dashboard (unpopulated)*
 
-    1.
 ### Add Connectors
 
       1. In a terminal session, navigate to the /opt/opencti folder and issue the following commands to generate an OpenCTI Connector ID:
@@ -299,7 +313,8 @@ EOF
       3. In the Environmental variables section, click on "Advanced mode," and copy the new UUID entry to the end of the list. Then click "Update the stack."
  ![](RackMultipart20231221-1-5l8g4e_html_f3fc61609a224ef5.png)
 
-Figure 134 - IDENTIFY: OpenCTI Dashboard (populated)
+*Figure 134 - IDENTIFY: OpenCTI Dashboard (populated)*
+</details>
 
 ---
 <div align="center">
