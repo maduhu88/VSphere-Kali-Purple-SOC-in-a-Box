@@ -13,7 +13,7 @@ To install the Elastic Agent on this host, follow the instructions in [Section 1
 
         sudo apt install nginx apache2-utils python3-pip python3-requests python3-dialog apt-transport-https gnupg-agent software-properties-common docker.io docker-compose
 
-![](RackMultipart20231221-1-5l8g4e_html_71c018d721368def.png)
+![](_images/135._Install_Docker_and_Malcolm_Prereqs.PNG)
 
 *Figure 135 - RESPOND: Docker install with Malcolm Prerequisites*
 
@@ -37,7 +37,7 @@ To install the Portainer on this host, follow the instructions in section 10.2.2
 
         git clone -b v23.10.0 https://github.com/cisagov/Malcolm
 
-![](RackMultipart20231221-1-5l8g4e_html_6243f94a64b8a496.png)
+![](_images/136._Clone_Malcolm_Repo_v23.10.0.PNG)
 
 *Figure 136 - RESPOND: Clone Malcolm Repository*
 
@@ -129,7 +129,7 @@ To install the Portainer on this host, follow the instructions in section 10.2.2
 
         docker-compose --profile malcolm pull
 
-![](RackMultipart20231221-1-5l8g4e_html_cd80678e1c44ebbf.png)
+![](_images/137._Pull_Malcolm_Docker_Images.PNG)
 
 *Figure 137 - DOCKER: Pull Malcolm images*
 
@@ -137,7 +137,7 @@ To install the Portainer on this host, follow the instructions in section 10.2.2
 
         sudo docker image ls
 
- ![](RackMultipart20231221-1-5l8g4e_html_fe34aae1c840410.png)
+ ![](_images/138._Verify_Malcolm_Images.PNG)
 
 *Figure 138 - RESPOND: Malcolm Docker Images*
 
@@ -149,7 +149,7 @@ To install the Portainer on this host, follow the instructions in section 10.2.2
 
         ./scripts/start
 
- ![](RackMultipart20231221-1-5l8g4e_html_b682f723526e2d79.png)
+ ![](_images/139._Start_Malcolm.PNG)
 
 Figure 139 - RESPOND: Start Malcolm Services
 
@@ -157,15 +157,15 @@ Figure 139 - RESPOND: Start Malcolm Services
 
 1. **On your DETECT node, open a browser and browse to your IDENTIFY node's Portainer portal (e.g. https://kali-violet.kali.purple:9443). Log into Portainer using your admin credentials.**
 
-![](RackMultipart20231221-1-5l8g4e_html_23e719f58c7d6367.png)
+![](_images/126._Log_into_Portainer.png)
 
 2. **Click on the local environment in the center (the Docker icon). Then on the left side of the next page int the navigation area, select "Stacks."**
 
-![](RackMultipart20231221-1-5l8g4e_html_165cb8905874bd0c.png)
+![](_images/139a._Select_Stacks.png)
 
 3. **On the "Stacks" page, select "malcolm." All containers listed should be green and healthy.**
 
-![](RackMultipart20231221-1-5l8g4e_html_87f3dc2f707e712b.png)
+![](_images/140._Malcolm_Containers_in_Portainer.PNG)
 
 *Figure 140 - RESPOND: Malcolm Docker Containers*
 
@@ -179,31 +179,31 @@ Figure 139 - RESPOND: Start Malcolm Services
     6. **Malcolm Network Traffic Artifact Upload:** https://kali-eminence.kali.purple/upload
     7. **Malcolm User Management:** https://kali-eminence.kali.purple/auth
 
- ![](RackMultipart20231221-1-5l8g4e_html_4e5ddf8caf76d75b.png)
+ ![](_images/141._Malcolm_Readme.PNG)
 
 *Figure 141 - RESPOND: Malcolm ReadMe*
 
-![](RackMultipart20231221-1-5l8g4e_html_ea95c5383b2a8ad9.png)
+![](_images/142._Arkime_Sessions_Interface.PNG)
 
 *Figure 142 - RESPOND: Arkime Sessions Page*
 
-![](RackMultipart20231221-1-5l8g4e_html_7ab32b9766d8c11a.png)
+![](_images/143._CyberChef.PNG)
 
 *Figure 143 - RESPOND: CyberChef*
 
-![](RackMultipart20231221-1-5l8g4e_html_b76c7f0f856864a8.png)
+![](_images/144._Malcolm_Opensearch_Dashboards.PNG)
 
 *Figure 144 - RESPOND: Opensearch Dashboards*
 
-![](RackMultipart20231221-1-5l8g4e_html_b09dfa5b0ca4080f.png)
+![](_images/145._NetBox_Interface.PNG)
 
 *Figure 145 - RESPOND: NetBox*
 
-![](RackMultipart20231221-1-5l8g4e_html_ef077747941c256c.png)
+![](_images/146._Network_Artifact_Upload.PNG)
 
 *Figure 146 - RESPOND: Malcolm Network Traffic Artifact Upload*
 
-![](RackMultipart20231221-1-5l8g4e_html_148fb06cbfed1065.png)
+![](_images/147._Malcolm_User_Management.PNG)
 
 *Figure 147 - RESPOND: Malcolm User Account Management*
 
