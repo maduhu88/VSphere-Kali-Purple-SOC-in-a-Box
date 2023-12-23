@@ -21,7 +21,7 @@ As of the writing of this document, several versions of the software used in the
 | **Elastic Agent** | 8.6.1 | 8.11.3 | 8.11.3 |
 | **Metricbeat** | 8.6.1 | 8.11.3 | 8.11.3 |
 | **Filebeat** | 8.6.1 | 8.11.3 | 8.11.3 |
-| **INL Malcolm** | 23.01.0 | 23.12.0 | 23.10.0 |
+| **INL Malcolm** | 23.01.0 | 23.12.1 | 23.10.0 |
 | **OpenCTI** | 5.5.2 | 5.12.9 | 5.12.8 |
 
 **Table 1 – Software Differences**
