@@ -2,7 +2,7 @@
 
 ## 11.1 - Elastic Agent
 
-To install the Elastic Agent on this host, follow the instructions in [Section 10.1.1 (Elastic Agent)].
+**To install the Elastic Agent on this host, follow the instructions in [Section 10.1.1 (Elastic Agent)].**
 
 <details>
 <summary><h2>11.2 - Docker and Malcolm Prerequisites</h2></summary>
@@ -23,7 +23,7 @@ To install the Elastic Agent on this host, follow the instructions in [Section 1
 
 ### 11.2.2 - Portainer
 
-To install the Portainer on this host, follow the instructions in section 10.2.2 (Portainer). Make sure to replace any references for your IDENTIFY node with your RESPOND node (name/IP address).
+**To install the Portainer on this host, follow the instructions in section 10.2.2 (Portainer). Make sure to replace any references for your IDENTIFY node with your RESPOND node (name/IP address).**
 </details>
 
 <details>
@@ -49,7 +49,7 @@ To install the Portainer on this host, follow the instructions in section 10.2.2
 
         ./scripts/install.py --configure
 
-2. You'll be asked a series of questions to configure the Malcolm platform (answers in brackets):
+2. **You'll be asked a series of questions to configure the Malcolm platform (answers in brackets):**
 
     1. "Add a non-root user to the 'docker' group?" **[Y]**
     2. "User:" **[your admin username]**
