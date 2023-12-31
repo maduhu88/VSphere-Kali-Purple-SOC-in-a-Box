@@ -75,7 +75,7 @@
 
 ![](_images/149c._Network_Interfaces_and_Hostname_Configuration_Utility.png)
 
-5. **Choose the interface whose MAC address DOES NOT MATCH the one you noted in [Section 12.2 (Hedgehog Linux Installation)](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/12%20-%20Build%20and%20Configure%20-%20Remote%20Network%20Sensor.md#122-hedgehog-linux-installation), step 2. Most likely it will be ens192.**
+5. **Choose the interface whose MAC address DOES NOT MATCH the one you noted in [Section 12.2 (Hedgehog Linux Installation)](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/main/_documentation/12%20-%20Build%20and%20Configure%20-%20Remote%20Network%20Sensor.md#122-hedgehog-linux-installation), step 2. Most likely it will be ens192.**
 
 ![](_images/149d._Network_Interfaces_and_Hostname_Configuration_Utility.png)
 
@@ -150,7 +150,7 @@
 
     ![](_images/149c._Network_Interfaces_and_Hostname_Configuration_Utility.png)
 
-    **(b) Choose the interface whose MAC address MATCHES the one you noted in [Section 12.2 (Hedgehog Linux Installation)](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/12%20-%20Build%20and%20Configure%20-%20Remote%20Network%20Sensor.md#122-hedgehog-linux-installation), step 2. Most likely it will be ens224. Select OK.**
+    **(b) Choose the interface whose MAC address MATCHES the one you noted in [Section 12.2 (Hedgehog Linux Installation)](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/main/_documentation/12%20-%20Build%20and%20Configure%20-%20Remote%20Network%20Sensor.md#122-hedgehog-linux-installation), step 2. Most likely it will be ens224. Select OK.**
 
     ![](_images/150c._Capture_and_Forwarding_Config.png)
 
@@ -254,5 +254,5 @@ In this section, I'll show you how to verify your sensor's connectivity to the R
 
 ---
 <div align="center">
-| [Previous Section: 11 - Configure: RESPOND Node](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/11%20-%20Configure%20RESPOND%20Node.md) | [Table of Contents](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/README.md) | [Next Section: 13 - Build and Configure: SOC Analyst Workstation](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/13%20-%20Build%20and%20Configure%20-%20SOC%20Analyst%20Workstation.md) |
+| [Previous Section: 11 - Configure: RESPOND Node](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/main/_documentation/11%20-%20Configure%20RESPOND%20Node.md) | [Table of Contents](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/main/README.md) | [Next Section: 13 - Build and Configure: SOC Analyst Workstation](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/main/_documentation/13%20-%20Build%20and%20Configure%20-%20SOC%20Analyst%20Workstation.md) |
 </div>

@@ -194,7 +194,7 @@ For this next section, you'll need to create a password to use for SSL certifica
 
 ![](_images/99a._Kibana_over_TLS.PNG)
 
-10. **Log in with the username 'elastic' and the password you recorded from [Section 9.1.1](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/9%20-%20Configure%20DETECT%20Node.md#911-install-elasticsearch) step 3.**
+10. **Log in with the username 'elastic' and the password you recorded from [Section 9.1.1](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/main/_documentation/9%20-%20Configure%20DETECT%20Node.md#911-install-elasticsearch) step 3.**
 
 ![](_images/99b._Kibana_Login.PNG)
 
@@ -658,5 +658,5 @@ For this next section, you'll need to create a password to use for SSL certifica
 
 ---
 <div align="center">
-| [Previous Section: 8 - Kali Purple](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/8%20-%20Kali%20Purple.md) | [Table of Contents](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/README.md) | [Next Section: 10 - Configure: IDENTIFY Node](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/10%20-%20Configure%20IDENTIFY%20Node.md) |
+| [Previous Section: 8 - Kali Purple](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/main/_documentation/8%20-%20Kali%20Purple.md) | [Table of Contents](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/main/README.md) | [Next Section: 10 - Configure: IDENTIFY Node](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/main/_documentation/10%20-%20Configure%20IDENTIFY%20Node.md) |
 </div>

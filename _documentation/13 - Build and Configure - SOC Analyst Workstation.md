@@ -14,7 +14,7 @@
 
 ## 13.2 - Kali Purple Installation and Configuration
 
-1. **To install Kali Purple, use section [8.1 (Kali Purple)](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/8%20-%20Kali%20Purple.md#81-kali-purple-installation) as your installation guide with the following caveats:**
+1. **To install Kali Purple, use section [8.1 (Kali Purple)](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/main/_documentation/8%20-%20Kali%20Purple.md#81-kali-purple-installation) as your installation guide with the following caveats:**
 
 1.1 - **For step 8.1.5 (Disk Settings), do Step 1 only.**
 
@@ -40,5 +40,5 @@
 
 ---
 <div align="center">
-| [Previous Section: 12 - Build and Configure: Remote Network Sensor](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/12%20-%20Build%20and%20Configure%20-%20Remote%20Network%20Sensor.md) | [Table of Contents](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/README.md) |
+| [Previous Section: 12 - Build and Configure: Remote Network Sensor](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/main/_documentation/12%20-%20Build%20and%20Configure%20-%20Remote%20Network%20Sensor.md) | [Table of Contents](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/main/README.md) |
 </div>

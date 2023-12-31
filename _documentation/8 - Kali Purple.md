@@ -37,20 +37,20 @@ This section will cover the installation of Kali Purple Linux. These steps are t
 
 *Figure 59 – Kali Purple: Manual network configuration*
 
-2. **Next, enter the desired IP address in CIDR notation (refer to [Table 6](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/5%20-%20SOC%20Data%20Collection.md#52-network-management)).** 
+2. **Next, enter the desired IP address in CIDR notation (refer to [Table 6](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/main/_documentation/5%20-%20SOC%20Data%20Collection.md#52-network-management)).** 
 
 ![](_images/60._-_Kali_Setup_-_Network_Manual_Setup.PNG)
 
 *Figure 60 – Kali Purple: IP addressing*
 
-3. **Use the IP address for the LAN interface of the PROTECT node as both the gateway and the name server (refer to [Table 6](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/5%20-%20SOC%20Data%20Collection.md#52-network-management)).** 
+3. **Use the IP address for the LAN interface of the PROTECT node as both the gateway and the name server (refer to [Table 6](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/main/_documentation/5%20-%20SOC%20Data%20Collection.md#52-network-management)).** 
 
 ![](_images/61a.__Kali_Setup_-_Network_Manual_Setup.PNG) 
 ![](_images/61b.__Kali_Setup_-_Network_Manual_Setup.PNG)
 
 *Figure 61 – Kali Purple: Gateway and DNS configuration*
 
-4. **Enter the desired name for the node (refer to [Table 6](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/5%20-%20SOC%20Data%20Collection.md#52-network-management)).** 
+4. **Enter the desired name for the node (refer to [Table 6](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/main/_documentation/5%20-%20SOC%20Data%20Collection.md#52-network-management)).** 
 
 ![](_images/62._Kali_Setup_-_Hostname.PNG)
 
@@ -92,7 +92,7 @@ This section will cover the installation of Kali Purple Linux. These steps are t
 
 ### 8.1.5 - Disk Settings
 
-**NOTE** : If you are not setting up SOC analyst workstations, skip to [Section 8.1.5.2 - SOC Nodes](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/8%20-%20Kali%20Purple.md#8152-soc-nodes) of this section.
+**NOTE** : If you are not setting up SOC analyst workstations, skip to [Section 8.1.5.2 - SOC Nodes](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/main/_documentation/8%20-%20Kali%20Purple.md#8152-soc-nodes) of this section.
 
 <details>
 <summary><h4>8.1.5.1 - SOC Analyst Workstations:</h4></summary>
@@ -363,5 +363,5 @@ This section will cover the installation of Kali Purple Linux. These steps are t
 
 ---
 <div align="center">
-| [Previous Section: 7 - Configure: PROTECT Node](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/7%20-%20Configuring%20the%20PROTECT%20node.md) | [Table of Contents](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/README.md) | [Next Section: 9 - Configure: DETECT Node](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/edit_1/_documentation/9%20-%20Configure%20DETECT%20Node.md) |
+| [Previous Section: 7 - Configure: PROTECT Node](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/main/_documentation/7%20-%20Configuring%20the%20PROTECT%20node.md) | [Table of Contents](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/main/README.md) | [Next Section: 9 - Configure: DETECT Node](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/main/_documentation/9%20-%20Configure%20DETECT%20Node.md) |
 </div>
