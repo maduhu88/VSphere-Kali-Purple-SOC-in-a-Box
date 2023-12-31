@@ -6,7 +6,7 @@ I chose VMware vSphere simply because it's the hypervisor I already have deploye
 
 ## 2.2 - No Micro-segmentation
 
-I opted against micro-segmentation initially for ease of deployment. I may revisit this. In the Proxmox instruction, the internal nodes are configured with /31 subnet masks, each having a separate gateway (all of which are virtual Ips on the LAN interface of the firewall). Each of these micro-subnets have a different VLAN ID. I have chosen to use a single /24 subnet mask for the LAN interface, and all nodes (IDENTIFY, DETECT, and RESPOND) lie therein.
+I opted against micro-segmentation initially for ease of deployment. I may revisit this. In the Proxmox instruction, the internal nodes are configured with /31 subnet masks, each having a separate gateway (all of which are virtual IPs on the LAN interface of the firewall). Each of these micro-subnets have a different VLAN ID. I have chosen to use a single /24 subnet mask for the LAN interface, and all nodes (IDENTIFY, DETECT, and RESPOND) lie therein.
 
 ## 2.3 - Software Versions
 
