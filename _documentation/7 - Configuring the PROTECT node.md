@@ -78,6 +78,7 @@
 *Figure 24 -PROTECT – VMware vSphere: Removal of ISO*
 
 **14. Returning to the VM console, choose "Complete Install." This will reboot the VM.**
+
 **15. When the login prompt appears, login with the root credentials you set previously. Verify that the interface designated as the WAN is the interface with a DHCP address assigned. On my VM, it is assigned to vmx1.**
 
 ![](_images/25._OPNsense_-_WAN_ID_and_root_login.png)
@@ -124,57 +125,57 @@ The following steps are to be accomplished from a separate system that has acces
 
 ### 7.2.1 - System Configuration
 
-1. Browse to the LAN address of your firewall (https://\<LAN IP\>). You'll be greeted by a warning about your connection not being private. Accept the risks to continue to the site. You'll see the login portal of the OPNsense firewall. Log in with the root credentials you set during setup.
+**1. Browse to the LAN address of your firewall (https://\<LAN IP\>). You'll be greeted by a warning about your connection not being private. Accept the risks to continue to the site. You'll see the login portal of the OPNsense firewall. Log in with the root credentials you set during setup.**
 
 ![](_images/31._OPNsense_-_Web_Portal.png)
 
 *Figure 31 – PROTECT – OPNsense: Web Login Portal*
 
-2. Upon first login, the Setup Wizard will launch. Click "Next." 
+**2. Upon first login, the Setup Wizard will launch. Click "Next."**
 
 ![](_images/32._OPNsense_-Setup_Wizard.png)
 
 *Figure 32 – PROTECT – OPNsense: Setup Wizard*
 
-3. On the "System: Wizard: General Information" screen, enter your desired hostname, domain name, and language preferences. The figure shown here uses the settings recommended in the Proxmox instructions. When done, click "Next." 
+**3. On the "System: Wizard: General Information" screen, enter your desired hostname, domain name, and language preferences. The figure shown here uses the settings recommended in the Proxmox instructions. When done, click "Next."** 
 
 ![](_images/33._OPNsense_-Setup_Wizard_-_General_Information.png)
 
 *Figure 33 – PROTECT – OPNsense: Setup Wizard – General information*
 
-4. On the next screen, you can leave the "Time server hostname" as default or change if you wish. Set the "Time zone" value to your time zone. When done, click "Next." 
+**4. On the next screen, you can leave the "Time server hostname" as default or change if you wish. Set the "Time zone" value to your time zone. When done, click "Next."** 
 
 ![](_images/34._OPNsense_-Setup_Wizard_-_Time_Server_info.png)
 
 *Figure 34 – PROTECT – OPNsense: Time server information*
 
-5. On the next page, leave the WAN interface with default settings. Click "Next." 
+**5. On the next page, leave the WAN interface with default settings. Click "Next."** 
 
 ![](_images/35._OPNsense_-Setup_Wizard_-_WAN_Interface.png)
 
 *Figure 35 – PROTECT – OPNsense: WAN interface configuration*
 
-6. On the next page, verify your LAN IP settings are correct, then click "Next." 
+**6. On the next page, verify your LAN IP settings are correct, then click "Next."** 
 
 ![](_images/36._OPNsense_-Setup_Wizard_-_LAN_Interface.png)
 
 *Figure 36 – PROTECT – OPNsense: LAN interface configuration*
 
-7. On the following page, verify your root password, then click "Next." 
+**7. On the following page, verify your root password, then click "Next."** 
 
 ![](_images/37._OPNsense_-_Setup_Wizard_-_Set_Root_Password.png)
 
 *Figure 37 – PROTECT – OPNsense: Root password*
 
-8. Click "Reload" to apply the settings.
+**8. Click "Reload" to apply the settings.**
 
-9. Next, using the navigation options on the left side of the screen, navigate to Interfaces -\> Assignments. 
+**9. Next, using the navigation options on the left side of the screen, navigate to Interfaces -\> Assignments.** 
 
 ![](_images/38._OPNsense_-_Interfaces_-_Assignments.png)
 
 *Figure 38 – PROTECT – OPNsense: Interface assignments*
 
-10. Click each interface listed on the left side of the screen. With each interface, you can change the name of it by modifying the description. Do this for any interfaces you desire. You also can modify/verify the IP settings for each interface. When done with all interfaces, click "Apply" to apply changes. 
+**10. Click each interface listed on the left side of the screen. With each interface, you can change the name of it by modifying the description. Do this for any interfaces you desire. You also can modify/verify the IP settings for each interface. When done with all interfaces, click "Apply" to apply changes.** 
       
 ![](_images/39._OPNsense_-_Interfaces_-_Renaming.png)
 
@@ -184,13 +185,13 @@ The following steps are to be accomplished from a separate system that has acces
 
 *Figure 40 – PROTECT – OPNsense: Configuring interfaces*
 
-11. Next, navigate to System -\> Settings -\> Administration. Change the TCP port to 8443 and ensure that the "Enable Secure Shell" option is selected. Click "Save" at the bottom of the screen when done.
+**11. Next, navigate to System -\> Settings -\> Administration. Change the TCP port to 8443 and ensure that the "Enable Secure Shell" option is selected. Click "Save" at the bottom of the screen when done.**
 
 ![](_images/41._OPNsense_-System_Administration.png)
 
 *Figure 41 – PROTECT – OPNsense: Administration settings*
 
-12. Next, navigate to Services -\> Web Proxy -\> Administration. Select the "Forward Proxy" tab at the top of the page. Ensure the "Proxy interfaces" has just the LAN interface selected. Set the Proxy port as port 80. Ensure the "Enable Transparent HTTP Proxy" option is checked. Set the SSL Proxy port to 443. Click "Apply" when done. You'll be presented a link to click to return to the firewall management site. 
+**12. Next, navigate to Services -\> Web Proxy -\> Administration. Select the "Forward Proxy" tab at the top of the page. Ensure the "Proxy interfaces" has just the LAN interface selected. Set the Proxy port as port 80. Ensure the "Enable Transparent HTTP Proxy" option is checked. Set the SSL Proxy port to 443. Click "Apply" when done. You'll be presented a link to click to return to the firewall management site.** 
 
 ![](_images/42._OPNsense_-Web_Proxy.png)
 
@@ -200,13 +201,13 @@ The following steps are to be accomplished from a separate system that has acces
 
 *Figure 43 – PROTECT – OPNsense: Web redirect*
 
-13. Next will setup logging. Navigate to System -\> Settings -\> Logging/targets. Click the red "+" on the right side of the screen to create a new destination.
+**13. Next will setup logging. Navigate to System -\> Settings -\> Logging/targets. Click the red "+" on the right side of the screen to create a new destination.**
 
 ![](_images/44._OPNsense_-Syslog.png)
 
 *Figure 44 – PROTECT – OPNsense: *Syslog*
 
-14. Configure the following settings for log forwarding. Use Figure 39 for choice selection for "Applications." Click "Save" when complete, and "Apply" to apply the configuration. 
+**14. Configure the following settings for log forwarding. Use Figure 39 for choice selection for "Applications." Click "Save" when complete, and "Apply" to apply the configuration.** 
       
 ![](_images/45._OPNsense_-_Firewall_Aliases_-_Ports_-_Remote_Administration.png)
 
@@ -218,41 +219,41 @@ The following steps are to be accomplished from a separate system that has acces
 
 ### 7.2.2 - Updating OPNsense
 
-Now we will update our OPNsense installation.
+**Now we will update our OPNsense installation.**
 
-1. In the navigation pane on the left side of the screen, navigate to Lobby -\> Dashboard. Click on the "Click to view pending updates" link in the right pane. This will bring you to the "System: Firmware" screen. 
+**1. In the navigation pane on the left side of the screen, navigate to Lobby -\> Dashboard. Click on the "Click to view pending updates" link in the right pane. This will bring you to the "System: Firmware" screen.**
 
 ![](_images/46a._PROTECT_-_Dashboard.PNG)
-2. A few seconds after the next screen appears, the system will display a message identifying updates to install. Click "Close." 
+**2. A few seconds after the next screen appears, the system will display a message identifying updates to install. Click "Close."** 
 
 ![](_images/46b._PROTECT_-_Patch_Notes.PNG)
-3. Scroll to the bottom of the screen and click "Update." This will start the update process. Upon completion, the firewall will reboot, and you will be returned to the OPNsense login screen. Log back into the firewall with your root credentials. 
+**3. Scroll to the bottom of the screen and click "Update." This will start the update process. Upon completion, the firewall will reboot, and you will be returned to the OPNsense login screen. Log back into the firewall with your root credentials.** 
 
 ![](_images/46c._PROTECT_-_Install_updates.PNG)
-4. Click on the "Click to view pending updates" link in the right pane. After a few seconds, you should see that no updates are needed. 
+**4. Click on the "Click to view pending updates" link in the right pane. After a few seconds, you should see that no updates are needed.** 
 
 ![](_images/46d._PROTECT_-_Patch_Complete.PNG)
 ### 7.2.3 - Install VM Tools
 
-1. On the "System: Firmware" screen, navigate to the "Plugins" tab. In the search bar of this screen, search for "os-vmware." Click the "+" on the right to install this plugin. This should take just a few seconds. 
+**1. On the "System: Firmware" screen, navigate to the "Plugins" tab. In the search bar of this screen, search for "os-vmware." Click the "+" on the right to install this plugin. This should take just a few seconds.** 
 
 ![](_images/46e._PROTECT_-_os-vmware.PNG)
-2. Navigate to Power -\> Reboot. Click "Yes" to reboot the firewall. When presented with the OPNsense login page, log in with your root credentials. 
+**2. Navigate to Power -\> Reboot. Click "Yes" to reboot the firewall. When presented with the OPNsense login page, log in with your root credentials.** 
 
 ![](_images/46f._PROTECT_-_Reboot_firewall.PNG)
 ### 7.2.4 - Unbound DNS
 
-In this section, we will configure the Unbound DNS Resolver service. As all nodes behind this firewall will use it as their DNS server, any internal services (hosts) need to have static entries for resolution to be successful.
+**In this section, we will configure the Unbound DNS Resolver service. As all nodes behind this firewall will use it as their DNS server, any internal services (hosts) need to have static entries for resolution to be successful.**
 
-1. Using the site navigation in the left pane, navigate to Services -\> Unbound DNS -\> Overrides. 
+**1. Using the site navigation in the left pane, navigate to Services -\> Unbound DNS -\> Overrides.** 
 
 ![](_images/47._DNS_navigation.PNG)
 
 *Figure 47 – PROTECT – OPNsense: Unbound DNS*
 
-2. On the right side of this page, click the red "+" to add a new entry.
+**2. On the right side of this page, click the red "+" to add a new entry.**
 
-3. Using the data in Table 7 and Figure 41 as a guide, create entries for your IDENTIFY, DETECT, and RESPOND nodes. Feel free to modify names/Ips as needed. 
+**3. Using the data in Table 7 and Figure 41 as a guide, create entries for your IDENTIFY, DETECT, and RESPOND nodes. Feel free to modify names/Ips as needed.** 
 
 ![](_images/48._DNS_Override_Entry.PNG)
 
@@ -266,21 +267,21 @@ In this section, we will configure the Unbound DNS Resolver service. As all node
 
 *Table 8 – PROTECT – OPNsense: Unbound DNS entries*
 
-4. Click "Save" to save each entry. You can create other entries here as needed. When done, click "Apply" to apply the current settings.
+**4. Click "Save" to save each entry. You can create other entries here as needed. When done, click "Apply" to apply the current settings.**
 
 ### 7.2.5 - Firewall Aliases
 
-1. Next you will configure firewall aliases. Navigate to Firewall -\> Aliases. On this page, click the "+" near the lower right of the page to add a new alias. 
+**1. Next you will configure firewall aliases. Navigate to Firewall -\> Aliases. On this page, click the "+" near the lower right of the page to add a new alias.** 
 
 ![](_images/49._OPNsense_-_Firewall_Aliases.png)
 
 *Figure 49 – PROTECT – OPNsense: Firewall aliases*
 
-2. The first set of aliases you are to configure are for ports. Configure 6 aliases with the data presented below. 
+**2. The first set of aliases you are to configure are for ports. Configure 6 aliases with the data presented below.** 
 
 ![](_images/50._OPNsense_-_Firewall_Aliases_-_Ports_-_ELK.png)
 
-Figure 50 – PROTECT – OPNsense: New alias configuration
+*Figure 50 – PROTECT – OPNsense: New alias configuration*
 
 | **Enabled** | **Name** | **Type** | **Content** | **Description** |
 | --- | --- | --- | --- | --- |
@@ -293,7 +294,7 @@ Figure 50 – PROTECT – OPNsense: New alias configuration
 
 *Table 9 – PROTECT – OPNsense: Port alias configurations*
 
-3. The next set of aliases you are to configure are for networks. Configure 2 aliases as presented below. 
+**3. The next set of aliases you are to configure are for networks. Configure 2 aliases as presented below.** 
 
 ![](_images/51._OPNsense_-_Firewall_Aliases_-_Networks_-_RFC_1918.png)
 
@@ -301,7 +302,7 @@ Figure 50 – PROTECT – OPNsense: New alias configuration
 
 *Figure 51 – PROTECT – OPNsense: Network aliases*
 
-4. The final set of aliases you are to configure are for hosts. Configure 3 aliases as presented below. 
+**4. The final set of aliases you are to configure are for hosts. Configure 3 aliases as presented below.** 
 
 ![](_images/52._OPNsense_-_Firewall_Aliases_-_Hosts_-_DETECT_Servers.png) 
 ![](_images/52a._OPNsense_-_Firewall_Aliases_-_Hosts_-_RESPOND_Servers.png)
@@ -311,13 +312,13 @@ Figure 50 – PROTECT – OPNsense: New alias configuration
 
 ### 7.2.16 - Firewall Rules
 
-1. Next you will configure firewall rules. Navigate to Firewall -\> Rules -\> [LAN Interface]. On this page, click the "+" near the upper right of the page to add a new rule. 
+**1. Next you will configure firewall rules. Navigate to Firewall -\> Rules -\> [LAN Interface]. On this page, click the "+" near the upper right of the page to add a new rule.** 
 
 ![](_images/53._OPNsense_-_Firewall_Rules.png)
 
 *Figure 53 – PROTECT – OPNsense: Firewall rules*
 
-2. As seen in the figure below, configure 6 firewall rules using the aliases created previously. The rules listed in green are default rules that already exist. The rule highlighted in orange is only relevant if you elected to configure the OPNET network. To re-order the rules, select the check box next to the rule you want to move on the rules screen, then, on the right side of the rules table, click the left arrow for the rule you want your selected rule to sit above. After all changes have been made, click "Apply." 
+**2. As seen in the figure below, configure 6 firewall rules using the aliases created previously. The rules listed in green are default rules that already exist. The rule highlighted in orange is only relevant if you elected to configure the OPNET network. To re-order the rules, select the check box next to the rule you want to move on the rules screen, then, on the right side of the rules table, click the left arrow for the rule you want your selected rule to sit above. After all changes have been made, click "Apply."** 
 
 ![](_images/54._OPNsense_-_Firewall_Rules_-_MGMT.png)
 
@@ -336,7 +337,7 @@ Figure 50 – PROTECT – OPNsense: New alias configuration
 
 *Table 10 – PROTECT – OPNsense: LAN Firewall rules settings*
 
-3. If you elected to deploy an OPNET network, configure the following rules for this interface: 
+**3. If you elected to deploy an OPNET network, configure the following rules for this interface:** 
 
 ![](_images/55._OPNsense_-_Firewall_Rules_-_OPNET.png)
 
@@ -351,10 +352,11 @@ Figure 50 – PROTECT – OPNsense: New alias configuration
 
 ### 7.2.7 - DMZ Port Forwarding
 
-Next you will configure DMZ port forwarding rules. The Proxmox instructions do not address the DMZ configuration (as of the drafting of this document). This port forwarding rules section is meant for environments that may have Elastic agents deployed in another network. The rules will allow the agent traffic to reach the Elastic Fleet server on the DETECT node.
+**Next you will configure DMZ port forwarding rules. The Proxmox instructions do not address the DMZ configuration (as of the drafting of this document). This port forwarding rules section is meant for environments that may have Elastic agents deployed in another network. The rules will allow the agent traffic to reach the Elastic Fleet server on the DETECT node.**
 
-1. Navigate to Firewall -\> NAT -\> Port Forward. On the Firewall: NAT: Port Forward page, click on the "+" near the upper right corner of the right window pane to add a new entry.
-2. On the configuration page, ensure the DMZ interface is selected. TCP/IP version is 4, with TCP being the protocol. For the "from:" source port, choose "other" and enter 9200. Select the DMZ interface address as the destination. For the "from:" destination port, use the same settings as the source. For the "Redirect target IP," select "Single host or Network" and enter the IP address that your DETECT node will use. For the "Redirect target port", use the same settings as the source/destination ports. Enter "Elastic traffic from external agents" for the description. Finally, for "Filter rule association," ensure "Add associated filter rule" is selected. This will create a companion firewall rule on the DMZ interface. 
+**1. Navigate to Firewall -\> NAT -\> Port Forward. On the Firewall: NAT: Port Forward page, click on the "+" near the upper right corner of the right window pane to add a new entry.**
+
+**2. On the configuration page, ensure the DMZ interface is selected. TCP/IP version is 4, with TCP being the protocol. For the "from:" source port, choose "other" and enter 9200. Select the DMZ interface address as the destination. For the "from:" destination port, use the same settings as the source. For the "Redirect target IP," select "Single host or Network" and enter the IP address that your DETECT node will use. For the "Redirect target port", use the same settings as the source/destination ports. Enter "Elastic traffic from external agents" for the description. Finally, for "Filter rule association," ensure "Add associated filter rule" is selected. This will create a companion firewall rule on the DMZ interface.** 
 
 ![](_images/56._OPNsense_-_Firewall_NAT_-_Port_Forwarding.png)
 </details>
