@@ -13,7 +13,7 @@ We will start with the NIST CSF PROTECT node. For the purposes of this document,
 
 **NOTE 3** : As of the writing of this document, I have been unable to successfully compile Filebeat on OPNsense 23.7, so there will be no information regarding this process at this time.
 
-**NOTE 4** : I have created enclaves and firewall rules that are not present in the Proxmox instructions. These are due to modifications I have made in this deployment (namely adding an enclave for analyst operations and preparing to receive external Elastic Agent traffic via the DMZ). Also, since I am not using a micro-segmented architecture, I will not configure any sub-interfaces. All rules meant for a sub-interface from the Proxmox instructions will be configured on the "SOC MGMT" interface in this setup. You will need to have a system (physical or virtual) that will be able to access the firewall from its LAN (in my case, "SOC MGMT") interface to accomplish the web components of firewall configuration.
+**NOTE 4** : I have created enclaves and firewall rules that are not present in the Proxmox instructions. These are due to modifications I have made in this deployment (namely adding an enclave for analyst operations and preparing to receive external Elastic Agent traffic via the DMZ). Also, since I am not using a micro-segmented architecture, I will not configure any sub-interfaces. All rules meant for a sub-interface from the Proxmox instructions will be configured on the "SOC MGMT" interface in this setup. 
 
 **1. In the vSphere web interface, click "Create/Register VM…"** 
 
@@ -73,8 +73,6 @@ Figure 8 – PROTECT – VMware vSphere: Connect CD/DVD Drive at power on
 
 <details>
 <summary><h2>6.2 - vSphere: Building the DETECT Node</h2></summary>
-
-In this section, we will build the heart of this SOC solution, the Elastic SIEM node. In line with the Proxmox instructions, we will name this node "kali-purple." Since all other nodes will be sending data to the Elasticsearch instance that will reside on this system, I chose to build it second, after the firewall. If you recall, the firewall (byzantium) is already configured to forward syslog data to this node. Once we get this node configured, it should automatically start ingesting the log data from the firewall.
 
 **To build the virtual machine for the DETECT node, use the steps in [Section 6.1](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/main/_documentation/6%20-%20Building%20the%20vSphere%20Nodes.md#61-vsphere-building-the-protect-node) to create a new VM in vSphere, coupled with the data from [Table 2 (Section 4.4.2)](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/main/_documentation/4%20-%20vSphere%20Configuration.md#442-detect-node-hardware). We will be using the Kali Purple 2023.3 ISO for the operating system in this section (Figure 9). Your resulting VM should appear as in Figure 10.**
 
