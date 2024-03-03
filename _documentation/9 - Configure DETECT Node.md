@@ -1,6 +1,6 @@
 # 9 - Configure: DETECT Node
 
-In this section, we will build the heart of this SOC solution, the Elastic SIEM node. In line with the Proxmox instructions, we will name this node "kali-purple." Since all other nodes will be sending data to the Elasticsearch instance that will reside on this system, I chose to build it second, after the firewall. If you recall, the firewall (byzantium) is already configured to forward syslog data to this node. Once we get this node configured, it should automatically start ingesting the syslog data from the firewall.
+In this section, we will build the heart of this SOC solution, the Elastic SIEM node. In line with the Proxmox instructions, this node is named "kali-purple." Since all other nodes will be sending data to the Elasticsearch instance that will reside on this system, I chose to build it second, after the firewall. If you recall, the firewall (byzantium) is already configured to forward syslog data to this node. Once we get this node configured, it should automatically start ingesting the syslog data from the firewall.
 
 <details>
 <summary><h2>9.1 - Elastic Stack SIEM Installation and Configuration</h2></summary>
