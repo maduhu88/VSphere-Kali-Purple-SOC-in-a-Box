@@ -17,7 +17,7 @@ In this section, we will build the heart of this SOC solution, the Elastic SIEM 
 
 3. **In the terminal session, issue the following command to install Elasticsearch:**
 
-        sudo bash -c "export HOSTNAME=kali-purple.kali.purple; apt-get install elasticsearch -y"
+        sudo bash -c "export HOSTNAME=kali-purple.kali.purple; apt-get install elasticsearch=8.11.3 -y"
 
 ![](_images/82._Install_ES.PNG)
 
@@ -44,7 +44,7 @@ In this section, we will build the heart of this SOC solution, the Elastic SIEM 
 
 1. **In the terminal session, issue the following command to install Kibana:**
 
-        sudo apt install kibana -y
+        sudo apt install kibana=8.11.3 -y
 
 ![](_images/85._Install_Kibana.PNG)
 
@@ -426,7 +426,7 @@ For this next section, you'll need to create a password to use for SSL certifica
 
 4. **In a terminal session, issue the following command to edit the file /etc/metricbeat/modules.d/elasticsearch.yml:**
 
-        sudo nano /etc/modules.d/elasticsearch.yml
+        sudo nano /etc/metricbeat/modules.d/elasticsearch.yml
 
 4.1 - **Uncomment the line that begins with *#hosts* if it is commented. Change it to read:**
 
@@ -454,7 +454,7 @@ For this next section, you'll need to create a password to use for SSL certifica
 
 6. **In a terminal session, issue the following command to edit the file /etc/metricbeat/modules.d/elasticsearch-xpack.yml:**
 
-        sudo nano /etc/modules.d/elasticsearch-xpack.yml
+        sudo nano /etc/metricbeat/modules.d/elasticsearch-xpack.yml
 
 6.1 - **Uncomment the line that begins with *#hosts* if it is commented. Change it to read:**
 
