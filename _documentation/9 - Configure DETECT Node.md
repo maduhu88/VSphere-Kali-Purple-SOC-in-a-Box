@@ -31,7 +31,7 @@ In this section, we will build the heart of this SOC solution, the Elastic SIEM 
 
 4. **In the terminal session, enter the following commands to convert the installation into a single-node setup:**
 
-        sudo sed -e '/cluster.initial_master_nodes/ s/^#\*/#/' -i /etc/elasticsearch/elasticsearch.yml
+        sudo sed -e '/cluster.initial_master_nodes/ s/^#*/#/' -i /etc/elasticsearch/elasticsearch.yml
         echo "discovery.type: single-node" | sudo tee -a /etc/elasticsearch/elasticsearch.yml
 
 ![](_images/84._Modify_etc-elasticsearch-elasticsearch.yml.png)
