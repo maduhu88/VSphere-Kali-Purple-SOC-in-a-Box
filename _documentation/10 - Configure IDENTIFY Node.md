@@ -71,7 +71,7 @@
 
 1. **In a terminal session, issue the following command to configure automatic startup for the Docker service:**
 
-        sudo systemctl enable docker –now
+        sudo systemctl enable docker --now
 
 ![](_images/121a._Enable_Docker.PNG)
 
