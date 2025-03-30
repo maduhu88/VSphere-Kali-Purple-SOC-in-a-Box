@@ -24,7 +24,7 @@ As of the writing of this document, several versions of the software used in the
 | **INL Malcolm** | 23.01.0 | 23.12.1 | 23.10.0 |
 | **OpenCTI** | 5.5.2 | 5.12.9 | 5.12.8 |
 
-** Mar 29, 2025: I am currently working on an updated instruction set.
+** Mar 29, 2025: I am currently working on an updated instruction set with newer software versions. **
 
 **Table 1 – Software Differences**
 
