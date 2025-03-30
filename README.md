@@ -11,3 +11,18 @@
 # 11 - [Configure: RESPOND Node](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/main/_documentation/11%20-%20Configure%20RESPOND%20Node.md)
 # 12 - [Build and Configure: Remote Network Sensor](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/main/_documentation/12%20-%20Build%20and%20Configure%20-%20Remote%20Network%20Sensor.md)
 # 13 - [Build and Configure: SOC Analyst Workstation](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/main/_documentation/13%20-%20Build%20and%20Configure%20-%20SOC%20Analyst%20Workstation.md)
+
+## Kali Purple SOC-in-a-Box 2025.1a Roadmap
+
+- [ ] Upgrade base OS to Kali Purple 2025.1a
+- [ ] Upgrade OPNsense to 25.1
+- [ ] Upgrade Elastic to 8.17.4
+- [ ] Upgrade OpenCTI to 6.5.10
+- [ ] Upgrade Greenbone Vulnerability Management (GVM) to 25.1.3
+- [ ] Upgrade Malcolm/Hedgehog Linux to 25.03.01
+- [ ] Develop and Integrate centralized Docker Control Node
+- [ ] Develop and Integrate local APT repository
+- [ ] Develop and Integrate Single Sign-On capability for SOC applications
+- [ ] Develop and Integrate team communications capability
+- [ ] Develop and Integrate cyber incident handling capability
+- [ ] Develop and Integrate centralized SOC artifact storage
