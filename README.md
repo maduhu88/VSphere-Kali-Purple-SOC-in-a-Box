@@ -15,9 +15,9 @@
 # 13 - [Build and Configure: SOC Analyst Workstation](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/main/_documentation/13%20-%20Build%20and%20Configure%20-%20SOC%20Analyst%20Workstation.md)
 
 
-### Kali Purple SOC-in-a-Box 2025.1a Roadmap
+# Kali Purple SOC-in-a-Box 2025.1a Roadmap
 
-# Updates
+## Updates
 - [ ] Upgrade base OS to Kali Purple 2025.1a
 - [ ] Upgrade OPNsense to 25.1
 - [ ] Upgrade Elastic to 8.17.4
@@ -25,7 +25,7 @@
 - [ ] Upgrade Greenbone Vulnerability Management (GVM) to 25.1.3
 - [ ] Upgrade Malcolm/Hedgehog Linux to 25.03.01
 
-# Additions
+## Additions
 - [ ] Develop and Integrate centralized Docker Control Node
 - [ ] Develop and Integrate local APT repository
 - [ ] Develop and Integrate Single Sign-On capability for SOC applications
