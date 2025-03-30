@@ -1,7 +1,5 @@
 # 6 - Building the Nodes in vSphere
 
-**Mar 29, 2025: I am currently working on an updated instruction set with newer software versions.**
-
 In this section, we will build the 4 virtual machines that will make up the core of the SOC. These steps will be accomplished within vSphere. The OS for the PROTECT node will be OPNsense, and Kali Purple will be installed on the remaining nodes, DETECT, IDENTIFY, and RESPOND.
 
 <details>

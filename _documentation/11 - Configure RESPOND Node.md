@@ -1,7 +1,5 @@
 # 11 - Configure: RESPOND Node
 
-**Mar 29, 2025: I am currently working on an updated instruction set with newer software versions.**
-
 ## 11.1 - Elastic Agent
 
 **To install the Elastic Agent on this host, follow the instructions in [Section 10.1.1 (Elastic Agent)].**
