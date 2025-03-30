@@ -12,6 +12,7 @@
 # 12 - [Build and Configure: Remote Network Sensor](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/main/_documentation/12%20-%20Build%20and%20Configure%20-%20Remote%20Network%20Sensor.md)
 # 13 - [Build and Configure: SOC Analyst Workstation](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/main/_documentation/13%20-%20Build%20and%20Configure%20-%20SOC%20Analyst%20Workstation.md)
 
+
 ## Kali Purple SOC-in-a-Box 2025.1a Roadmap
 
 - [ ] Upgrade base OS to Kali Purple 2025.1a
