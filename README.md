@@ -1,3 +1,5 @@
+[![Kali-Purple 2025.1a](./images/Kali_Purple_2025.1a.png)](./images/Kali_Purple_2025.1a.png)
+
 # 1 - [Introduction](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/main/_documentation/1%20-%20Introduction.md)
 # 2 - [Key Differences between Offensive Security's (Proxmox) and my (vSphere) SOC](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/main/_documentation/2%20-%20Differences.md)
 # 3 - [Software Requirements](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/main/_documentation/3%20-%20Software%20Requirements.md)
