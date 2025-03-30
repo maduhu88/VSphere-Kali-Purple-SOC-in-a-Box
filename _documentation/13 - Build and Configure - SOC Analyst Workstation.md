@@ -1,7 +1,5 @@
 # 13 - Build and Configure: SOC Analyst Workstations
 
-**Mar 29, 2025: I am currently working on an updated instruction set with newer software versions.**
-
 ## 13.1 - VMware vSphere: VM Configuration
 
 | CPU Cores | Memory | Function | Disks | Network Interfaces | Networks |

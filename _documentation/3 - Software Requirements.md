@@ -1,7 +1,5 @@
 # 3 - Software Requirements
 
-**Mar 29, 2025: I am currently working on an updated instruction set with newer software versions.**
-
 ## 3.1 - VMWare vSphere
 
 ### 3.1.1 - Minimum Version

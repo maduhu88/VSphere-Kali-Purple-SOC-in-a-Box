@@ -1,7 +1,5 @@
 # 10 - Configure: IDENTIFY Node
 
-**Mar 29, 2025: I am currently working on an updated instruction set with newer software versions.**
-
 <details>
 <summary><h2>10.1 - Elastic Agent</h2></summary>
 
