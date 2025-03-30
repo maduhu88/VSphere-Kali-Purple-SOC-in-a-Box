@@ -15,7 +15,7 @@
 # 13 - [Build and Configure: SOC Analyst Workstation](https://gitlab.com/phybroptyx/vsphere-kali-purple-soc-in-a-box/-/blob/main/_documentation/13%20-%20Build%20and%20Configure%20-%20SOC%20Analyst%20Workstation.md)
 
 
-## Kali Purple SOC-in-a-Box 2025.1a Roadmap
+### Kali Purple SOC-in-a-Box 2025.1a Roadmap
 
 # Updates
 - [ ] Upgrade base OS to Kali Purple 2025.1a
