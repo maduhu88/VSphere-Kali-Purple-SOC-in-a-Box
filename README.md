@@ -17,12 +17,15 @@
 
 ## Kali Purple SOC-in-a-Box 2025.1a Roadmap
 
+# Updates
 - [ ] Upgrade base OS to Kali Purple 2025.1a
 - [ ] Upgrade OPNsense to 25.1
 - [ ] Upgrade Elastic to 8.17.4
 - [ ] Upgrade OpenCTI to 6.5.10
 - [ ] Upgrade Greenbone Vulnerability Management (GVM) to 25.1.3
 - [ ] Upgrade Malcolm/Hedgehog Linux to 25.03.01
+
+# Additions
 - [ ] Develop and Integrate centralized Docker Control Node
 - [ ] Develop and Integrate local APT repository
 - [ ] Develop and Integrate Single Sign-On capability for SOC applications
