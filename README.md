@@ -18,17 +18,17 @@
 # Kali Purple SOC-in-a-Box 2025.1a Roadmap
 
 ## Updates
-- [ ] Upgrade base OS to Kali Purple 2025.1a  [ ] Documentation updated
-- [ ] Upgrade OPNsense to 25.1  [ ] Documentation updated
-- [ ] Upgrade Elastic to 8.17.4  [ ] Documentation updated
-- [ ] Upgrade OpenCTI to 6.5.10  [ ] Documentation updated
-- [ ] Upgrade Greenbone Vulnerability Management (GVM) to 25.1.3  [ ] Documentation updated
-- [ ] Upgrade Malcolm/Hedgehog Linux to 25.03.01  [ ] Documentation updated
+- [ ] Upgrade base OS to Kali Purple 2025.1a
+- [ ] Upgrade OPNsense to 25.1
+- [ ] Upgrade Elastic to 8.17.4
+- [ ] Upgrade OpenCTI to 6.5.10
+- [ ] Upgrade Greenbone Vulnerability Management (GVM) to 25.1.3
+- [ ] Upgrade Malcolm/Hedgehog Linux to 25.03.01
 
 ## Additions
-- [ ] Develop and Integrate centralized Docker Control Node  [ ] Documentation updated
-- [ ] Develop and Integrate local APT repository  [ ] Documentation updated
-- [ ] Develop and Integrate Single Sign-On capability for SOC applications  [ ] Documentation updated
-- [ ] Develop and Integrate team communications capability  [ ] Documentation updated
-- [ ] Develop and Integrate cyber incident handling capability  [ ] Documentation updated
-- [ ] Develop and Integrate centralized SOC artifact storage  [ ] Documentation updated
+- [ ] Develop and Integrate centralized Docker Control Node
+- [ ] Develop and Integrate local APT repository
+- [ ] Develop and Integrate Single Sign-On capability for SOC applications
+- [ ] Develop and Integrate team communications capability
+- [ ] Develop and Integrate cyber incident handling capability
+- [ ] Develop and Integrate centralized SOC artifact storage
