@@ -1,5 +1,7 @@
 # 4 - VMWare vSphere Configuration
 
+**Mar 29, 2025: I am currently working on an updated instruction set with newer software versions.**
+
 ## 4.1 - Licensing Requirements (Remote Sensor deployments only)
 
 In this vSphere deployment, the vSphere Distributed Switch (VDS) can be utilized. This allows for, among other things, port mirroring sessions to be created. If you are not implementing Remote Sensors, then you can still follow the remaining steps using the vSphere Standard Switch (VSS), which is free to use. The VDS requires either an Enterprise Plus or vSAN license, and a VMware vCenter deployment.

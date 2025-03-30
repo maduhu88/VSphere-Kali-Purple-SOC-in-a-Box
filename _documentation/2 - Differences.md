@@ -1,5 +1,7 @@
 # 2 - Key Differences between Proxmox and vSphere SOC deployments
 
+**Mar 29, 2025: I am currently working on an updated instruction set with newer software versions.**
+
 ## 2.1 - Hypervisor Changes
 
 I chose VMware vSphere simply because it's the hypervisor I already have deployed in my lab environment. I am certain that Proxmox was chosen by the folks at Offensive Security due to it being among the more popular open-source hypervisors available, with many of the enterprise features of VMware.
@@ -23,8 +25,6 @@ As of the writing of this document, several versions of the software used in the
 | **Filebeat** | 8.6.1 | 8.11.3 | 8.11.3 |
 | **INL Malcolm** | 23.01.0 | 23.12.1 | 23.10.0 |
 | **OpenCTI** | 5.5.2 | 5.12.9 | 5.12.8 |
-
-** Mar 29, 2025: I am currently working on an updated instruction set with newer software versions. **
 
 **Table 1 – Software Differences**
 

@@ -1,5 +1,7 @@
 # 7 - Configure: PROTECT Node
 
+**Mar 29, 2025: I am currently working on an updated instruction set with newer software versions.**
+
 <details>
 <summary><h2>7.1 - OPNsense Installation</h2></summary>
 

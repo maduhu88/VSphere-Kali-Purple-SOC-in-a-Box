@@ -1,5 +1,7 @@
 # 5 - SOC Environment Data Collection
 
+**Mar 29, 2025: I am currently working on an updated instruction set with newer software versions.**
+
 The Kali Purple virtual SOC will be primarily composed of 4 nodes: a firewall, a SIEM, a threat intelligence/vulnerability scanning platform, and a network traffic analysis platform. The current instructions provided with the Kali Purple SOC guide is not to clear as to what order to deploy/configure the nodes. In this and related documents, I intend to clarify how and what order to deploy the nodes for the SOC to operate appropriately.
 
 I will include some optional information for building forward network sensors, as well as SOC analyst workstations.
