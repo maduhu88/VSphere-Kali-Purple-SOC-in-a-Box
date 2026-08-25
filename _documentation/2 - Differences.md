@@ -14,15 +14,15 @@ As of the writing of this document, several versions of the software used in the
 
 | **Software Title** | **Proxmox Version** | **Current Version** | **My Version** |
 | --- | --- | --- | --- |
-| **OPNsense Firewall** | 22.7 | 23.7 | 23.7 |
-| **Kali Purple Linux** | 2022.4/2023.1 | 2023.4 | 2023.4 |
-| **Elasticsearch** | 8.6.1 | 8.11.3 | 8.11.3 |
-| **Kibana** | 8.6.1 | 8.11.3 | 8.11.3 |
-| **Elastic Agent** | 8.6.1 | 8.11.3 | 8.11.3 |
-| **Metricbeat** | 8.6.1 | 8.11.3 | 8.11.3 |
-| **Filebeat** | 8.6.1 | 8.11.3 | 8.11.3 |
-| **INL Malcolm** | 23.01.0 | 23.12.1 | 23.10.0 |
-| **OpenCTI** | 5.5.2 | 5.12.9 | 5.12.8 |
+| **OPNsense Firewall** | 22.7 | 25.1 | 23.7 |
+| **Kali Purple Linux** | 2022.4/2023.1 | 2025.1a | 2025.1a |
+| **Elasticsearch** | 8.6.1 | 8.17.4 | 8.17.4 |
+| **Kibana** | 8.6.1 | 8.17.4 | 8.17.4 |
+| **Elastic Agent** | 8.6.1 | 8.17.4 | 8.17.4 |
+| **Metricbeat** | 8.6.1 | 8.17.4 | 8.17.4 |
+| **Filebeat** | 8.6.1 | 8.17.4 | 8.17.4 |
+| **INL Malcolm** | 23.01.0 | 25.03.1 | 25.03.1 |
+| **OpenCTI** | 5.5.2 | 6.5.10 | 6.5.10 |
 
 **Table 1 – Software Differences**
 
